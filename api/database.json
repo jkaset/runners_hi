@@ -7,7 +7,12 @@
       "id": 1
     }
   ], 
-  "activities": [],
+  "activities": [
+    {
+      "id": 1,
+      "userId": 1
+    }
+  ],
   "activityTypes": [
     {
       "id": 1,

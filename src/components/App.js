@@ -4,6 +4,7 @@ import { Login } from './auth/Login'
 import { Register } from './auth/Register'
 //import { ApplicationViews } from '../ApplicationViews'
 //import logo from './logo.svg';
+import { HomeList } from '../components/home/HomeList'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,7 +16,7 @@ export const App = () => (
             if (localStorage.getItem("runnersHi_user")) {
                 return (
                     <>
-                    <h1>hello</h1>
+                    <h1>hey</h1>
                     </>
                 )
             } else {
