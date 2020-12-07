@@ -23,7 +23,7 @@ export const Login = props => {
             .then(exists => {
                 if (exists && exists.password === password.current.value) {
                     // The user id is saved under the key app_user_id in local Storage. Change below if needed!
-                    localStorage.setItem("app_user_id", exists.id)
+                    localStorage.setItem("runnersHi_user", exists.id)
                     props.history.push("/")
                 } else if (exists && exists.password !== password.current.value) {
                     passwordDialog.current.showModal()
