@@ -3,27 +3,40 @@ import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 //import { Link } from "react-router-dom"
-import { Form } from 'react-bootstrap';
-//import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
+import { Form } from 'react-bootstrap'
 //import { Activity } from "./Activity"
 
 export const ActivityForm = (props) => {
   const { activities, addActivity } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
-  const date = useRef(null)
   const activityType = useRef(null)
   const moodPre = useRef(null)
   const moodPost = useRef(null)
   const note = useRef(null)
 
+  
+
   useEffect(() => {
-    getActivityTypes().then(addActivity)
+    getActivityTypes()
   }, [])
 
   const logNewActivity = () => {
+
     const activityTypeId = parseInt(activityType.current.value)
-    console.log(activityTypeId)
+
+    if (activityTypeId === 0) {
+      window.alert("Please choose an activity")
+    } else {
+      addActivity({
+        date: Date.now(), 
+        moodPre: moodPre.current.value,
+        // moodPost: moodPost.current.value,
+        // note: note.current.value,
+        activityTypeId
+      })
+      .then(() => props.history.push("/activities"))
+    }
   }
   
   return (
@@ -31,18 +44,20 @@ export const ActivityForm = (props) => {
       <Form>
         <h4>Pre-run Stats</h4>
         <Form.Group controlId="form.ControlSelect1">
-          <Form.Label>Choose today's activity</Form.Label>
-          <Form.Control as="select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <Form.Label>Select today's activity</Form.Label>
+          <Form.Control ref={activityType} as="select">
+            
+            {activityTypes.map(a => (
+              <option key={a.id} value={a.id}>
+                {a.name}
+              </option>
+            ))}
+            
           </Form.Control>
           </Form.Group>
           <Form.Group controlId="form.ControlSelect1">
             <Form.Label>On a scale of 1-10, how's your mood?</Form.Label>
-            <Form.Control as="select">
+            <Form.Control ref={moodPre} as="select">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -55,7 +70,7 @@ export const ActivityForm = (props) => {
               <option>10</option>
             </Form.Control>
           </Form.Group>
-          <button type="submit" onClick={evt => {
+          <button className="btn btn-secondary" type="submit" onClick={evt => {
           evt.preventDefault() // Prevent browser from submitting the form
           logNewActivity()
         }}>Ready to Run!</button>

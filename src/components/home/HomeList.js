@@ -40,7 +40,7 @@ export const HomeList = (props) => {
             <p>Getting started is easy! Before you head out for your run, we'll just ask you a few quick questions.</p>
           </div>
           <Link to="/activities/create" className="btn btn-primary">
-            Let's get "hi"</Link>
+            Run</Link>
 
         </>
       )
