@@ -18,10 +18,6 @@ export const App = () => (
                 return (
                     <>
                         <Route render={props => <ApplicationViews {...props} />} />
-                        {/* <ActivityProvider>
-                            <HomeList />
-                        </ActivityProvider> */}
-
                     </>
                 )
             } else {

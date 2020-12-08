@@ -26,7 +26,7 @@ export const HomeList = (props) => {
       return (
         <>
           <h3>Welcome back, User!</h3>
-          <Link to="#" className="btn btn-primary">Track New Run</Link>
+          <Link to="/activities/create" className="btn btn-primary">Track New Run</Link>
           <Link to="/activities" className="btn btn-primary">See Stats</Link>
         </>
       )
@@ -39,7 +39,7 @@ export const HomeList = (props) => {
             <p>Runner's-Hi helps you track the effects of exercise on your mental well-being.</p>
             <p>Getting started is easy! Before you head out for your run, we'll just ask you a few quick questions.</p>
           </div>
-          <Link to="#" className="btn btn-primary">
+          <Link to="/activities/create" className="btn btn-primary">
             Let's get "hi"</Link>
 
         </>
