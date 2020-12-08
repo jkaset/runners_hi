@@ -13,12 +13,6 @@
       "firstName": "Harry",
       "lastName": "Kagan",
       "id": 2
-    },
-    {
-      "email": "rosey@dog.com",
-      "password": "dog",
-      "name": "Rosey Cotton",
-      "id": 3
     }
   ],
   "activities": [
@@ -81,48 +75,6 @@
     },
     {
       "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
-      "id": 16
-    },
-    {
-      "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "id": 19
-    },
-    {
-      "id": 20
-    },
-    {
-      "id": 21
-    },
-    {
-      "id": 22
-    },
-    {
-      "id": 23
-    },
-    {
-      "id": 24
-    },
-    {
-      "id": 25
-    },
-    {
-      "id": 26
-    },
-    {
-      "id": 27
-    },
-    {
-      "id": 28
     }
   ],
   "activityTypes": [
