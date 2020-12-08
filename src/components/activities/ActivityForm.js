@@ -2,26 +2,29 @@ import React, { useContext, useRef, useEffect } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
-//import { Link } from "react-router-dom"
 import { Form } from 'react-bootstrap'
-//import { Activity } from "./Activity"
 
+
+//props: define parameters to capture object
 export const ActivityForm = (props) => {
   const { activities, addActivity } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
+  //references created here to attach to input fields in form
   const activityType = useRef(null)
   const moodPre = useRef(null)
   const moodPost = useRef(null)
   const note = useRef(null)
   const userId = parseInt(localStorage.getItem("runnersHi_user"))
 
+  //on initialization, get types for form
   useEffect(() => {
     getActivityTypes()
   }, [])
 
   const logNewActivity = () => {
 
+    //in case id is a string
     const activityTypeId = parseInt(activityType.current.value)
 
     if (activityTypeId === 0) {
@@ -35,7 +38,9 @@ export const ActivityForm = (props) => {
         note: "",
         activityTypeId
       })
-      .then(() => props.history.push("/activities"))
+      //using history because I need change route when button is clicked
+      //this is the push that needs to happen once form has been edited
+      //.then(() => props.history.push("/activities"))
     }
   }
   
@@ -46,7 +51,7 @@ export const ActivityForm = (props) => {
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>Today's activity</Form.Label>
           <Form.Control ref={activityType} as="select">
-          <option>choose your run</option>
+          <option value="0">choose your run</option>
             {activityTypes.map(a => (
               <option key={a.id} value={a.id}>
                 {a.name}

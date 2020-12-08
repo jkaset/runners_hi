@@ -32,40 +32,13 @@
       "id": 2
     },
     {
-      "userId": 1,
-      "date": 1607460212806,
-      "moodPre": "4",
-      "moodPost": "",
-      "note": "",
-      "activityTypeId": 7,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "date": 1607460771782,
+      "userId": 3,
+      "date": 1607464679254,
       "moodPre": "1",
       "moodPost": "",
       "note": "",
-      "activityTypeId": 1,
-      "id": 4
-    },
-    {
-      "userId": 3,
-      "date": 1607462194481,
-      "moodPre": "3",
-      "moodPost": "",
-      "note": "",
-      "activityTypeId": 7,
-      "id": 5
-    },
-    {
-      "userId": 3,
-      "date": 1607463499005,
-      "moodPre": "3",
-      "moodPost": "",
-      "note": "",
-      "activityTypeId": 6,
-      "id": 6
+      "activityTypeId": null,
+      "id": 3
     }
   ],
   "activityTypes": [
