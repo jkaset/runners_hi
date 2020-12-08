@@ -14,6 +14,7 @@ export const ActivityTypeProvider = (props) => {
         .then(setActivityTypes)
 }
 
+//would this allow me to manually add activity?
 const addActivityType = activityType => {
     return fetch("http://localhost:8088/activityTypes", {
         method: "POST",
