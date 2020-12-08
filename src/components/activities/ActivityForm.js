@@ -14,8 +14,7 @@ export const ActivityForm = (props) => {
   const moodPre = useRef(null)
   const moodPost = useRef(null)
   const note = useRef(null)
-
-  
+  const userId = parseInt(localStorage.getItem("runnersHi_user"))
 
   useEffect(() => {
     getActivityTypes()
@@ -29,10 +28,11 @@ export const ActivityForm = (props) => {
       window.alert("Please choose an activity")
     } else {
       addActivity({
+        userId: userId,
         date: Date.now(), 
         moodPre: moodPre.current.value,
-        // moodPost: moodPost.current.value,
-        // note: note.current.value,
+        moodPost: "",
+        note: "",
         activityTypeId
       })
       .then(() => props.history.push("/activities"))
@@ -44,9 +44,9 @@ export const ActivityForm = (props) => {
       <Form>
         <h4>Pre-run Stats</h4>
         <Form.Group controlId="form.ControlSelect1">
-          <Form.Label>Select today's activity</Form.Label>
+          <Form.Label>Today's activity</Form.Label>
           <Form.Control ref={activityType} as="select">
-            
+          <option>choose your run</option>
             {activityTypes.map(a => (
               <option key={a.id} value={a.id}>
                 {a.name}
