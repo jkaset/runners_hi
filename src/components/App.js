@@ -4,7 +4,8 @@ import { Login } from './auth/Login'
 import { Register } from './auth/Register'
 //import { ApplicationViews } from '../ApplicationViews'
 //import logo from './logo.svg';
-//import { HomeList } from '../components/home/HomeList'
+import { HomeList } from '../components/home/HomeList'
+import { ActivityProvider} from '../components/activities/ActivityProvider'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,20 +13,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export const App = () => (
     <>
 
-    <Route render={() => {
-        if (localStorage.getItem("runnersHi_user")) {
+        <Route render={() => {
+            if (localStorage.getItem("runnersHi_user")) {
                 return (
-                   <>
-                        <h1>help me</h1>
-                   </>
+                    <>
+                        <ActivityProvider>
+                            <HomeList />
+                        </ActivityProvider>
+                    </>
                 )
             } else {
                 return <Redirect to="/login" />
             }
         }} />
-        
+
         <Route path="/login" render={props => <Login {...props} />} />
-        <Route path="/register" render={props => <Register {...props} />} /> 
-        
-    </>  
+        <Route path="/register" render={props => <Register {...props} />} />
+
+    </>
 )

@@ -5,15 +5,35 @@
       "password": "jk",
       "name": "Jas Kas",
       "id": 1
+    },
+    {
+      "email": "hk@hk.com",
+      "password": "hk",
+      "name": "Harry Kagan",
+      "id": 2
     }
-  ], 
+  ],
   "activities": [
-    
+    {
+      "id": 1,
+      "userId": 1,
+      "notes": "run"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "notes": "fast"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "notes": "fast"
+    }
   ],
   "activityTypes": [
     {
       "id": 1,
-      "name":"casual jog"
+      "name": "casual jog"
     },
     {
       "id": 2,
@@ -61,7 +81,7 @@
     },
     {
       "id": 13,
-      "name":"walk"
+      "name": "walk"
     }
   ]
 }
