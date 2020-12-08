@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { ActivityList } from "./activities/ActivityList"
 import { ActivityProvider } from "./activities/ActivityProvider"
 import { ActivityTypeProvider } from "./activityTypes/ActivityTypeProvider"
+import { ActivityForm } from "./activities/ActivityForm"
 import { HomeList } from "./home/HomeList"
 
 export const ApplicationViews = (props) => {
@@ -17,9 +18,15 @@ export const ApplicationViews = (props) => {
 
       <ActivityTypeProvider>
         <ActivityProvider>
-          <Route exact path="/activities">
+          {/* <Route exact path="/activities">
             <ActivityList />
-          </Route>
+          </Route> */}
+          <Route exact path="/activities" render={
+              props => <ActivityList {...props} />
+            } />
+          <Route exact path="/activities/create" render={
+              props => <ActivityForm {...props} />
+            } />
         </ActivityProvider>
       </ActivityTypeProvider>
 
