@@ -32,7 +32,7 @@ export const ActivityList = (props) => {
     <div>
       <h2>Your activities</h2>
 
-      
+
       {activities.map(activity => {
         if (activity.userId === user) {
           const activityType = activityTypes.find(type => type.id === activity.activityId)
@@ -42,8 +42,9 @@ export const ActivityList = (props) => {
           />
         }
       })}
-
+      <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
     </div>
+
   )
 }
 

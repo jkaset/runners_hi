@@ -57,6 +57,15 @@
       "note": "",
       "activityTypeId": 7,
       "id": 5
+    },
+    {
+      "userId": 3,
+      "date": 1607463499005,
+      "moodPre": "3",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 6,
+      "id": 6
     }
   ],
   "activityTypes": [
