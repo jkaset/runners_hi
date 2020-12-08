@@ -8,7 +8,17 @@
     }
   ], 
   "activities": [
-    
+    {
+      "id": 1,
+      "userId": 1,
+      "notes": "run"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "notes": "fast"
+
+    }
   ],
   "activityTypes": [
     {
