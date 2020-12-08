@@ -29,12 +29,12 @@ const addActivity = activity => {
 //         .then(res => res.json())
 // }
 
-// const releaseActivity = activityId => {
-//     return fetch(`http://localhost:8088/activities/${ activityId }`, {
-//         method: "DELETE"
-//     })
-//     .then(getActivities)
-// }
+const deleteActivity = activityId => {
+    return fetch(`http://localhost:8088/activities/${ activityId }`, {
+        method: "DELETE"
+    })
+    .then(getActivities)
+}
 
 // const updateActivity = activity => {
 //     return fetch(`http://localhost:8088/activities/${activity.id}`, {
@@ -49,7 +49,7 @@ const addActivity = activity => {
 
 return (
     <ActivityContext.Provider value={{
-        activities, addActivity, getActivities
+        activities, addActivity, getActivities, deleteActivity
     }}>
         {props.children}
     </ActivityContext.Provider>
