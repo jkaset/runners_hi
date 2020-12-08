@@ -26,8 +26,8 @@ export const HomeList = (props) => {
       return (
         <>
           <h3>Welcome back, User!</h3>
-          <Link to="/activities/create" className="btn btn-primary">Track New Run</Link>
-          <Link to="/activities" className="btn btn-primary">See Stats</Link>
+          <Link to="/activities/create" className="btn btn-secondary">Track New Run</Link>
+          <Link to="/activities" className="btn btn-secondary">See Stats</Link>
         </>
       )
     } else {
@@ -40,7 +40,7 @@ export const HomeList = (props) => {
             <p>Getting started is easy! Before you head out for your run, we'll just ask you a few quick questions.</p>
           </div>
           <Link to="/activities/create" className="btn btn-primary">
-            Let's get "hi"</Link>
+            Run</Link>
 
         </>
       )

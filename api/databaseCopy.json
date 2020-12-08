@@ -13,20 +13,68 @@
       "firstName": "Harry",
       "lastName": "Kagan",
       "id": 2
-    },
-    {
-      "email": "rosey@dog.com",
-      "password": "dog",
-      "name": "Rosey Cotton",
-      "id": 3
     }
   ],
   "activities": [
     {
-      "date": 1607457977269,
-      "moodPre": "2",
-      "activityTypeId": 1,
-      "id": 1
+      "id": 1,
+      "userId": 1,
+      "date": "2020/12/07",
+      "notes": "Ran fast",
+      "mood_start": 3,
+      "mood_end": 7,
+      "activityTypeId": 4
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "date": "2020/12/01",
+      "notes": "It was fun",
+      "mood_start": 1,
+      "mood_end": 10,
+      "activityTypeId": 5
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "date": "2020/12/12",
+      "notes": "Great weather",
+      "mood_start": 5,
+      "mood_end": 6,
+      "activityTypeId": 8
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
     }
   ],
   "activityTypes": [

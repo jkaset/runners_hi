@@ -15,7 +15,7 @@ export const ActivityList = () => {
   return (
     <>
     <h1>You made it to SAVED ACTIVITIES</h1>
-    <Link to="/activities/create" className="btn btn-primary">Record a New Run</Link>
+    <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
     </>
   )
 }
