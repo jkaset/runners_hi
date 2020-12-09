@@ -66,12 +66,13 @@ export const ActivityForm = (props, history) => {
     } else {
       if (editMode) {
         updateActivity({
-          userId: userId,
-          date: date,
+          id: activity.id,
+          userId: parseInt(localStorage.getItem("runnersHi-user")),
+          date: format(new Date(), 'MM-dd-yyyy'),
           moodPre: moodPre.current.value,
           moodPost: moodPost.current.value,
           note: note.current.value,
-          activityTypeId
+          activityTypeId: parseInt(activityType.current.value)
         })
           .then(() => props.history.push("/activities"))
       } else {
