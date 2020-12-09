@@ -3,7 +3,7 @@ import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form } from 'react-bootstrap'
-
+import { format } from 'date-fns'
 
 //props: define parameters to capture object
 export const ActivityForm = (props) => {
@@ -11,6 +11,7 @@ export const ActivityForm = (props) => {
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
   //references created here to attach to input fields in form
+  const date = format(new Date(), 'MM-dd-yyyy')
   const activityType = useRef(null)
   const moodPre = useRef(null)
   const moodPost = useRef(null)
@@ -32,15 +33,22 @@ export const ActivityForm = (props) => {
     } else {
       addActivity({
         userId: userId,
-        date: Date.now(), 
+        date: date,
         moodPre: moodPre.current.value,
         moodPost: "",
         note: "",
         activityTypeId
       })
+
+      // const date = (dateString) => {
+      //   const options = { year: "numeric", month: "long", day: "numeric" }
+      //   return new Date(dateString).toLocaleDateString(undefined, options)
+      // }
       //using history because I need change route when button is clicked
       //this is the push that needs to happen once form has been edited
-      //.then(() => props.history.push("/activities"))
+      .then(() => props.history.push("/activities"))
+
+      //instead, button on Form A needs to render Form B
     }
   }
   
