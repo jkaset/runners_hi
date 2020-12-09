@@ -16,15 +16,15 @@ export const ActivityList = (props) => {
     getActivityTypes().then(getActivities)
   }, [])
 
-  useEffect(() => {
-    const activityType = activityTypes.find(at => at.id === activity.activityTypeId) || {}
-    setActivity(activityType)
-  }, [activityTypes])
+  // useEffect(() => {
+  //   const activityType = activityTypes.find(at => at.id === activity.activityTypeId) || {}
+  //   setActivity(activityType)
+  // }, [activityTypes])
 
-  useEffect(() => {
-    const activity = activities.find(a => a.id === parseInt(props.match.params.activityId)) || {}
-    setActivity(activity)
-  }, [activities])
+  // useEffect(() => {
+  //   const activity = activities.find(a => a.id === parseInt(props.match.params.activityId)) || {}
+  //   setActivity(activity)
+  // }, [activities])
 
   const user = parseInt(localStorage.getItem("runnersHi_user"))
 
@@ -33,15 +33,18 @@ export const ActivityList = (props) => {
       <h2>Your activities</h2>
 
 
-      {activities.map(activity => {
-        if (activity.userId === user) {
-          const activityType = activityTypes.find(type => type.id === activity.activityId)
+      {
+        activities.map(activity => {
+          if (activity.userId === user) {
+            const activityType = activityTypes.find(type => type.id === activity.activityTypeId)
 
-          return <Activity key={activity.id} activity={activity}
-            activityType={activityType}
-          />
-        }
-      })}
+            return <Activity key={activity.id}
+              activity={activity}
+              activityType={activityType}
+            />
+          }
+        })}
+
       <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
     </div>
 
