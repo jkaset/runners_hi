@@ -39,6 +39,60 @@
       "note": "",
       "activityTypeId": 1,
       "id": 8
+    },
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 3,
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 3,
+      "id": 10
+    },
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 2,
+      "id": 11
+    },
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 1,
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "10",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 13,
+      "id": 13
+    },
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "9",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 1,
+      "id": 14
     }
   ],
   "activityTypes": [

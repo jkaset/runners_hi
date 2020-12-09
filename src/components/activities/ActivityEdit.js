@@ -3,9 +3,7 @@ import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form } from 'react-bootstrap'
-import { format } from 'date-fns'
 
-//props: define parameters to capture object
 export const ActivityForm = (props) => {
   const { activities, addActivity } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
@@ -23,33 +21,20 @@ export const ActivityForm = (props) => {
     getActivityTypes()
   }, [])
 
-  const logNewActivity = () => {
+  const editNewActivity = () => {
 
-    //in case id is a string
-    const activityTypeId = parseInt(activityType.current.value)
-
-    if (activityTypeId === 0) {
-      window.alert("Please choose an activity")
-    } else {
-      addActivity({
-        userId: userId,
-        date: date,
-        moodPre: moodPre.current.value,
-        moodPost: "",
-        note: "",
-        activityTypeId
+      editActivity({
+        
+        moodPost: moodPost.current.value,
+        note: note.current.value,
+       
       })
       
 
-      // const date = (dateString) => {
-      //   const options = { year: "numeric", month: "long", day: "numeric" }
-      //   return new Date(dateString).toLocaleDateString(undefined, options)
-      // }
       //using history because I need change route when button is clicked
       //this is the push that needs to happen once form has been edited
-      .then((newActivity) => props.history.push(`/activities/edit/${newActivity.id}`))
+      .then((newActivity) => props.history.push('/activities'))
 
-      //instead, button on Form A needs to render Form B
     }
   }
   
@@ -94,35 +79,3 @@ export const ActivityForm = (props) => {
     )
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// //ORIGINAL CODE JUST TO RENDER FOR ROUTING
-// import React, {useContext, useRef, useEffect} from "react"
-// import "./Activity.css"
-// import {ActivityContext} from "./ActivityProvider"
-// import {Link} from "react-router-dom"
-
-// export const ActivityForm = (props) => {
-//   const { activities, addActivity } = useContext(ActivityContext)
-  
-//   useEffect(() => {
-//     addActivity()
-//   }, [])
-
-//     return (
-//       <>
-//       <h1>You made it to ACTIVITY FORM</h1>
-//       <Link to="/activities" className="btn btn-secondary">Log it!</Link>
-//       </>
-//     )
-// }
