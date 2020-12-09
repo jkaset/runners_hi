@@ -5,7 +5,7 @@ import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form } from 'react-bootstrap'
 
 export const ActivityEdit = (props) => {
-  const { activities, addActivity, getActivities, setActivity,editActivity } = useContext(ActivityContext)
+  const { activities, addActivity, getActivities, setActivity,updateActivity } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
   //references created here to attach to input fields in form
@@ -42,7 +42,7 @@ export const ActivityEdit = (props) => {
 
   const editNewActivity = () => {
 
-    editActivity({
+    updateActivity({
 
       moodPost: moodPost.current.value,
       note: note.current.value,

@@ -28,7 +28,33 @@
     }
   ],
   "activities": [
-
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 1,
+      "id": 1
+    },
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "3",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 4,
+      "id": 2
+    },
+    {
+      "userId": 4,
+      "date": "12-09-2020",
+      "moodPre": "3",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 4,
+      "id": 3
+    }
   ],
   "activityTypes": [
     {
