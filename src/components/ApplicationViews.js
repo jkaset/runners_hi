@@ -22,11 +22,16 @@ export const ApplicationViews = (props) => {
             <ActivityList />
           </Route> */}
           <Route exact path="/activities" render={
-              props => <ActivityList {...props} />
-            } />
+            props => <ActivityList {...props} />
+          } />
           <Route exact path="/activities/create" render={
-              props => <ActivityForm {...props} />
-            } />
+            props => <ActivityForm {...props} />
+          } />
+
+         
+          <Route exact path="/activities/edit/:activityId(\d+)" render={
+            props => <ActivityForm {...props} />
+          } />
         </ActivityProvider>
       </ActivityTypeProvider>
 
