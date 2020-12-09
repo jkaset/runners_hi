@@ -31,6 +31,10 @@ export const ApplicationViews = (props) => {
 
           <Route path="/:activities/edit/(\d+)" render={
             props => <ActivityEdit {...props} />
+         
+          <Route exact path="/activities/edit/:activityId(\d+)" render={
+            props => <ActivityForm {...props} />
+
           } />
         </ActivityProvider>
       </ActivityTypeProvider>

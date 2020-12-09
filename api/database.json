@@ -19,10 +19,16 @@
       "password": "dog",
       "name": "Rosey Cotton",
       "id": 3
+    },
+    {
+      "email": "fj@fj.com",
+      "password": "fj",
+      "name": "Frangipane Jones",
+      "id": 4
     }
   ],
   "activities": [
-    
+
   ],
   "activityTypes": [
     {

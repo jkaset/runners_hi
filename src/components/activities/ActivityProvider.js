@@ -27,6 +27,7 @@ export const ActivityProvider = (props) => {
             })
     }
 
+
     // const getActivityById = (id) => {
     //     console.log(id)
     //     return fetch(`http://localhost:8088/activities/${ id }?_expand=location&_expand=customer`)
@@ -60,6 +61,4 @@ export const ActivityProvider = (props) => {
     )
 
 
-}
-
-// inside return statement, add getActivityById, searchTerms, setTerms, releaseActivity, updateActivity
+//searchTerms, setTerms,
