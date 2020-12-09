@@ -40,20 +40,19 @@ export const ActivityForm = (props, history) => {
           1. Get the value of the URL parameter.
           2. Use that `id` to find the activity.
           3. Update component state variable.
-  */
-  // const getActivityInEditMode = () => {
-  //   if (editMode) {
-  //     const activityId = parseInt(props.match.params.activityId)
-  //     const selectedActivity = activities.find(a => a.id === activityId) || {}
-  //     setActivity(selectedActivity)
-  //   }
-  // }
+  // */
+  const getActivityInEditMode = () => {
+    if (editMode) {
+      const activityId = parseInt(props.match.params.activityId)
+      const selectedActivity = activities.find(a => a.id === activityId) || {}
+      setActivity(selectedActivity)
+    }
+  }
 
 
   //on initialization, get types for form
   useEffect(() => {
-    getActivityTypes()
-    getActivities()
+    getActivityTypes().then(getActivities)
   }, [])
 
   const logNewActivity = () => {
@@ -69,25 +68,27 @@ export const ActivityForm = (props, history) => {
           id: activity.id,
           userId: parseInt(localStorage.getItem("runnersHi-user")),
           date: format(new Date(), 'MM-dd-yyyy'),
-          moodPre: moodPre.current.value,
-          moodPost: moodPost.current.value,
-          note: note.current.value,
-          activityTypeId: parseInt(activityType.current.value)
+          moodPre: activity.moodPre,
+          moodPost: activity.moodPost,
+          note: activity.note,
+          activityTypeId
         })
           .then(() => props.history.push("/activities"))
       } else {
         addActivity({
-          userId: userId,
-          date: date,
-          moodPre: moodPre.current.value,
+          userId: activity.userId,
+          date: format(new Date(), 'MM-dd-yyyy'),
+          moodPre: activity.moodPre,
           moodPost: "",
           note: "",
           activityTypeId
         })
-          .then(() => props.history.push("/activities"))
+          //render to edit mode
+          .then(getActivityInEditMode)
+
       }
     }
-
+  }
 
     //using history because I need change route when button is clicked
     //this is the push that needs to happen once form has been edited
@@ -104,7 +105,7 @@ export const ActivityForm = (props, history) => {
           <h4>Pre-run Stats</h4>
           <Form.Group controlId="form.ControlSelect1">
             <Form.Label>Today's activity</Form.Label>
-            <Form.Control ref={activityType} as="select">
+            <Form.Control  as="select">
               <option value="0">choose your run</option>
               {activityTypes.map(a => (
                 <option key={a.id} value={a.id}>
@@ -116,7 +117,7 @@ export const ActivityForm = (props, history) => {
           </Form.Group>
           <Form.Group controlId="form.ControlSelect1">
             <Form.Label>On a scale of 1-10, how's your mood?</Form.Label>
-            <Form.Control ref={moodPre} as="select">
+            <Form.Control  as="select">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -134,17 +135,46 @@ export const ActivityForm = (props, history) => {
             logNewActivity()
           }}>old button</button>
 
-        <button className="btn btn-secondary" type="submit" onClick={evt => {
-          evt.preventDefault()
-          logNewActivity()
-          props.history.push(`/activities/edit/${activity.id}`)
-        }}>Run (get form b)</button>
-        </Form>
+          <button className="btn btn-secondary" type="submit" onClick={evt => {
+            evt.preventDefault()
+            logNewActivity()
+            props.history.push(`/activities/edit/${activity.id}`)
+          }}>Run (get form b)</button>
+
+          
+            <Form.Group controlId="form.ControlSelect1">
+              <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
+              <Form.Control  as="select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </Form.Control>
+            </Form.Group>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Run Notes:</Form.Label>
+              <Form.Control as="textarea" rows={3} />
+            </Form.Group>
+            <button className="btn btn-secondary" type="submit" onClick={evt => {
+              evt.preventDefault() // Prevent browser from submitting the form
+              logNewActivity()
+            }}>Log it</button>
+          </Form>
+
+
+          
+        
       </>
     )
 
   }
-}
+
 
 
 
