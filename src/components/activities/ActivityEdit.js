@@ -1,21 +1,33 @@
-import React, { useContext, useRef, useEffect } from "react"
+import React, { useContext, useRef, useEffect, useState } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form } from 'react-bootstrap'
 
 export const ActivityEdit = (props) => {
-  const { activities, addActivity, getActivities, setActivity,updateActivity } = useContext(ActivityContext)
+  const { activities, addActivity, getActivities, updateActivity } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
+
+  // Component state
+  const [activity, setActivity] = useState({}) 
   //references created here to attach to input fields in form
 
-  const moodPost = useRef(null)
-  const note = useRef(null)
+  // const moodPost = useRef(null)
+  // const note = useRef(null)
 
   // Is there a a URL parameter??
   const editMode = props.match.params.hasOwnProperty("activityId")
 
+  const handleControlledInputChange = (event) => {
+    /*
+        When changing a state object or array, always create a new one
+        and change state instead of modifying current one
+    */
+    const newActivity = Object.assign({}, activity)
+    newActivity[event.target.name] = event.target.value
+    setActivity(newActivity)
+}
   /*
          If there is a URL parameter, then the user has chosen to
          edit an activity.
@@ -42,18 +54,20 @@ export const ActivityEdit = (props) => {
 
   const editNewActivity = () => {
 
-    updateActivity({
+    
+      updateActivity({
 
-      moodPost: moodPost.current.value,
-      note: note.current.value,
+        moodPost: activity.moodPost,
+        note: activity.note,
 
-    })
+      })
 
-      //using history because I need change route when button is clicked
-      //this is the push that needs to happen once form has been edited
-      .then(() => props.history.push('/activities'))
+        //using history because I need change route when button is clicked
+        //this is the push that needs to happen once form has been edited
+        .then(() => props.history.push('/activities'))
 
-  }
+    }
+  
 
 
   //form B updateRun
@@ -64,7 +78,7 @@ export const ActivityEdit = (props) => {
         <h4>Time for your post-run check-in</h4>
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
-          <Form.Control as="select" ref={moodPost} >
+          <Form.Control as="select" defaultValue={activity.moodPost}  >
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -79,7 +93,7 @@ export const ActivityEdit = (props) => {
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Run Notes:</Form.Label>
-          <Form.Control as="textarea" rows={3} ref={note} />
+          <Form.Control as="textarea" rows={3}  defaultValue={activity.note} />
         </Form.Group>
         <button className="btn btn-secondary" type="submit" onClick={evt => {
           evt.preventDefault() // Prevent browser from submitting the form
@@ -90,3 +104,5 @@ export const ActivityEdit = (props) => {
   )
 
 }
+
+//ref={note} ref={moodPost}
