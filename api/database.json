@@ -22,15 +22,7 @@
     }
   ],
   "activities": [
-    {
-      "userId": 4,
-      "date": "12-09-2020",
-      "moodPre": "1",
-      "moodPost": "",
-      "note": "",
-      "activityTypeId": 1,
-      "id": 1
-    }
+    
   ],
   "activityTypes": [
     {
