@@ -63,43 +63,25 @@ export const ActivityForm = (props, history) => {
     if (activityTypeId === 0) {
       window.alert("Please choose an activity")
     } else {
-      if (editMode) {
-        updateActivity({
-          id: activity.id,
-          userId: parseInt(localStorage.getItem("runnersHi-user")),
-          date: format(new Date(), 'MM-dd-yyyy'),
-          moodPre: activity.moodPre,
-          moodPost: activity.moodPost,
-          note: activity.note,
-          activityTypeId
-        })
-          .then(() => props.history.push("/activities"))
-      } else {
-        addActivity({
-          userId: activity.userId,
-          date: format(new Date(), 'MM-dd-yyyy'),
-          moodPre: activity.moodPre,
-          moodPost: "",
-          note: "",
-          activityTypeId
-        })
-          //render to edit mode
-          .then(getActivityInEditMode)
+      addActivity({
+        userId: userId,
+        date: date,
+        moodPre: moodPre.current.value,
+        moodPost: "",
+        note: "",
+        activityTypeId
+      })
+      
+      //using history because I need change route when button is clicked
+      //this is the push that needs to happen once form has been edited
+      .then((newActivity) => props.history.push(`/activities/edit/${newActivity.id}`))
 
-      }
+      //instead, button on Form A needs to render Form B
     }
   }
-
-    //using history because I need change route when button is clicked
-    //this is the push that needs to happen once form has been edited
-    //.then(() => props.history.push("/activities"))
-
-
-    //instead, button on Form A needs to render Form B
-    //   }
-    // }
-
-    return (
+  
+  //form A createRun
+  return (
       <>
         <Form>
           <h4>Pre-run Stats</h4>
