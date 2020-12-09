@@ -23,11 +23,11 @@ const addActivity = activity => {
         .then(getActivities)
 }
 
-// const getActivityById = (id) => {
-//     console.log(id)
-//     return fetch(`http://localhost:8088/activities/${ id }?_expand=location&_expand=customer`)
-//         .then(res => res.json())
-// }
+const getActivityById = (id) => {
+    console.log(id)
+    return fetch(`http://localhost:8088/activities/${ id }?_expand=location&_expand=customer`)
+        .then(res => res.json())
+}
 
 const deleteActivity = activityId => {
     return fetch(`http://localhost:8088/activities/${ activityId }`, {
@@ -36,20 +36,20 @@ const deleteActivity = activityId => {
     .then(getActivities)
 }
 
-// const updateActivity = activity => {
-//     return fetch(`http://localhost:8088/activities/${activity.id}`, {
-//         method: "PUT",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(activity)
-//     })
-//         .then(getActivities)
-// }
+const updateActivity = activity => {
+    return fetch(`http://localhost:8088/activities/${activity.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(activity)
+    })
+        .then(getActivities)
+}
 
 return (
     <ActivityContext.Provider value={{
-        activities, addActivity, getActivities, deleteActivity
+        activities, addActivity, getActivities, deleteActivity, getActivityById,  updateActivity
     }}>
         {props.children}
     </ActivityContext.Provider>
@@ -58,4 +58,4 @@ return (
 
 }
 
-// inside return statement, add getActivityById, searchTerms, setTerms, releaseActivity, updateActivity
+//searchTerms, setTerms,
