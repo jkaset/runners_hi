@@ -40,11 +40,6 @@ export const ActivityForm = (props) => {
         activityTypeId
       })
       
-
-      // const date = (dateString) => {
-      //   const options = { year: "numeric", month: "long", day: "numeric" }
-      //   return new Date(dateString).toLocaleDateString(undefined, options)
-      // }
       //using history because I need change route when button is clicked
       //this is the push that needs to happen once form has been edited
       .then((newActivity) => props.history.push(`/activities/edit/${newActivity.id}`))

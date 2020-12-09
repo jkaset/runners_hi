@@ -4,6 +4,7 @@ import { ActivityList } from "./activities/ActivityList"
 import { ActivityProvider } from "./activities/ActivityProvider"
 import { ActivityTypeProvider } from "./activityTypes/ActivityTypeProvider"
 import { ActivityForm } from "./activities/ActivityForm"
+import { ActivityEdit } from "./activities/ActivityEdit"
 import { HomeList } from "./home/HomeList"
 
 export const ApplicationViews = (props) => {
@@ -22,11 +23,15 @@ export const ApplicationViews = (props) => {
             <ActivityList />
           </Route> */}
           <Route exact path="/activities" render={
-              props => <ActivityList {...props} />
-            } />
+            props => <ActivityList {...props} />
+          } />
           <Route exact path="/activities/create" render={
-              props => <ActivityForm {...props} />
-            } />
+            props => <ActivityForm {...props} />
+          } />
+
+          <Route path="/:activities/edit/(\d+)" render={
+            props => <ActivityEdit {...props} />
+          } />
         </ActivityProvider>
       </ActivityTypeProvider>
 
