@@ -40,15 +40,6 @@
       "note": "Big hills",
       "activityTypeId": 4,
       "id": 1
-    },
-    {
-      "userId": 2,
-      "date": "12-10-2020",
-      "moodPre": "1",
-      "moodPost": "10",
-      "note": "",
-      "activityTypeId": 2,
-      "id": 2
     }
   ],
   "activityTypes": [

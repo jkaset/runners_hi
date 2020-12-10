@@ -15,6 +15,7 @@ export default function ActivityMoodsMath() {
   const moodsPreTotal = () => {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     activities.forEach(activity => {
+
       if (activity.userId === user) {
         //moodsPre.splice(0, 1)
         moodsPre.push(parseInt(activity.moodPre))
@@ -22,7 +23,12 @@ export default function ActivityMoodsMath() {
       console.log(moodsPre)
     })
 
-    return moodsPre.reduce(reducer);
+    return moodsPre.reduce(reducer)
+    // if (userActivities.length > 0) {
+    //   return moodsPre.reduce(reducer)
+    //   } else {
+    //     return 0
+    //   }
   }
 
   let moodsPost = []
@@ -38,7 +44,11 @@ export default function ActivityMoodsMath() {
       }
       console.log(moodsPost)
     })
-
+    // if (userActivities.length > 0) {
+    // return moodsPost.reduce(reducer)
+    // } else {
+    //   return 0
+    // }
     return moodsPost.reduce(reducer)
   }
 
@@ -49,9 +59,12 @@ export default function ActivityMoodsMath() {
   const average = divisible/dividedBy 
 
 
-
+  // if (userActivities.length > 0) {
+  // return Math.round(average * 10)
+  // } else {
+  //   return 0
+  // }
   return Math.round(average * 10)
-
 }
 
 
