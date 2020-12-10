@@ -29,7 +29,7 @@
   ],
   "activities": [
     {
-      "userId": 4,
+      "userId": 1,
       "date": "12-09-2020",
       "moodPre": "1",
       "moodPost": "",
@@ -38,21 +38,21 @@
       "id": 1
     },
     {
-      "userId": 4,
+      "userId": 1,
       "date": "12-09-2020",
-      "moodPre": "3",
+      "moodPre": "1",
       "moodPost": "",
       "note": "",
-      "activityTypeId": 4,
+      "activityTypeId": 10,
       "id": 2
     },
     {
-      "userId": 4,
+      "userId": 1,
       "date": "12-09-2020",
-      "moodPre": "3",
+      "moodPre": "4",
       "moodPost": "",
       "note": "",
-      "activityTypeId": 4,
+      "activityTypeId": 8,
       "id": 3
     }
   ],
