@@ -2,10 +2,8 @@ import React, {useContext} from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 
-
 export const Activity = ({ activity, activityType, props }) => {
   const { deleteActivity } = useContext(ActivityContext)
-
 
   const activityToDelete = (activity) => {
     const activityId = activity.id
@@ -25,10 +23,6 @@ export const Activity = ({ activity, activityType, props }) => {
       <button
         onClick={() => {
           activityToDelete(activity)
-          //   .then(() => {
-          //     props.history.push("/activities")
-          // })
-
         }}
       >Delete</button>
 
@@ -36,4 +30,3 @@ export const Activity = ({ activity, activityType, props }) => {
   )
 }
 
-//<div className="activity__moodPre">Mood: {activity.moodPre}</div>
