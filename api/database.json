@@ -34,42 +34,12 @@
   "activities": [
     {
       "userId": 1,
-      "date": "12-09-2020",
-      "moodPre": "1",
-      "moodPost": "",
-      "note": "",
-      "activityTypeId": 2,
+      "date": "12-10-2020",
+      "moodPre": "4",
+      "moodPost": "9",
+      "note": "Quick one on my lunch break.",
+      "activityTypeId": 1,
       "id": 1
-    },
-    {
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "date": "12-10-2020",
-      "moodPre": "3",
-      "moodPost": "",
-      "note": "",
-      "activityTypeId": 1,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "date": "12-10-2020",
-      "moodPre": "1",
-      "moodPost": "",
-      "note": "",
-      "activityTypeId": 1,
-      "id": 6
-    },
-    {
-      "userId": 5,
-      "date": "12-10-2020",
-      "moodPre": "1",
-      "moodPost": "",
-      "note": "",
-      "activityTypeId": 1,
-      "id": 7
     }
   ],
   "activityTypes": [

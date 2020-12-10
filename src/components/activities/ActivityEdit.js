@@ -13,11 +13,11 @@ export const ActivityEdit = (props) => {
   const [activity, setActivity] = useState({}) 
   //references created here to attach to input fields in form
 
-  // const moodPost = useRef(null)
-  // const note = useRef(null)
+  const moodPost = useRef(null)
+  const note = useRef(null)
 
   // Is there a a URL parameter??
-  const editMode = props.match.params.hasOwnProperty("activityId")
+  //const editMode = props.match.params.hasOwnProperty("activityId")
 
   const handleControlledInputChange = (event) => {
     /*
@@ -36,17 +36,19 @@ export const ActivityEdit = (props) => {
              2. Use that `id` to find the activity.
              3. Update component state variable.
      */
+
+     //find activity id based on path in address bar, then find that activity from the activities in the database, then set that activity in state
   const getActivityInEditMode = () => {
-    if (editMode) {
+   
       const activityId = parseInt(props.match.params.activityId)
       const selectedActivity = activities.find(a => a.id === activityId) || {}
       setActivity(selectedActivity)
-    }
+    
   }
-  //on initialization, get types for form
+  //on initialization, gets/sets activities
   useEffect(() => {
     getActivityTypes()
-    //getActivities()
+    getActivities()
   }, [])
 
   // Once provider state is updated, determine the activity (if edit)
@@ -54,26 +56,15 @@ export const ActivityEdit = (props) => {
     getActivityInEditMode()
   }, [activities])
 
-  //pass in activity id???
-  //can use refs on create
-  //can use refs of values you're not editing
-  // get id of item just created to edit, to do that, return item just created, send that in as parameter for edit
 
-  
-  
-  // const activityEdit = (activity) => {
-  //   const activityId = activity.id 
-  //   updateActivity(activityId)
-  //}
 
   const editNewActivity = () => {
 
     //if (editMode) {
       updateActivity({
-
-        moodPost: activity.moodPost,
-        note: activity.note,
-
+        id: parseInt(props.match.params.activityId),
+        moodPost: moodPost.current.value,
+        note: note.current.value,
       })
     
 
@@ -87,7 +78,7 @@ export const ActivityEdit = (props) => {
    // } 
     }
   
-
+    console.log(activity)
 
   //form B updateRun
   return (
@@ -98,7 +89,7 @@ export const ActivityEdit = (props) => {
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
           
-          <Form.Control as="select" defaultValue={activity.moodPost} onChange={handleControlledInputChange} >
+          <Form.Control as="select" ref={moodPost} onChange={handleControlledInputChange} >
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -113,7 +104,7 @@ export const ActivityEdit = (props) => {
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Run Notes:</Form.Label>
-          <Form.Control as="textarea" rows={3}  defaultValue={activity.note} onChange={handleControlledInputChange}/>
+          <Form.Control as="textarea" rows={3}  ref={note} onChange={handleControlledInputChange}/>
         </Form.Group>
         <button className="btn btn-secondary" type="submit" onClick={evt => {
           evt.preventDefault() 
@@ -126,3 +117,31 @@ export const ActivityEdit = (props) => {
 }
 
 //ref={note} ref={moodPost}
+
+  //const user = parseInt(localStorage.getItem('runnersHi_user'))
+  //console.log(user)
+
+  // const activityId = activities.map(activity=> {
+  //   if (activity.id === user.activityId) {
+  //     return activity.id
+  //   }
+  // })
+
+  // const userDataArray = activities.map(activity=> {
+  //   if (activity.userId === user) {
+  //     console.log(activity)
+  //   }
+  //   console.log(userDataArray)
+  // })
+  //pass in activity id???
+  //can use refs on create
+  //can use refs of values you're not editing
+  // get id of item just created to edit, to do that, return item just created, send that in as parameter for edit
+
+  
+  
+  // const activityEdit = (activity) => {
+  //   const activityId = activity.id 
+  //   updateActivity(activityId)
+  // }
+ 

@@ -9,22 +9,13 @@ export const ActivityList = (props) => {
   const { activities, getActivities } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
-  const [activity, setActivity] = useState({})
+  //const [activity, setActivity] = useState({})
 
   useEffect(() => {
     console.log("ActivityList: Initial render before data")
     getActivityTypes().then(getActivities)
   }, [])
 
-  // useEffect(() => {
-  //   const activityType = activityTypes.find(at => at.id === activity.activityTypeId) || {}
-  //   setActivity(activityType)
-  // }, [activityTypes])
-
-  // useEffect(() => {
-  //   const activity = activities.find(a => a.id === parseInt(props.match.params.activityId)) || {}
-  //   setActivity(activity)
-  // }, [activities])
 
   const user = parseInt(localStorage.getItem("runnersHi_user"))
 
@@ -51,9 +42,15 @@ export const ActivityList = (props) => {
   )
 }
 
-// return (
-//   <>
-//   <h1>You made it to SAVED ACTIVITIES</h1>
-//   <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
-//   </>
-// )
+
+
+
+// useEffect(() => {
+  //   const activityType = activityTypes.find(at => at.id === activity.activityTypeId) || {}
+  //   setActivity(activityType)
+  // }, [activityTypes])
+
+  // useEffect(() => {
+  //   const activity = activities.find(a => a.id === parseInt(props.match.params.activityId)) || {}
+  //   setActivity(activity)
+  // }, [activities])

@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect, useState } from "react"
+import React, { useContext, useRef, useEffect } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
@@ -17,6 +17,87 @@ export const ActivityForm = (props, history) => {
   const moodPost = useRef(null)
   const note = useRef(null)
   const userId = parseInt(localStorage.getItem("runnersHi_user"))
+
+  //on initialization, get types for form
+  useEffect(() => {
+    getActivityTypes()
+  }, [])
+
+  const logNewActivity = () => {
+
+    //in case id is a string
+    const activityTypeId = parseInt(activityType.current.value)
+
+    if (activityTypeId === 0) {
+      window.alert("Please choose an activity")
+    } else {
+      addActivity({
+        
+        userId: userId,
+        date: date,
+        moodPre: moodPre.current.value,
+        moodPost: "",
+        note: "",
+        activityTypeId
+      })
+      
+      //using history because I need change route when button is clicked
+      //this is the push that needs to happen once form has been edited
+      .then((newActivity) => props.history.push(`/activities/edit/${newActivity.id}`))
+     
+      //instead, button on Form A needs to render Form B
+    }
+  }
+  
+  //form A createRun
+  //refactor so moods has a for i<10 loop function
+  return (
+      <>
+        <Form>
+          <h4>Pre-run Stats</h4>
+          <Form.Group controlId="form.ControlSelect1">
+            <Form.Label>Today's activity</Form.Label>
+            <Form.Control  as="select" ref={activityType}>
+              <option value="0">choose your run</option>
+              {activityTypes.map(a => (
+                <option key={a.id} value={a.id}>
+                  {a.name}
+                </option>
+              ))}
+
+            </Form.Control>
+          </Form.Group>
+          <Form.Group controlId="form.ControlSelect1">
+            <Form.Label>On a scale of 1-10, how's your mood?</Form.Label>
+            <Form.Control  as="select" ref={moodPre}>
+              
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </Form.Control>
+          </Form.Group>
+          {/* <button className="btn btn-secondary" type="submit" onClick={evt => {
+            evt.preventDefault() // Prevent browser from submitting the form
+            logNewActivity()
+          }}>old button</button> */}
+
+          <button className="btn btn-secondary" type="submit" onClick={evt => {
+            evt.preventDefault()
+            logNewActivity()
+            
+          }}>Ready to Run!</button>            
+          </Form>  
+      </>
+    )
+
+  }
 
   // Component state
   //const [activity, setActivity] = useState({})
@@ -48,85 +129,6 @@ export const ActivityForm = (props, history) => {
   //     setActivity(selectedActivity)
   //   }
   // }
-
-
-  //on initialization, get types for form
-  useEffect(() => {
-    getActivityTypes()
-  }, [])
-
-  const logNewActivity = () => {
-
-    //in case id is a string
-    const activityTypeId = parseInt(activityType.current.value)
-
-    if (activityTypeId === 0) {
-      window.alert("Please choose an activity")
-    } else {
-      addActivity({
-        userId: userId,
-        date: date,
-        moodPre: moodPre.current.value,
-        moodPost: "",
-        note: "",
-        activityTypeId
-      })
-      
-      //using history because I need change route when button is clicked
-      //this is the push that needs to happen once form has been edited
-      .then((newActivity) => props.history.push(`/activities/edit/${newActivity.id}`))
-
-      //instead, button on Form A needs to render Form B
-    }
-  }
-  
-  //form A createRun
-  return (
-      <>
-        <Form>
-          <h4>Pre-run Stats</h4>
-          <Form.Group controlId="form.ControlSelect1">
-            <Form.Label>Today's activity</Form.Label>
-            <Form.Control  as="select" ref={activityType}>
-              <option value="0">choose your run</option>
-              {activityTypes.map(a => (
-                <option key={a.id} value={a.id}>
-                  {a.name}
-                </option>
-              ))}
-
-            </Form.Control>
-          </Form.Group>
-          <Form.Group controlId="form.ControlSelect1">
-            <Form.Label>On a scale of 1-10, how's your mood?</Form.Label>
-            <Form.Control  as="select" ref={moodPre}>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-            </Form.Control>
-          </Form.Group>
-          {/* <button className="btn btn-secondary" type="submit" onClick={evt => {
-            evt.preventDefault() // Prevent browser from submitting the form
-            logNewActivity()
-          }}>old button</button> */}
-
-          <button className="btn btn-secondary" type="submit" onClick={evt => {
-            evt.preventDefault()
-            logNewActivity()
-            
-          }}>Ready to Run!</button>            
-          </Form>  
-      </>
-    )
-
-  }
 
 
 
