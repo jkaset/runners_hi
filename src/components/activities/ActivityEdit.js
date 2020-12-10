@@ -5,7 +5,7 @@ import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form } from 'react-bootstrap'
 
 export const ActivityEdit = (props) => {
-  const { activities, addActivity, getActivities, updateActivity } = useContext(ActivityContext)
+  const { activities, addActivity, getActivities, updateActivity, deleteActivity } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
 
@@ -27,6 +27,7 @@ export const ActivityEdit = (props) => {
     const newActivity = Object.assign({}, activity)
     newActivity[event.target.name] = event.target.value
     setActivity(newActivity)
+    
 }
   /*
          If there is a URL parameter, then the user has chosen to
@@ -54,7 +55,19 @@ export const ActivityEdit = (props) => {
   }, [activities])
 
   //pass in activity id???
+  //can use refs on create
+  //can use refs of values you're not editing
+  // get id of item just created to edit, to do that, return item just created, send that in as parameter for edit
+
+  
+  
+  // const activityEdit = (activity) => {
+  //   const activityId = activity.id 
+  //   updateActivity(activityId)
+  //}
+
   const editNewActivity = () => {
+
     
       updateActivity({
 
@@ -67,9 +80,10 @@ export const ActivityEdit = (props) => {
         //this is the push that needs to happen once form has been edited
         // .then((newActivity) => props.history.push(`/activities/edit/${newActivity.id}`)) 
         
-        .then(() => props.history.push('/activities/edit')) 
+        //.then(() => props.history.push('/activities/edit')) 
 
         .then(() => props.history.push('/activities'))
+        
     }
   
 
