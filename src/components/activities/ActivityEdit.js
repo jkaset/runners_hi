@@ -46,7 +46,7 @@ export const ActivityEdit = (props) => {
   //on initialization, get types for form
   useEffect(() => {
     getActivityTypes()
-    getActivities()
+    //getActivities()
   }, [])
 
   // Once provider state is updated, determine the activity (if edit)
@@ -68,22 +68,23 @@ export const ActivityEdit = (props) => {
 
   const editNewActivity = () => {
 
-    
+    //if (editMode) {
       updateActivity({
 
         moodPost: activity.moodPost,
         note: activity.note,
 
       })
+    
 
         //using history because I need change route when button is clicked
         //this is the push that needs to happen once form has been edited
         // .then((newActivity) => props.history.push(`/activities/edit/${newActivity.id}`)) 
         
         //.then(() => props.history.push('/activities/edit')) 
-
+       
         .then(() => props.history.push('/activities'))
-        
+   // } 
     }
   
 

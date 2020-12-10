@@ -5,18 +5,20 @@ import { ActivityProvider } from "./activities/ActivityProvider"
 import { ActivityTypeProvider } from "./activityTypes/ActivityTypeProvider"
 import { ActivityForm } from "./activities/ActivityForm"
 import { ActivityEdit } from "./activities/ActivityEdit"
+import { UserProvider } from "./users/UserProvider"
 
 import { HomeList } from "./home/HomeList"
 
 export const ApplicationViews = (props) => {
   return (
     <>
-
+    <UserProvider>
       <ActivityProvider>
         <Route exact path="/" render={
           props => <HomeList {...props} />
         } />
       </ActivityProvider>
+    </UserProvider>
         
       <ActivityTypeProvider>
         <ActivityProvider>
