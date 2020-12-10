@@ -5,6 +5,8 @@ import { ActivityProvider } from "./activities/ActivityProvider"
 import { ActivityTypeProvider } from "./activityTypes/ActivityTypeProvider"
 import { ActivityStartForm } from "./activities/ActivityStartForm"
 import { ActivityEndForm } from "./activities/ActivityEndForm"
+import { ActivityMoodMath } from "./activities/ActivityMoodMath"
+
 import { UserProvider } from "./users/UserProvider"
 
 import { HomeList } from "./home/HomeList"

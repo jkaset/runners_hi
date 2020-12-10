@@ -16,12 +16,54 @@ export const ActivityList = (props) => {
     getActivityTypes().then(getActivities)
   }, [])
 
-
+  
   const user = parseInt(localStorage.getItem("runnersHi_user"))
+  
+  //Mood math 
+  
+
+  let moodsPre = []
+  
+  const moodsPreTotal = () => {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    activities.forEach(activity => {
+      if (activity.userId === user) {
+        moodsPre.push(parseInt(activity.moodPre))
+      }
+      console.log(moodsPre)
+    })
+
+    return moodsPre.reduce(reducer);
+  }
+
+  let moodsPost = []
+  const moodsPostTotal = () => {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    activities.forEach(activity => {
+      if (activity.userId === user) {
+        moodsPost.push(parseInt(activity.moodPost))
+      }
+      console.log(moodsPost)
+    })
+
+    return moodsPost.reduce(reducer)
+  }
+
+  const average = (moodsPostTotal() - moodsPreTotal())/moodsPre.length
+  
+  const ActivityMoodMath = () => {
+    
+    return average * 10
+
+  }
+
+
 
   return (
+    <>
     <div>
-      <h2>Your activities</h2>
+      <h3>Running changes your mood by <ActivityMoodMath />%</h3>
+      <h4>Your Stats</h4>
 
 
       {
@@ -38,19 +80,10 @@ export const ActivityList = (props) => {
 
       <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
     </div>
-
+</>
   )
 }
 
 
 
 
-// useEffect(() => {
-  //   const activityType = activityTypes.find(at => at.id === activity.activityTypeId) || {}
-  //   setActivity(activityType)
-  // }, [activityTypes])
-
-  // useEffect(() => {
-  //   const activity = activities.find(a => a.id === parseInt(props.match.params.activityId)) || {}
-  //   setActivity(activity)
-  // }, [activities])
