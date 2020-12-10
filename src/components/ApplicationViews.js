@@ -32,7 +32,7 @@ export const ApplicationViews = (props) => {
             props => <ActivityForm {...props} />
           } />
 
-          <Route exact path="/:activities/edit/(\d+)" render={
+          <Route exact path="/activities/edit/:activityId(\d+)" render={
             props => <ActivityEdit {...props} />
           } />
 
