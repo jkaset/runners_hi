@@ -35,20 +35,11 @@
     {
       "userId": 1,
       "date": "12-10-2020",
-      "moodPre": "4",
-      "moodPost": "9",
-      "note": "Quick one on my lunch break.",
-      "activityTypeId": 1,
+      "moodPre": "2",
+      "moodPost": "3",
+      "note": "Big hills",
+      "activityTypeId": 4,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "date": "12-10-2020",
-      "moodPre": "5",
-      "moodPost": "8",
-      "note": "Beautiful day",
-      "activityTypeId": 3,
-      "id": 3
     }
   ],
   "activityTypes": [
