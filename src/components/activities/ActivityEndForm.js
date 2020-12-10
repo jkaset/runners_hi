@@ -21,6 +21,7 @@ export const ActivityEndForm = (props) => {
         .then(() => props.history.push('/activities'))
     }
  
+    const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   return (
     <>
       <Form>
@@ -29,19 +30,13 @@ export const ActivityEndForm = (props) => {
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
           
-          <Form.Control as="select" ref={moodPost}  >
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
+          <Form.Control as="select" ref={moodPost}>
+          {moods.map(m => (
+              <option key={m}>{m}</option>
+            ))}
           </Form.Control>
         </Form.Group>
+
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Run Notes:</Form.Label>
           <Form.Control as="textarea" rows={3}  ref={note} />
