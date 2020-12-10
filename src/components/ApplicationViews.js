@@ -3,8 +3,8 @@ import { Route } from "react-router-dom"
 import { ActivityList } from "./activities/ActivityList"
 import { ActivityProvider } from "./activities/ActivityProvider"
 import { ActivityTypeProvider } from "./activityTypes/ActivityTypeProvider"
-import { ActivityForm } from "./activities/ActivityForm"
-import { ActivityEdit } from "./activities/ActivityEdit"
+import { ActivityStartForm } from "./activities/ActivityStartForm"
+import { ActivityEndForm } from "./activities/ActivityEndForm"
 import { UserProvider } from "./users/UserProvider"
 
 import { HomeList } from "./home/HomeList"
@@ -22,23 +22,17 @@ export const ApplicationViews = (props) => {
         
       <ActivityTypeProvider>
         <ActivityProvider>
-          {/* <Route exact path="/activities">
-            <ActivityList />
-          </Route> */}
+         
           <Route exact path="/activities" render={
             props => <ActivityList {...props} />
           } />
           <Route exact path="/activities/create" render={
-            props => <ActivityForm {...props} />
+            props => <ActivityStartForm {...props} />
           } />
 
           <Route exact path="/activities/edit/:activityId(\d+)" render={
-            props => <ActivityEdit {...props} />
+            props => <ActivityEndForm {...props} />
           } />
-
-          {/* <Route exact path="/activities/edit/:activityId(\d+)" render={
-            props => <ActivityEdit {...props} />
-          } />  */}
 
         </ActivityProvider>
       </ActivityTypeProvider>

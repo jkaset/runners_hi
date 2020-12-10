@@ -40,6 +40,15 @@
       "note": "Quick one on my lunch break.",
       "activityTypeId": 1,
       "id": 1
+    },
+    {
+      "userId": 1,
+      "date": "12-10-2020",
+      "moodPre": "5",
+      "moodPost": "8",
+      "note": "Beautiful day",
+      "activityTypeId": 3,
+      "id": 3
     }
   ],
   "activityTypes": [
