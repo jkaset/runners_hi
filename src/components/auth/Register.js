@@ -3,7 +3,7 @@ import "./Login.css"
 
 export const Register = (props) => {
     const firstName = useRef()
-    const lastName = useRef()
+    //const lastName = useRef()
     const email = useRef()
     const password = useRef()
     const verifyPassword = useRef()
@@ -33,7 +33,7 @@ export const Register = (props) => {
                             body: JSON.stringify({
                                 email: email.current.value,
                                 password: password.current.value,
-                                name: `${firstName.current.value} ${lastName.current.value}`
+                                name: `${firstName.current.value}`
                             })
                         })
                             .then(_ => _.json())
@@ -73,10 +73,7 @@ export const Register = (props) => {
                     <label htmlFor="firstName"> First Name </label>
                     <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
                 </fieldset>
-                <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
-                    <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
-                </fieldset>
+                
                 <fieldset>
                     <label htmlFor="inputEmail"> Email address </label>
                     <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />

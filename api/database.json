@@ -3,15 +3,13 @@
     {
       "email": "jk@jk.com",
       "password": "jk",
-      "firstName": "Jas",
-      "lastName": "Kas",
+      "name": "Jas",
       "id": 1
     },
     {
       "email": "hk@hk.com",
       "password": "hk",
-      "firstName": "Harry",
-      "lastName": "Kagan",
+      "name": "Harry",
       "id": 2
     },
     {
@@ -21,13 +19,59 @@
       "id": 3
     },
     {
-      "email": "fj@fj.com",
-      "password": "fj",
-      "name": "Frangipane Jones",
+      "email": "ben@ben.com",
+      "password": "ben",
+      "name": "Ben",
       "id": 4
+    },
+    {
+      "email": "jes@jes.com",
+      "password": "jes",
+      "name": "Jes",
+      "id": 5
     }
   ],
-  "activities": [],
+  "activities": [
+    {
+      "userId": 1,
+      "date": "12-09-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 2,
+      "id": 1
+    },
+    {
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "date": "12-10-2020",
+      "moodPre": "3",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 1,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "date": "12-10-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 1,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "date": "12-10-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 1,
+      "id": 7
+    }
+  ],
   "activityTypes": [
     {
       "id": 1,
