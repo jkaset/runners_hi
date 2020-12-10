@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { ActivityContext } from "./ActivityProvider"
 
-export const ActivityMoodMath = () => {
+export default function ActivityMoodsMath() {
   
   const { activities } = useContext(ActivityContext)
   //Mood math 

@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react"
 import { ActivityContext } from "./ActivityProvider"
 import { Activity } from "./Activity"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
+import ActivityMoodMath from "./ActivityMoodMath"
 import "./Activity.css"
 import { Link } from "react-router-dom"
 
@@ -25,7 +26,7 @@ export const ActivityList = (props) => {
   return (
     <>
       <div>
-        <h3>Running changes your mood by %</h3>
+        <h3>Running changes your mood by <ActivityMoodMath />%</h3>
         <h4>Your Stats</h4>
 
 

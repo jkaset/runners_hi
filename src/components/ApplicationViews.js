@@ -5,7 +5,7 @@ import { ActivityProvider } from "./activities/ActivityProvider"
 import { ActivityTypeProvider } from "./activityTypes/ActivityTypeProvider"
 import { ActivityStartForm } from "./activities/ActivityStartForm"
 import { ActivityEndForm } from "./activities/ActivityEndForm"
-import { ActivityMoodMath } from "./activities/ActivityMoodMath"
+//import { ActivityMoodMath } from "./activities/ActivityMoodMath"
 
 import { UserProvider } from "./users/UserProvider"
 
@@ -23,7 +23,7 @@ export const ApplicationViews = (props) => {
       </UserProvider>
 
       <ActivityTypeProvider>
-        <ActivityMoodMath>
+       
           <ActivityProvider>
 
             <Route exact path="/activities" render={
@@ -38,7 +38,7 @@ export const ApplicationViews = (props) => {
             } />
 
           </ActivityProvider>
-        </ActivityMoodMath>
+       
       </ActivityTypeProvider>
 
     </>
