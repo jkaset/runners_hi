@@ -1,43 +1,45 @@
-// import {useContext} from "react"
-// import { ActivityContext } from "./ActivityProvider"
+import React, { useContext } from "react"
+import { ActivityContext } from "./ActivityProvider"
 
-//   //Mood math 
-//   const user = parseInt(localStorage.getItem("runnersHi_user"))
-
-//   let moodsPre = []
-//   const { activities } = useContext(ActivityContext)
+export const ActivityMoodMath = () => {
   
-//   const moodsPreTotal = () => {
-//     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-//     activities.forEach(activity => {
-//       if (activity.userId === user) {
-//         moodsPre.push(parseInt(activity.moodPre))
-//       }
-//       console.log(moodsPre)
-//     })
+  const { activities } = useContext(ActivityContext)
+  //Mood math 
+  const user = parseInt(localStorage.getItem("runnersHi_user"))
 
-//     return moodsPre.reduce(reducer);
-//   }
+  let moodsPre = []
 
-//   let moodsPost = []
-//   const moodsPostTotal = () => {
-//     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-//     activities.forEach(activity => {
-//       if (activity.userId === user) {
-//         moodsPost.push(parseInt(activity.moodPost))
-//       }
-//       console.log(moodsPost)
-//     })
+  const moodsPreTotal = () => {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    activities.forEach(activity => {
+      if (activity.userId === user) {
+        moodsPre.push(parseInt(activity.moodPre))
+      }
+      console.log(moodsPre)
+    })
 
-//     return moodsPost.reduce(reducer)
-//   }
+    return moodsPre.reduce(reducer);
+  }
 
-//   const average = (moodsPostTotal() - moodsPreTotal())/moodsPre.length
-  
-//   const ActivityMoodMath = () => {
-    
-//     return average * 10
+  let moodsPost = []
+  const moodsPostTotal = () => {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    activities.forEach(activity => {
+      if (activity.userId === user) {
+        moodsPost.push(parseInt(activity.moodPost))
+      }
+      console.log(moodsPost)
+    })
 
-//   }
+    return moodsPost.reduce(reducer)
+  }
+
+  const average = (moodsPostTotal() - moodsPreTotal()) / moodsPre.length
+
+
+
+  return Math.round(average * 10)
+
+}
 
 

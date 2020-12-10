@@ -44,38 +44,11 @@
     {
       "userId": 2,
       "date": "12-10-2020",
-      "moodPre": "3",
-      "moodPost": "4",
-      "note": "ssss",
+      "moodPre": "1",
+      "moodPost": "10",
+      "note": "ss",
       "activityTypeId": 5,
       "id": 2
-    },
-    {
-      "userId": 2,
-      "date": "12-10-2020",
-      "moodPre": "5",
-      "moodPost": "10",
-      "note": "ddd",
-      "activityTypeId": 5,
-      "id": 3
-    },
-    {
-      "userId": 2,
-      "date": "12-10-2020",
-      "moodPre": "4",
-      "moodPost": "8",
-      "note": "ssss",
-      "activityTypeId": 2,
-      "id": 4
-    },
-    {
-      "userId": 2,
-      "date": "12-10-2020",
-      "moodPre": "10",
-      "moodPost": "3",
-      "note": "d",
-      "activityTypeId": 5,
-      "id": 5
     }
   ],
   "activityTypes": [

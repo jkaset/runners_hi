@@ -14,29 +14,31 @@ import { HomeList } from "./home/HomeList"
 export const ApplicationViews = (props) => {
   return (
     <>
-    <UserProvider>
-      <ActivityProvider>
-        <Route exact path="/" render={
-          props => <HomeList {...props} />
-        } />
-      </ActivityProvider>
-    </UserProvider>
-        
-      <ActivityTypeProvider>
+      <UserProvider>
         <ActivityProvider>
-         
-          <Route exact path="/activities" render={
-            props => <ActivityList {...props} />
+          <Route exact path="/" render={
+            props => <HomeList {...props} />
           } />
-          <Route exact path="/activities/create" render={
-            props => <ActivityStartForm {...props} />
-          } />
-
-          <Route exact path="/activities/edit/:activityId(\d+)" render={
-            props => <ActivityEndForm {...props} />
-          } />
-
         </ActivityProvider>
+      </UserProvider>
+
+      <ActivityTypeProvider>
+        <ActivityMoodMath>
+          <ActivityProvider>
+
+            <Route exact path="/activities" render={
+              props => <ActivityList {...props} />
+            } />
+            <Route exact path="/activities/create" render={
+              props => <ActivityStartForm {...props} />
+            } />
+
+            <Route exact path="/activities/edit/:activityId(\d+)" render={
+              props => <ActivityEndForm {...props} />
+            } />
+
+          </ActivityProvider>
+        </ActivityMoodMath>
       </ActivityTypeProvider>
 
     </>
