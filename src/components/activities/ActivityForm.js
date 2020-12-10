@@ -120,16 +120,9 @@ export const ActivityForm = (props, history) => {
           <button className="btn btn-secondary" type="submit" onClick={evt => {
             evt.preventDefault()
             logNewActivity()
-            //props.history.push(`/activities/edit/${activity.id}`)
-          }}>Ready to Run!</button>
-
-          
             
-          </Form>
-
-
-          
-        
+          }}>Ready to Run!</button>            
+          </Form>  
       </>
     )
 

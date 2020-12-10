@@ -44,7 +44,8 @@ export const ActivityEdit = (props) => {
   }
   //on initialization, get types for form
   useEffect(() => {
-    getActivityTypes().then(getActivities)
+    getActivityTypes()
+    getActivities()
   }, [])
 
   // Once provider state is updated, determine the activity (if edit)
@@ -52,8 +53,8 @@ export const ActivityEdit = (props) => {
     getActivityInEditMode()
   }, [activities])
 
+  //pass in activity id???
   const editNewActivity = () => {
-
     
       updateActivity({
 
@@ -64,8 +65,11 @@ export const ActivityEdit = (props) => {
 
         //using history because I need change route when button is clicked
         //this is the push that needs to happen once form has been edited
-        .then(() => props.history.push('/activities'))
+        // .then((newActivity) => props.history.push(`/activities/edit/${newActivity.id}`)) 
+        
+        .then(() => props.history.push('/activities/edit')) 
 
+        .then(() => props.history.push('/activities'))
     }
   
 
@@ -78,7 +82,8 @@ export const ActivityEdit = (props) => {
         <h4>Time for your post-run check-in</h4>
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
-          <Form.Control as="select" defaultValue={activity.moodPost}  >
+          
+          <Form.Control as="select" defaultValue={activity.moodPost} onChange={handleControlledInputChange} >
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -93,10 +98,10 @@ export const ActivityEdit = (props) => {
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Run Notes:</Form.Label>
-          <Form.Control as="textarea" rows={3}  defaultValue={activity.note} />
+          <Form.Control as="textarea" rows={3}  defaultValue={activity.note} onChange={handleControlledInputChange}/>
         </Form.Group>
         <button className="btn btn-secondary" type="submit" onClick={evt => {
-          evt.preventDefault() // Prevent browser from submitting the form
+          evt.preventDefault() 
           editNewActivity()
         }}>Log it</button>
       </Form>
