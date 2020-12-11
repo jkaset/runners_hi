@@ -81,10 +81,19 @@
       "userId": 2,
       "date": "12-11-2020",
       "moodPre": "1",
-      "moodPost": "",
-      "note": "",
+      "moodPost": "3",
+      "note": "\nss",
       "activityTypeId": 3,
       "id": 7
+    },
+    {
+      "userId": 2,
+      "date": "12-11-2020",
+      "moodPre": "6",
+      "moodPost": "10",
+      "note": "s",
+      "activityTypeId": 6,
+      "id": 8
     }
   ],
   "activityTypes": [

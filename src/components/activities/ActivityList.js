@@ -19,6 +19,8 @@ export const ActivityList = (props) => {
   }, [])
 
 
+  const sortedActivities = activities.sort((a, b) => b.date - a.date)
+
   const user = parseInt(localStorage.getItem("runnersHi_user"))
   const userActivities = activities.filter(a => a.userId === user)
   console.log(userActivities)
@@ -32,7 +34,7 @@ export const ActivityList = (props) => {
           <h3>Running changes your mood by <ActivityMoodMath />%</h3>
           <h4>Your Stats</h4>
 
-
+        <div className="pre-scrollable">
           {
             activities.map(activity => {
               if (activity.userId === user) {
@@ -44,7 +46,7 @@ export const ActivityList = (props) => {
                 />
               }
             })}
-
+        </div>
           <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
         </div>
       </>
