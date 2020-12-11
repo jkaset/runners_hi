@@ -76,6 +76,15 @@
       "note": "s",
       "activityTypeId": 1,
       "id": 6
+    },
+    {
+      "userId": 2,
+      "date": "12-11-2020",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 3,
+      "id": 7
     }
   ],
   "activityTypes": [
