@@ -10,8 +10,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const App = () => (
     <>
-         <Logo />
-         
+        <Logo />
+
         <Route render={() => {
             if (localStorage.getItem("runnersHi_user")) {
                 return (

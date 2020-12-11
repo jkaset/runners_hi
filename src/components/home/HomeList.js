@@ -3,42 +3,43 @@ import "./Home.css"
 import { Link } from "react-router-dom"
 import { ActivityContext } from "../activities/ActivityProvider"
 import { UserContext } from "../users/UserProvider"
-//import { Activity } from "../activities/Activity"
 
 export const HomeList = () => {
 
-  // (find function through activities.userId, if any match current user, return existing user home / else return new user home)
-
+  //stuff from Providers I need
   const { activities, getActivities } = useContext(ActivityContext)
   const { users, getUsers } = useContext(UserContext)
   
+  //This hook perfoms data fetching, and tells react I need to do something after render, runs after every render, every update
   useEffect(() => {
-    //console.log("ActivityList: Initial render before data")
+    
     getUsers()
     getActivities()
   }, [])
 
-
+  //define logged in user
   const user = parseInt(localStorage.getItem('runnersHi_user'))
   //console.log(user)
 
-  let userHasActivities = activities.map(activity => activity.userId === user)
-  //console.log(userHasActivities)
 
-  //console.log(users)
-  //console.log(user)
-   
+  //function to include user's first name
   let userGreeting = users.map(currentUser=> {
     if (currentUser.id === user) {
       return currentUser.name
     }
   })
   
+   
+  let userHasActivities = activities.map(activity => activity.userId === user)
+  //console.log(userHasActivities)
+  //console.log(users)
+  //console.log(user)
 
   const HomeOption = () => {
-
+    //probably an easier way to do this, but userHasActivities goes through all activities, returns an array of true and falses, trues being 'this activity's user id is the user currently logged in,' so if the array includes one true for the user, the homepage for existing users should render. The '0' is at what indext the array method starts looking
     if (userHasActivities.includes(true, 0)) {
-      return (
+   
+    return (
         <>
     
       <h3>Welcome back, {userGreeting}!</h3>

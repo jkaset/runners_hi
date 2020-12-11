@@ -50,7 +50,8 @@ export const ActivityStartForm = (props) => {
   }
 
   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+  //map function to list activity types from api
+  //button on bottom logs the data collected from form to database.json and then routes you to Activity End Form where you update that data
   return (
     <>
     <Logout />  

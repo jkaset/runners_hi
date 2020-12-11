@@ -5,12 +5,10 @@ import { ActivityProvider } from "./activities/ActivityProvider"
 import { ActivityTypeProvider } from "./activityTypes/ActivityTypeProvider"
 import { ActivityStartForm } from "./activities/ActivityStartForm"
 import { ActivityEndForm } from "./activities/ActivityEndForm"
-//import { ActivityMoodMath } from "./activities/ActivityMoodMath"
-
 import { UserProvider } from "./users/UserProvider"
-
 import { HomeList } from "./home/HomeList"
 
+//if you need data from a provider, it is one of your module's parents, and you need to next it
 export const ApplicationViews = (props) => {
   return (
     <>
@@ -23,7 +21,6 @@ export const ApplicationViews = (props) => {
       </UserProvider>
 
       <ActivityTypeProvider>
-
         <ActivityProvider>
 
           <Route exact path="/activities">
@@ -39,9 +36,7 @@ export const ApplicationViews = (props) => {
           } />
 
         </ActivityProvider>
-
       </ActivityTypeProvider>
-
     </>
   )
 }

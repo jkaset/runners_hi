@@ -2,17 +2,20 @@ import React, {useContext} from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 
-export const Activity = ({ activity, activityType, props }) => {
+export const Activity = ({ activity, activityType }) => {
   const { deleteActivity } = useContext(ActivityContext)
+
+  //logic for finding activityType is in ActivityList map function
 
   const activityToDelete = (activity) => {
     const activityId = activity.id
 
     deleteActivity(activityId)
   }
+
+  //all-caps activity type
   let activityHeading = (activityType.name).toUpperCase()
 
-  
 
   return (
     <section className="activity">

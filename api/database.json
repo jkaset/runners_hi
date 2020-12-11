@@ -85,15 +85,6 @@
     },
     {
       "userId": 1,
-      "date": "12-10-2020",
-      "moodPre": "3",
-      "moodPost": "8",
-      "note": "Quick run on my lunchbreak. Totally energized to tackle the rest of my day at work",
-      "activityTypeId": 4,
-      "id": 6
-    },
-    {
-      "userId": 1,
       "date": "12-01-2020",
       "moodPre": "7",
       "moodPost": "10",
@@ -118,6 +109,33 @@
       "note": "Did a quick 15 minutes, figured it was better than nothing. Ran on an empty stomach, no stitches!",
       "activityTypeId": 1,
       "id": 9
+    },
+    {
+      "userId": 5,
+      "date": "12-11-2020",
+      "moodPre": "1",
+      "moodPost": "10",
+      "note": "ki",
+      "activityTypeId": 7,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "date": "12-11-2020",
+      "moodPre": "5",
+      "moodPost": "6",
+      "note": "Quick run on my lunchbreak. Totally energized to tackle the rest of my day at work",
+      "activityTypeId": 10,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "date": "12-11-2020",
+      "moodPre": "1",
+      "moodPost": "9",
+      "note": "Literally ran around the block, took 10 minutes. Feel so much better. More energized than slamming a Monster Energy drink. Energized like that movie Crank where he electrocutes his heart with a telephone pole.",
+      "activityTypeId": 1,
+      "id": 13
     }
   ],
   "activityTypes": [
