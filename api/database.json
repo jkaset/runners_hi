@@ -29,6 +29,12 @@
       "password": "jes",
       "name": "Jes",
       "id": 5
+    },
+    {
+      "email": "josh@josh.com",
+      "password": "josh",
+      "name": "Josh",
+      "id": 6
     }
   ],
   "activities": [
@@ -94,6 +100,15 @@
       "note": "Race was brutal, but I finished 15th in my age group. Slowed down a lot in the last 2 miles, but made up for it on the down-hills in the final stretch. Now to start training for the full-marathon",
       "activityTypeId": 8,
       "id": 7
+    },
+    {
+      "userId": 6,
+      "date": "12-11-2020",
+      "moodPre": "4",
+      "moodPost": "8",
+      "note": "Did the huge hill at Shelby. The hardest part was getting out the door. Didn't want to go because it was raining and cold, but I'm glad I did.",
+      "activityTypeId": 4,
+      "id": 8
     }
   ],
   "activityTypes": [

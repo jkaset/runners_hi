@@ -8,7 +8,7 @@ import { Logout } from '../auth/Logout'
 import { Link } from "react-router-dom"
 
 //props: define parameters to capture object
-export const ActivityStartForm = (props, history) => {
+export const ActivityStartForm = (props) => {
   const { addActivity } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 

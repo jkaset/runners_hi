@@ -17,7 +17,7 @@ export const ApplicationViews = (props) => {
       <UserProvider>
         <ActivityProvider>
           <Route exact path="/" render={
-            props => <HomeList {...props} />
+            props => <HomeList />
           } />
         </ActivityProvider>
       </UserProvider>
