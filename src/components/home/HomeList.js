@@ -13,17 +13,17 @@ export const HomeList = () => {
   const { users, getUsers } = useContext(UserContext)
   
   useEffect(() => {
-    console.log("ActivityList: Initial render before data")
+    //console.log("ActivityList: Initial render before data")
     getUsers()
     getActivities()
   }, [])
 
 
   const user = parseInt(localStorage.getItem('runnersHi_user'))
-  console.log(user)
+  //console.log(user)
 
   let userHasActivities = activities.map(activity => activity.userId === user)
-  console.log(userHasActivities)
+  //console.log(userHasActivities)
 
   //console.log(users)
   //console.log(user)

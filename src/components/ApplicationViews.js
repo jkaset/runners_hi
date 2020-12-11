@@ -16,9 +16,9 @@ export const ApplicationViews = (props) => {
     <>
       <UserProvider>
         <ActivityProvider>
-          <Route exact path="/" render={
-            props => <HomeList />
-          } />
+          <Route exact path="/">
+            <HomeList />
+          </Route>
         </ActivityProvider>
       </UserProvider>
 
@@ -26,9 +26,10 @@ export const ApplicationViews = (props) => {
 
         <ActivityProvider>
 
-          <Route exact path="/activities" render={
-            props => <ActivityList />
-          } />
+          <Route exact path="/activities">
+            <ActivityList />
+          </Route>
+
           <Route exact path="/activities/create" render={
             props => <ActivityStartForm {...props} />
           } />
