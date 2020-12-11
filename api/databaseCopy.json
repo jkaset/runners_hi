@@ -3,78 +3,88 @@
     {
       "email": "jk@jk.com",
       "password": "jk",
-      "firstName": "Jas",
-      "lastName": "Kas",
+      "name": "Jas",
       "id": 1
     },
     {
       "email": "hk@hk.com",
       "password": "hk",
-      "firstName": "Harry",
-      "lastName": "Kagan",
+      "name": "Harry",
       "id": 2
+    },
+    {
+      "email": "rosey@dog.com",
+      "password": "dog",
+      "name": "Rosey Cotton",
+      "id": 3
+    },
+    {
+      "email": "ben@ben.com",
+      "password": "ben",
+      "name": "Ben",
+      "id": 4
+    },
+    {
+      "email": "jes@jes.com",
+      "password": "jes",
+      "name": "Jes",
+      "id": 5
     }
   ],
   "activities": [
     {
-      "id": 1,
       "userId": 1,
-      "date": "2020/12/07",
-      "notes": "Ran fast",
-      "mood_start": 3,
-      "mood_end": 7,
-      "activityTypeId": 4
+      "date": "12-10-2020",
+      "moodPre": "2",
+      "moodPost": "4",
+      "note": "Weather slowed me down, but finished a whole podcast, and beat my last time... warm up 12', 400m (1:28), 800m (3:04), 1200m (5:02) STOP bad shin/hamstring cool down 8 min - 4 miles.",
+      "activityTypeId": 5,
+      "id": 1
     },
     {
-      "id": 2,
+      "userId": 1,
+      "date": "12-10-2020",
+      "moodPre": "4",
+      "moodPost": "6",
+      "note": "Finished audio book 'What I Talk About When I Talk About Running' by Haruki Murakami. My favorite quote from it was 'When I'm running I don't have to talk to anybody and don't have to listen to anybody. This is a part of my day I can't do without.'",
+      "activityTypeId": 5,
+      "id": 2
+    },
+    {
       "userId": 2,
-      "date": "2020/12/01",
-      "notes": "It was fun",
-      "mood_start": 1,
-      "mood_end": 10,
-      "activityTypeId": 5
+      "date": "12-11-2020",
+      "moodPre": "4",
+      "moodPost": "1",
+      "note": "BAD workout - wu 20 min, 2 miles (12:12) ",
+      "activityTypeId": 5,
+      "id": 3
     },
     {
-      "id": 3,
-      "userId": 1,
-      "date": "2020/12/12",
-      "notes": "Great weather",
-      "mood_start": 5,
-      "mood_end": 6,
-      "activityTypeId": 8
-    },
-    {
+      "userId": 2,
+      "date": "12-11-2020",
+      "moodPre": "1",
+      "moodPost": "10",
+      "note": "3 miles at 2nd best record pace. Lots of pain, no suffering. Found my new fave running quote: 'All I do is keep on running in my own cozy, homemade void, my own nostalgic silence. And this is a pretty wonderful thing. No matter what anybody else says.' -Haruki Murakami",
+      "activityTypeId": 8,
       "id": 4
     },
     {
+      "userId": 2,
+      "date": "12-11-2020",
+      "moodPre": "4",
+      "moodPost": "10",
+      "note": "Weather was awesome at the Airpark. Ran with friends, went by so fast!",
+      "activityTypeId": 4,
       "id": 5
     },
     {
+      "userId": 1,
+      "date": "12-11-2020",
+      "moodPre": "3",
+      "moodPost": "8",
+      "note": "Quick run on my lunchbreak. Totally energized to tackle the rest of my day at work",
+      "activityTypeId": 4,
       "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "id": 14
     }
   ],
   "activityTypes": [

@@ -34,10 +34,10 @@
   "activities": [
     {
       "userId": 1,
-      "date": "12-10-2020",
+      "date": "12-8-2020",
       "moodPre": "2",
       "moodPost": "4",
-      "note": "sdf",
+      "note": "Weather slowed me down, but finished a whole podcast, and beat my last time... warm up 12', 400m (1:28), 800m (3:04), 1200m (5:02) STOP bad shin/hamstring cool down 8 min - 4 miles.",
       "activityTypeId": 5,
       "id": 1
     },
@@ -46,7 +46,7 @@
       "date": "12-10-2020",
       "moodPre": "4",
       "moodPost": "6",
-      "note": "sadfa",
+      "note": "Finished audio book 'What I Talk About When I Talk About Running' by Haruki Murakami. My favorite quote from it was 'When I'm running I don't have to talk to anybody and don't have to listen to anybody. This is a part of my day I can't do without.'",
       "activityTypeId": 5,
       "id": 2
     },
@@ -55,7 +55,7 @@
       "date": "12-11-2020",
       "moodPre": "4",
       "moodPost": "1",
-      "note": "sdfsdfs",
+      "note": "BAD workout - wu 20 min, 2 miles (12:12) ",
       "activityTypeId": 5,
       "id": 3
     },
@@ -64,7 +64,7 @@
       "date": "12-11-2020",
       "moodPre": "1",
       "moodPost": "10",
-      "note": "Ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding...room for more bell dings with #280characters",
+      "note": "3 miles at 2nd best record pace. Lots of pain, no suffering. Found my new fave running quote: 'All I do is keep on running in my own cozy, homemade void, my own nostalgic silence. And this is a pretty wonderful thing. No matter what anybody else says.' -Haruki Murakami",
       "activityTypeId": 8,
       "id": 4
     },
@@ -73,18 +73,27 @@
       "date": "12-11-2020",
       "moodPre": "4",
       "moodPost": "10",
-      "note": "ssss",
+      "note": "Weather was awesome at the Airpark. Ran with friends, went by so fast!",
       "activityTypeId": 4,
       "id": 5
     },
     {
       "userId": 1,
-      "date": "12-11-2020",
+      "date": "12-12-2020",
       "moodPre": "3",
       "moodPost": "8",
-      "note": "hhhhhskfhsalkfsdl fsadlkfj lsdkfj alskjflksd flskadjflksa flasdkj lsdkalksadf lksfjlksdfa jlkfj lasdkjasklkfjsdlkfj sdlkafjlaskdfj lszkdj lkasdflaksdflaskdfj sdlkafjasldjf asdlkjf dslakdflkasdf alsdkjsdlkfj alsdkjsladkjlaskdf lskdfj slkj alskdfjaslj fdlskj lfksdalkdsfalsdkjlaskdf",
+      "note": "Quick run on my lunchbreak. Totally energized to tackle the rest of my day at work",
       "activityTypeId": 4,
       "id": 6
+    },
+    {
+      "userId": 1,
+      "date": "12-01-2020",
+      "moodPre": "7",
+      "moodPost": "10",
+      "note": "Race was brutal, but I finished 15th in my age group. Slowed down a lot in the last 2 miles, but made up for it on the down-hills in the final stretch. Now to start training for the full-marathon",
+      "activityTypeId": 8,
+      "id": 7
     }
   ],
   "activityTypes": [

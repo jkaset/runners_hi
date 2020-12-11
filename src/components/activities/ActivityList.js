@@ -9,16 +9,17 @@ import { Link } from "react-router-dom"
 
 
 
-export const ActivityList = (props) => {
-  const { activities, getActivities } = useContext(ActivityContext)
+export const ActivityList = () => {
+  const { activities, getActivities, useActivities } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
   useEffect(() => {
     console.log("ActivityList: Initial render before data")
-    getActivityTypes().then(getActivities)
+    getActivityTypes().then(useActivities).then(getActivities)
   }, [])
 
-
+  const sortedActivities = useActivities(activities)
+  console.log(sortedActivities)
   const user = parseInt(localStorage.getItem("runnersHi_user"))
   const userActivities = activities.filter(a => a.userId === user)
   console.log(userActivities)
