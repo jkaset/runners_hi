@@ -27,12 +27,14 @@ export const ActivityProvider = (props) => {
             })
     }
 
+    const useActivities = () => {
+        const sortedByDate = activities.sort(
+            (currentActivity, nextActivity) =>
+            Date.parse(nextActivity.date) - Date.parse(currentActivity.date) 
+        )
+         return sortedByDate
+     };
 
-    // const getActivityById = (id) => {
-    //     console.log(id)
-    //     return fetch(`http://localhost:8088/activities/${ id }?_expand=location&_expand=customer`)
-    //         .then(res => res.json())
-    // }
 
     const deleteActivity = activityId => {
         return fetch(`http://localhost:8088/activities/${activityId}`, {
@@ -54,7 +56,7 @@ export const ActivityProvider = (props) => {
 
     return (
         <ActivityContext.Provider value={{
-            activities, addActivity, getActivities, updateActivity, deleteActivity
+            activities, addActivity, getActivities, updateActivity, deleteActivity, useActivities
         }}>
             {props.children}
         </ActivityContext.Provider>
