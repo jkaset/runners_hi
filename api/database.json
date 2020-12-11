@@ -52,48 +52,30 @@
     },
     {
       "userId": 2,
-      "date": "12-10-2020",
-      "moodPre": "5",
-      "moodPost": "6",
-      "note": "sdf",
-      "activityTypeId": 4,
+      "date": "12-11-2020",
+      "moodPre": "4",
+      "moodPost": "1",
+      "note": "sdfsdfs",
+      "activityTypeId": 5,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "date": "12-11-2020",
+      "moodPre": "1",
+      "moodPost": "10",
+      "note": "Ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding ding...room for more bell dings with #280characters",
+      "activityTypeId": 8,
       "id": 4
     },
     {
       "userId": 2,
-      "date": "12-10-2020",
-      "moodPre": "3",
-      "moodPost": "6",
-      "note": "s",
+      "date": "12-11-2020",
+      "moodPre": "4",
+      "moodPost": "10",
+      "note": "ssss",
       "activityTypeId": 4,
       "id": 5
-    },
-    {
-      "userId": 2,
-      "date": "12-10-2020",
-      "moodPre": "1",
-      "moodPost": "5",
-      "note": "s",
-      "activityTypeId": 1,
-      "id": 6
-    },
-    {
-      "userId": 2,
-      "date": "12-11-2020",
-      "moodPre": "1",
-      "moodPost": "3",
-      "note": "\nss",
-      "activityTypeId": 3,
-      "id": 7
-    },
-    {
-      "userId": 2,
-      "date": "12-11-2020",
-      "moodPre": "6",
-      "moodPost": "10",
-      "note": "s",
-      "activityTypeId": 6,
-      "id": 8
     }
   ],
   "activityTypes": [
