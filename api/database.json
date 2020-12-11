@@ -35,11 +35,20 @@
     {
       "userId": 1,
       "date": "12-10-2020",
-      "moodPre": "1",
-      "moodPost": "9",
-      "note": "kjh",
-      "activityTypeId": 3,
+      "moodPre": "2",
+      "moodPost": "4",
+      "note": "sdf",
+      "activityTypeId": 5,
       "id": 1
+    },
+    {
+      "userId": 1,
+      "date": "12-10-2020",
+      "moodPre": "4",
+      "moodPost": "6",
+      "note": "sadfa",
+      "activityTypeId": 5,
+      "id": 2
     }
   ],
   "activityTypes": [
