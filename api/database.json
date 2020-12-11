@@ -49,6 +49,33 @@
       "note": "sadfa",
       "activityTypeId": 5,
       "id": 2
+    },
+    {
+      "userId": 2,
+      "date": "12-10-2020",
+      "moodPre": "5",
+      "moodPost": "6",
+      "note": "sdf",
+      "activityTypeId": 4,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "date": "12-10-2020",
+      "moodPre": "3",
+      "moodPost": "6",
+      "note": "s",
+      "activityTypeId": 4,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "date": "12-10-2020",
+      "moodPre": "1",
+      "moodPost": "5",
+      "note": "s",
+      "activityTypeId": 1,
+      "id": 6
     }
   ],
   "activityTypes": [

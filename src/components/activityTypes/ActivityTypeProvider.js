@@ -1,6 +1,6 @@
 //clean this up for unwanted functions in context
 
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 export const ActivityTypeContext = React.createContext()
 

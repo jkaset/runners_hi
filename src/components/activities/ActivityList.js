@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import { ActivityContext } from "./ActivityProvider"
 import { Activity } from "./Activity"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
@@ -60,52 +60,5 @@ export const ActivityList = (props) => {
     )
   }
 }
-
-
-//Mood math 
-
-
-// let moodsPre = []
-// // let moodsPre = [0, -1, -2, -3, -4, -5];
-// // moodsPre.filter(x => x > 0)         // removes all elements
-// //   .reduce((x, y) => x + y, 0) // the initial value is the neutral element of the addition
-// const ActivityMoodMath = () => {
-//   const moodsPreTotal = () => {
-//     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-//     activities.forEach(activity => {
-//       if (activity.userId === user) {
-//         moodsPre.push(parseInt(activity.moodPre))
-//       }
-//       console.log(moodsPre)
-//     })
-
-//     return moodsPre.reduce(reducer)
-//   }
-
-//   let moodsPost = []
-//   // let moodsPost = [0, -1, -2, -3, -4, -5];
-//   // moodsPost.filter(x => x > 0)         // removes all elements
-//   //   .reduce((x, y) => x + y, 0) // the initial value is the neutral element of the addition
-//     console.log(moodsPost)
-//   const moodsPostTotal = () => {
-//     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-//     activities.forEach(activity => {
-//       if (activity.userId === user) {
-//         moodsPost.push(parseInt(activity.moodPost))
-//       }
-//       console.log(moodsPost)
-//     })
-//     return moodsPost.reduce(reducer)
-//   }
-
-//   const average = (moodsPostTotal() - moodsPreTotal()) / moodsPre.length
-//   console.log(average)
-
-
-
-//   return Math.round(average * 10)
-
-//   console.log(MoodMath)
-// }
 
 
