@@ -58,7 +58,7 @@
     },
     {
       "userId": 2,
-      "date": "12-11-2020",
+      "date": "12-10-2020",
       "moodPre": "4",
       "moodPost": "1",
       "note": "BAD workout - wu 20 min, 2 miles (12:12) ",
@@ -67,7 +67,7 @@
     },
     {
       "userId": 2,
-      "date": "12-11-2020",
+      "date": "11-22-2020",
       "moodPre": "1",
       "moodPost": "10",
       "note": "3 miles at 2nd best record pace. Lots of pain, no suffering. Found my new fave running quote: 'All I do is keep on running in my own cozy, homemade void, my own nostalgic silence. And this is a pretty wonderful thing. No matter what anybody else says.' -Haruki Murakami",
@@ -76,7 +76,7 @@
     },
     {
       "userId": 2,
-      "date": "12-11-2020",
+      "date": "12-06-2020",
       "moodPre": "4",
       "moodPost": "10",
       "note": "Weather was awesome at the Airpark. Ran with friends, went by so fast!",
@@ -109,6 +109,15 @@
       "note": "Did the huge hill at Shelby. The hardest part was getting out the door. Didn't want to go because it was raining and cold, but I'm glad I did.",
       "activityTypeId": 4,
       "id": 8
+    },
+    {
+      "userId": 2,
+      "date": "12-11-2020",
+      "moodPre": "5",
+      "moodPost": "10",
+      "note": "Did a quick 15 minutes, figured it was better than nothing. Ran on an empty stomach, no stitches!",
+      "activityTypeId": 1,
+      "id": 9
     }
   ],
   "activityTypes": [
