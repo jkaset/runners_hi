@@ -14,15 +14,14 @@ export const ActivityList = () => {
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
   useEffect(() => {
-    console.log("ActivityList: Initial render before data")
     getActivityTypes().then(useActivities).then(getActivities)
   }, [])
 
   const sortedActivities = useActivities(activities)
-  console.log(sortedActivities)
+  //console.log(sortedActivities)
   const user = parseInt(localStorage.getItem("runnersHi_user"))
   const userActivities = activities.filter(a => a.userId === user)
-  console.log(userActivities)
+  //console.log(userActivities)
 
   if (userActivities.length > 0) {
     return (

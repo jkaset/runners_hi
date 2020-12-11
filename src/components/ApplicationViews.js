@@ -23,22 +23,22 @@ export const ApplicationViews = (props) => {
       </UserProvider>
 
       <ActivityTypeProvider>
-       
-          <ActivityProvider>
 
-            <Route exact path="/activities" render={
-              props => <ActivityList {...props} />
-            } />
-            <Route exact path="/activities/create" render={
-              props => <ActivityStartForm {...props} />
-            } />
+        <ActivityProvider>
 
-            <Route exact path="/activities/edit/:activityId(\d+)" render={
-              props => <ActivityEndForm {...props} />
-            } />
+          <Route exact path="/activities" render={
+            props => <ActivityList />
+          } />
+          <Route exact path="/activities/create" render={
+            props => <ActivityStartForm {...props} />
+          } />
 
-          </ActivityProvider>
-       
+          <Route exact path="/activities/edit/:activityId(\d+)" render={
+            props => <ActivityEndForm {...props} />
+          } />
+
+        </ActivityProvider>
+
       </ActivityTypeProvider>
 
     </>

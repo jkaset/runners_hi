@@ -41,9 +41,9 @@ export default function ActivityMoodsMath() {
   }
 
   const dividedBy = userActivities.length
-  console.log(dividedBy)
+  //console.log(dividedBy)
   const divisible = (moodsPostTotal() - moodsPreTotal())
-  console.log(divisible)
+  //console.log(divisible)
   const average = divisible/dividedBy 
 
   return Math.round(average * 10)
