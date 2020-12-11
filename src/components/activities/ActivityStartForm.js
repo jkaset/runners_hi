@@ -4,7 +4,7 @@ import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form } from 'react-bootstrap'
 import { format } from 'date-fns'
-import { Logout } from '../Logout'
+import { Logout } from '../auth/Logout'
 import { Link } from "react-router-dom"
 
 //props: define parameters to capture object
