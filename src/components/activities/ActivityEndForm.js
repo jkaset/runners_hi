@@ -2,6 +2,7 @@ import React, { useContext, useRef } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { Form } from 'react-bootstrap'
+import App from './ActivityToggle'
 
 export const ActivityEndForm = (props) => {
   const { updateActivity } = useContext(ActivityContext)
@@ -24,7 +25,8 @@ export const ActivityEndForm = (props) => {
     const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   return (
     <>
-      <Form>
+    <App />
+      {/* <Form>
         <h4>Done running?</h4>
         <h4>Time for your post-run check-in</h4>
         <Form.Group controlId="form.ControlSelect1">
@@ -45,7 +47,7 @@ export const ActivityEndForm = (props) => {
           evt.preventDefault() 
           editNewActivity()
         }}>Log it</button>
-      </Form>
+      </Form> */}
     </>
   )
 
