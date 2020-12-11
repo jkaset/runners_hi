@@ -19,12 +19,11 @@ export const HomeList = () => {
   const user = parseInt(localStorage.getItem('runnersHi_user'))
   //console.log(user)
 
-  // let userHasActivities = activities.map(activity => activity.userId === user)
-  // console.log(userHasActivities)
-  //console.log(users)
-  //console.log(user)
+  let userHasActivities = activities.map(activity => activity.userId === user)
+  console.log(userHasActivities)
+  console.log(users)
+  console.log(user)
    
-  const userActivities = activities.filter(a => a.userId === user)
 
   //function to include 
   let userGreeting = users.map(currentUser=> {
@@ -36,8 +35,8 @@ export const HomeList = () => {
 
   const HomeOption = () => {
     //probably an easier way to do this, but userHasActivities goes through all activities, returns an array of true and falses, trues being 'this activity's user id is the user currently logged in,' so if the array includes one true for the user, the homepage for existing users should render. The '0' is at what indext the array method starts looking
-    //if (userHasActivities.includes(true, 0)) {
-    if (userActivities > 0)  {
+    if (userHasActivities.includes(true, 0)) {
+   
     return (
         <>
     

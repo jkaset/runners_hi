@@ -3,6 +3,7 @@ import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { Form } from 'react-bootstrap'
 
+//didn't need to fetch, set state, just capture id
 export const ActivityEndForm = (props) => {
   const { updateActivity } = useContext(ActivityContext)
   const moodPost = useRef(null)

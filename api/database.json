@@ -85,15 +85,6 @@
     },
     {
       "userId": 1,
-      "date": "12-10-2020",
-      "moodPre": "3",
-      "moodPost": "8",
-      "note": "Quick run on my lunchbreak. Totally energized to tackle the rest of my day at work",
-      "activityTypeId": 4,
-      "id": 6
-    },
-    {
-      "userId": 1,
       "date": "12-01-2020",
       "moodPre": "7",
       "moodPost": "10",
