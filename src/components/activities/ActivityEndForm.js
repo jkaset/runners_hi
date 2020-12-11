@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect, useState } from "react"
+import React, { useContext, useRef } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { Form } from 'react-bootstrap'

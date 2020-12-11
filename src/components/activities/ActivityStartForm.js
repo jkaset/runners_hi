@@ -52,7 +52,8 @@ export const ActivityStartForm = (props, history) => {
 
   return (
     <>
-    <Logout /> <a href="/activities">See Stats</a>
+    <Logout />  
+    <a href="/activities">See Stats</a>
       <Form>
         <h4>Pre-run Stats</h4>
         <Form.Group controlId="form.ControlSelect1">
