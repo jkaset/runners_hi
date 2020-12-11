@@ -35,10 +35,10 @@
     {
       "userId": 1,
       "date": "12-10-2020",
-      "moodPre": "2",
-      "moodPost": "3",
-      "note": "Big hills",
-      "activityTypeId": 4,
+      "moodPre": "1",
+      "moodPost": "9",
+      "note": "kjh",
+      "activityTypeId": 3,
       "id": 1
     }
   ],
