@@ -3,14 +3,19 @@ import { ActivityContext } from "./ActivityProvider"
 
 export default function ActivityMoodsMath() {
   
+  //pull in activities from Provider
   const { activities } = useContext(ActivityContext)
-  //Mood math 
+ 
+  //define user as person logged in
   const user = parseInt(localStorage.getItem("runnersHi_user"))
+  
+
+  //filter for activities specific to that user
   const userActivities = activities.filter(a => a.userId === user)
   //console.log(userActivities)
+  
+  //an empty array to push to
   let moodsPre = []
-  
-  
 
   const moodsPreTotal = () => {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
