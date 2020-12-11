@@ -3,7 +3,7 @@ import { ActivityContext } from "./ActivityProvider"
 import { Activity } from "./Activity"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import ActivityMoodMath from "./ActivityMoodMath"
-import {Logout} from "../Logout"
+import {Logout} from "../auth/Logout"
 import "./Activity.css"
 import { Link } from "react-router-dom"
 
@@ -18,8 +18,6 @@ export const ActivityList = (props) => {
     getActivityTypes().then(getActivities)
   }, [])
 
-
-  const sortedActivities = activities.sort((a, b) => b.date - a.date)
 
   const user = parseInt(localStorage.getItem("runnersHi_user"))
   const userActivities = activities.filter(a => a.userId === user)
