@@ -13,7 +13,7 @@ export const ActivityStartForm = (props) => {
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
 
   //references created here to attach to input fields in form
-  const date = format(new Date(), 'MM-dd-yyyy')
+  const date = format(new Date(), 'MM-dd-yyyy hh:mm')
   const activityType = useRef(null)
   const moodPre = useRef(null)
   const userId = parseInt(localStorage.getItem("runnersHi_user"))
