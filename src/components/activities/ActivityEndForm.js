@@ -39,7 +39,7 @@ export const ActivityEndForm = (props) => {
 
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Run Notes:</Form.Label>
-          <Form.Control className="form_note" maxlength={280} as="textarea" rows={3}  ref={note} />
+          <Form.Control className="form_note" maxLength={280} as="textarea" rows={3}  ref={note} />
         </Form.Group>
         <button className="btn btn-secondary" type="submit" onClick={evt => {
           evt.preventDefault() 

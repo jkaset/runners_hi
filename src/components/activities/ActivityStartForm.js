@@ -4,7 +4,8 @@ import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form } from 'react-bootstrap'
 import { format } from 'date-fns'
-import { Logout } from '../Logout';
+import { Logout } from '../Logout'
+import { Link } from "react-router-dom"
 
 //props: define parameters to capture object
 export const ActivityStartForm = (props, history) => {
@@ -48,12 +49,15 @@ export const ActivityStartForm = (props, history) => {
     }
   }
 
+ 
+  
   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   return (
     <>
     <Logout />  
-    <a href="/activities">See Stats</a>
+    
+    <Link to="/activities">Go back</Link>
       <Form>
         <h4>Pre-run Stats</h4>
         <Form.Group controlId="form.ControlSelect1">
