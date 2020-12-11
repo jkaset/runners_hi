@@ -5,7 +5,7 @@ import { ActivityContext } from "../activities/ActivityProvider"
 import { UserContext } from "../users/UserProvider"
 //import { Activity } from "../activities/Activity"
 
-export const HomeList = (props) => {
+export const HomeList = () => {
 
   // (find function through activities.userId, if any match current user, return existing user home / else return new user home)
 
@@ -25,8 +25,8 @@ export const HomeList = (props) => {
   let userHasActivities = activities.map(activity => activity.userId === user)
   console.log(userHasActivities)
 
-  console.log(users)
-  console.log(user)
+  //console.log(users)
+  //console.log(user)
    
   let userGreeting = users.map(currentUser=> {
     if (currentUser.id === user) {
@@ -34,10 +34,6 @@ export const HomeList = (props) => {
     }
   })
   
-  // const userName = users.map(u=> {
-  //   if (activities.userId === u) {
-  //     console.log(u.name)
-  //   }})
 
   const HomeOption = () => {
 

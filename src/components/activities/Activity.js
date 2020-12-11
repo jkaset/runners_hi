@@ -21,7 +21,7 @@ export const Activity = ({ activity, activityType, props }) => {
       <div className="activity__moodPre">Pre-activity Mood: {activity.moodPre} out of 10</div>
       <div className="activity__moodPost">Post-activity Mood: {activity.moodPost} out of 10</div>
       <div className="activity__moodChange">Your mood quotient changed {((activity.moodPost-activity.moodPre)/10)*100}%</div>
-      <div className="activity__note">Note: "{activity.note}"</div>
+      <div className="activity__note">Notes: "{activity.note}"</div>
 
 
       <button

@@ -29,6 +29,12 @@
       "password": "jes",
       "name": "Jes",
       "id": 5
+    },
+    {
+      "email": "josh@josh.com",
+      "password": "josh",
+      "name": "Josh",
+      "id": 6
     }
   ],
   "activities": [
@@ -43,7 +49,7 @@
     },
     {
       "userId": 1,
-      "date": "12-10-2020",
+      "date": "12-09-2020",
       "moodPre": "4",
       "moodPost": "6",
       "note": "Finished audio book 'What I Talk About When I Talk About Running' by Haruki Murakami. My favorite quote from it was 'When I'm running I don't have to talk to anybody and don't have to listen to anybody. This is a part of my day I can't do without.'",
@@ -52,7 +58,7 @@
     },
     {
       "userId": 2,
-      "date": "12-11-2020",
+      "date": "12-10-2020",
       "moodPre": "4",
       "moodPost": "1",
       "note": "BAD workout - wu 20 min, 2 miles (12:12) ",
@@ -61,7 +67,7 @@
     },
     {
       "userId": 2,
-      "date": "12-11-2020",
+      "date": "11-22-2020",
       "moodPre": "1",
       "moodPost": "10",
       "note": "3 miles at 2nd best record pace. Lots of pain, no suffering. Found my new fave running quote: 'All I do is keep on running in my own cozy, homemade void, my own nostalgic silence. And this is a pretty wonderful thing. No matter what anybody else says.' -Haruki Murakami",
@@ -70,7 +76,7 @@
     },
     {
       "userId": 2,
-      "date": "12-11-2020",
+      "date": "12-06-2020",
       "moodPre": "4",
       "moodPost": "10",
       "note": "Weather was awesome at the Airpark. Ran with friends, went by so fast!",
@@ -79,7 +85,7 @@
     },
     {
       "userId": 1,
-      "date": "12-12-2020",
+      "date": "12-10-2020",
       "moodPre": "3",
       "moodPost": "8",
       "note": "Quick run on my lunchbreak. Totally energized to tackle the rest of my day at work",
@@ -94,6 +100,24 @@
       "note": "Race was brutal, but I finished 15th in my age group. Slowed down a lot in the last 2 miles, but made up for it on the down-hills in the final stretch. Now to start training for the full-marathon",
       "activityTypeId": 8,
       "id": 7
+    },
+    {
+      "userId": 6,
+      "date": "12-11-2020",
+      "moodPre": "4",
+      "moodPost": "8",
+      "note": "Did the huge hill at Shelby. The hardest part was getting out the door. Didn't want to go because it was raining and cold, but I'm glad I did.",
+      "activityTypeId": 4,
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "date": "12-11-2020",
+      "moodPre": "5",
+      "moodPost": "10",
+      "note": "Did a quick 15 minutes, figured it was better than nothing. Ran on an empty stomach, no stitches!",
+      "activityTypeId": 1,
+      "id": 9
     }
   ],
   "activityTypes": [
