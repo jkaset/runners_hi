@@ -111,15 +111,6 @@
       "id": 9
     },
     {
-      "userId": 5,
-      "date": "12-11-2020 02:28",
-      "moodPre": "1",
-      "moodPost": "10",
-      "note": "ki",
-      "activityTypeId": 7,
-      "id": 11
-    },
-    {
       "userId": 1,
       "date": "12-11-2020 01:48",
       "moodPre": "5",
@@ -172,6 +163,15 @@
       "note": "kjg",
       "activityTypeId": 3,
       "id": 17
+    },
+    {
+      "userId": 5,
+      "date": "12-12-2020 08:17",
+      "moodPre": "1",
+      "moodPost": "5",
+      "note": "",
+      "activityTypeId": 6,
+      "id": 18
     }
   ],
   "activityTypes": [
