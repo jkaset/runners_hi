@@ -21,7 +21,7 @@ export const ActivityEndForm = (props) => {
     updateActivity({
       id: parseInt(props.match.params.activityId),
       moodPost: moodPost.current.value,
-      note: note.current.value,
+      note: note.current.value
     })
 
       //need change route when button is clicked
@@ -37,6 +37,9 @@ export const ActivityEndForm = (props) => {
     <>
       <Form>
         <h4>Done running?</h4>
+        <Form.Group controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Click here" />
+          </Form.Group>
         <h4>Time for your post-run check-in</h4>
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
@@ -52,6 +55,10 @@ export const ActivityEndForm = (props) => {
           <Form.Label>Run Notes:</Form.Label>
           <Form.Control className="form_note" maxLength={280} as="textarea" rows={3} ref={note} />
         </Form.Group>
+
+        
+          
+       
 
 
         <button className="btn btn-secondary" type="submit" onClick={evt => {
