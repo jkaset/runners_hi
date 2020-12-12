@@ -10,6 +10,7 @@ import { ActivityChart } from "./ActivityChart"
 
 
 
+
 export const ActivityList = () => {
   const { activities, getActivities, useActivities } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)

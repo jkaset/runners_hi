@@ -3,6 +3,7 @@ import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { Form, Button, Card, Accordion } from 'react-bootstrap'
 
+
 // setState schedules an update to a component’s state object. When state changes, the component responds by re-rendering.
 //but I didn't need to set state in this particular update, just capture id and PATCH info to replace empty strings
 export const ActivityEndForm = (props) => {
@@ -75,6 +76,7 @@ export const ActivityEndForm = (props) => {
           evt.preventDefault()
           //instantGrat()
           editNewActivity()
+          
         }}>Log it</button>
       </Form>
       {/* </Card.Body>
