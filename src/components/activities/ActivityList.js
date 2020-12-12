@@ -27,7 +27,9 @@ export const ActivityList = () => {
   if (userActivities.length > 0) {
     return (
       <>
-        <Logout />
+        <Logout /> 
+          <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
+        
        
         <div>
           <h3>Running changes your mood by <ActivityMoodMath />%</h3>
@@ -46,9 +48,9 @@ export const ActivityList = () => {
                 />
               }
             })}
-        </div>
-          <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
-        </div>
+          </div>
+          </div>
+        
       </>
     )
   } else {
