@@ -6,6 +6,7 @@ import ActivityMoodMath from "./ActivityMoodMath"
 import {Logout} from "../auth/Logout"
 import "./Activity.css"
 import { Link } from "react-router-dom"
+import { ActivityChart } from "./ActivityChart"
 
 
 
@@ -30,6 +31,7 @@ export const ActivityList = () => {
        
         <div>
           <h3>Running changes your mood by <ActivityMoodMath />%</h3>
+          <ActivityChart />
           <h4>Your Stats</h4>
 
         <div className="pre-scrollable">
