@@ -14,7 +14,8 @@ export const Activity = ({ activity, activityType }) => {
   }
 
   //all-caps activity type
-  let activityHeading = (activityType.name).toUpperCase()
+let activityHeading = (activityType.name).toUpperCase()
+//{activityType.name}
 
 
   return (
