@@ -28,17 +28,27 @@ export const ActivityChart = () => {
     //console.log(moodsPre)
   })
 
+  let moodsPost = []
+
+  //push all moodPost numbers into empty array
+  activities.forEach(activity => {
+    if (activity.userId === user) {
+      moodsPost.push(parseInt(activity.moodPost))
+    }
+    //console.log(moodsPost)
+  })
+
   // const instances = userActivities.length
   // console.log(instances)
-let instancesArray = []
-//const instances = () => {
+  let instancesArray = []
+  //const instances = () => {
   for (let i = 0; i < userActivities.length; i++) {
     //console.log((i).toString()).split("")
     instancesArray.push(((i).toString()).split(""))
     //return i
   }
-//}
-console.log(instancesArray)
+  //}
+  console.log(instancesArray)
 
 
 
@@ -50,49 +60,77 @@ console.log(instancesArray)
         label: 'Before',
         fill: false,
         lineTension: 0.5,
-        backgroundColor: 'rgba(75,192,192,1)',
-        borderColor: 'rgba(0,0,0,1)',
+        backgroundColor: 'black',
+        borderColor: 'navy',
         borderWidth: 2,
         data: (moodsPre)
-      }
-    ]
-  }
-
-  const state1 = {
-    labels: (instancesArray),
-    datasets: [
+      },
       {
-        label: 'Before',
+        label: 'After',
         fill: false,
         lineTension: 0.5,
-        backgroundColor: 'rgba(75,192,192,1)',
-        borderColor: 'rgba(0,0,0,1)',
+        backgroundColor: 'lime',
+        borderColor: 'orange',
         borderWidth: 2,
-        data: (6, 7, 8, 9, 10)
+        data: (moodsPost)
       }
     ]
   }
-
-
 
   return (
     <>
-    <div>
-      <Line
-        data={state}
-        options={{
-          title: {
-            display: true,
-            text: 'Mood Relationship',
-            fontSize: 20
-          },
-          legend: {
-            display: true,
-            position: 'right'
+      <div>
+        <Line
+          data={state}
+          options={{
+            // 
+            
+              xAxes: [{
+                barPercentage: 0.5,
+                barThickness: 22,
+                maxBarThickness: 38,
+                minBarLength: 18,
+
+                ticks: {
+                  beginAtZero: false
+                }
+              }],
+            
+          yAxes: [
+                {
+                  type: 'linear',
+                  display: true,
+                  position: 'left',
+                  id: 'y-axis-1',
+                  labels: {
+                    show: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                  }
+
+                },
+                {
+                  type: 'linear',
+                  display: true,
+                  position: 'right',
+                  gridLines: {
+                    display: false
+                  },
+                  id: 'y-axis-2',
+                  labels: {
+                    show: false
+                  },
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }
+              ]
+            }
           }
-        }}
-      />
+            />
     </div>
 </>
   )
-}
+
+      }
