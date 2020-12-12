@@ -150,10 +150,19 @@
       "userId": 5,
       "date": "12-12-2020 06:38",
       "moodPre": "1",
-      "moodPost": "",
-      "note": "",
+      "moodPost": "5",
+      "note": "ssdf",
       "activityTypeId": 2,
       "id": 15
+    },
+    {
+      "userId": 5,
+      "date": "12-12-2020 07:03",
+      "moodPre": "1",
+      "moodPost": "10",
+      "note": "sga",
+      "activityTypeId": 1,
+      "id": 16
     }
   ],
   "activityTypes": [
