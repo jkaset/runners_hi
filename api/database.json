@@ -163,6 +163,24 @@
       "note": "sga",
       "activityTypeId": 1,
       "id": 16
+    },
+    {
+      "userId": 5,
+      "date": "12-12-2020 07:03",
+      "moodPre": "1",
+      "moodPost": "9",
+      "note": "sdf",
+      "activityTypeId": 5,
+      "id": 17
+    },
+    {
+      "userId": 5,
+      "date": "12-12-2020 07:04",
+      "moodPre": "1",
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 6,
+      "id": 18
     }
   ],
   "activityTypes": [

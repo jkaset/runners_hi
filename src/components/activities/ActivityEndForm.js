@@ -40,7 +40,7 @@ export const ActivityEndForm = (props) => {
 
   return (
     <>
-    <h3>Run Completed?</h3>
+    <h4>Finished?</h4>
       <Accordion>
         <Card>
           <Card.Header>
