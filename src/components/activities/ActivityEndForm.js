@@ -35,7 +35,10 @@ export const ActivityEndForm = (props) => {
   //react bootstrap form, array method to render moods 1-10
   //button at the bottom runs update function
 
-
+  // const instantGrat = () => {
+    
+  //   window.alert("Great Work!")
+  // }
 
 
   return (
@@ -45,7 +48,7 @@ export const ActivityEndForm = (props) => {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              Click Here!
+              click here
       </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
@@ -69,6 +72,7 @@ export const ActivityEndForm = (props) => {
 
 <button className="btn btn-secondary" type="submit" onClick={evt => {
   evt.preventDefault()
+  //instantGrat()
   editNewActivity()
 }}>Log it</button>
 </Form></Card.Body>
