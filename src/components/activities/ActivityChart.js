@@ -54,7 +54,7 @@ export const ActivityChart = () => {
 
 
   const state = {
-    labels: (instancesArray),
+    labels: (instancesArray.reverse()),
     datasets: [
       {
         label: 'Before',
