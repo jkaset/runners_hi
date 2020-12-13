@@ -7,10 +7,12 @@ import { format } from 'date-fns'
 import { Logout } from '../auth/Logout'
 import { Link } from "react-router-dom"
 
+
 //props: define parameters to capture object
 export const ActivityStartForm = (props) => {
   const { addActivity } = useContext(ActivityContext)
   const { activityTypes, getActivityTypes } = useContext(ActivityTypeContext)
+
 
   //references created here to attach to input fields in form
   const date = format(new Date(), 'MM-dd-yyyy hh:mm')
@@ -22,6 +24,8 @@ export const ActivityStartForm = (props) => {
   useEffect(() => {
     getActivityTypes()
   }, [])
+
+
 
   const logNewActivity = () => {
 
@@ -48,15 +52,15 @@ export const ActivityStartForm = (props) => {
 
     }
   }
-
+  
   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   //map function to list activity types from api
   //button on bottom logs the data collected from form to database.json and then routes you to Activity End Form where you update that data
   return (
     <>
-    <Logout />  
-    
-    <Link to="/activities">See stats</Link>
+      <Logout />
+
+      <Link to="/activities">See stats</Link>
       <Form>
         <h4>Pre-run Stats</h4>
         <Form.Group controlId="form.ControlSelect1">
@@ -79,14 +83,14 @@ export const ActivityStartForm = (props) => {
             ))}
           </Form.Control>
         </Form.Group>
-
+        
         <button className="btn btn-secondary" type="submit" onClick={evt => {
           evt.preventDefault()
           logNewActivity()
 
         }}>Ready to Run!</button>
       </Form>
-      
+
     </>
   )
 
