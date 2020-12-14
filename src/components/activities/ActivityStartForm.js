@@ -57,6 +57,7 @@ export const ActivityStartForm = (props) => {
   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   //create variable to push to
   let moodValue = []
+
   // let lastValue = moodValue.pop()
   // const moodValueFunction = () => {
   // return lastValue
@@ -100,6 +101,9 @@ export const ActivityStartForm = (props) => {
               evt.preventDefault()
               console.log("clicked", m)
               moodValue.push(m)
+              
+              // console.log(arr)
+
               
             }} key={m}>{m}</button>
           ))}
