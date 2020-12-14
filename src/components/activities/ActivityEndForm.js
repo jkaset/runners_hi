@@ -73,7 +73,7 @@ export const ActivityEndForm = (props) => {
               <option key={m}>{m}</option>
             ))}
           </Form.Control> */}
-          <ButtonGroup ref={moodPost}>
+          <ButtonGroup variant="light" size="lg" ref={moodPost}>
           {moods.map(m => (
             <Button onClick={evt => {
               evt.preventDefault()

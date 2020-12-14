@@ -7,8 +7,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
 import { Logout } from '../auth/Logout'
 import { Link } from "react-router-dom"
-
-import { MoodSelector } from "../moods/MoodSelector"
+//import { MoodSelector } from "../moods/MoodSelector"
 
 //props: define parameters to capture object
 export const ActivityStartForm = (props) => {
@@ -79,11 +78,11 @@ export const ActivityStartForm = (props) => {
         
         <ButtonGroup ref={moodPre}>
           {moods.map(m => (
-            <Button onClick={evt => {
+            <Button variant="light" size="lg"  onClick={evt => {
               evt.preventDefault()
-              console.log("clicked", m)
+              //console.log("clicked", m)
               moodValue.push(m)     
-            }}className={m} key={m}>{emojis[m-1]}</Button>
+            }}className={m} id="emoticon" key={m}>{emojis[m-1]}</Button>
           ))}
         </ButtonGroup>
         </Form.Group>
