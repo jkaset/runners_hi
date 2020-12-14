@@ -20,20 +20,36 @@ export const Activity = ({ activity, activityType }) => {
 
   return (
     <>
-      <Accordion defaultActiveKey="0">
+      <Accordion>
         <Card>
-          
-            <Accordion.Toggle as={Card.Header} eventKey="0">
-              <div>
-                {activity.date}
-                {activityHeading}
-                {((activity.moodPost - activity.moodPre) / 10) * 100}%
-              </div>
-            </Accordion.Toggle>
+          <Accordion.Toggle as={Card.Header} eventKey="0">
+            <ul>
+              <li>{activity.date}</li>
+              <li>{activityHeading}</li>
+              <li>Mental Improvement: {((activity.moodPost - activity.moodPre) / 10) * 100}%</li>
+            </ul>
+            <Button
+              onClick={() => {
+                activityToDelete(activity)
+              }}>Delete</Button>
+            <Button
+            >See Notes</Button>
+          </Accordion.Toggle>
 
-            <Accordion.Collapse eventKey="0">
-              <Card.Body>
-                <section className="activity">
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>
+                <div className="activity__note">Notes: "{activity.note}"</div>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+      </Accordion>
+    </>
+
+  )
+}
+
+
+{/* <section className="activity">
                   <div className="activity__date">{activity.date}</div>
                   <div className="activity__name">{activityHeading}</div>
                   <div className="activity__moodPost">Post-activity Mood: {activity.moodPost} out of 10</div>
@@ -43,19 +59,6 @@ export const Activity = ({ activity, activityType }) => {
                   <div className="activity__note">Notes: "{activity.note}"</div>
 
 
-                  <button
-                    onClick={() => {
-                      activityToDelete(activity)
-                    }}
-                  >Delete</button>
+                  
 
-                </section>
-              </Card.Body>
-            </Accordion.Collapse>
-        </Card>
-      </Accordion>
-    </>
-
-  )
-}
-
+                </section> */}
