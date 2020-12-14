@@ -1,9 +1,48 @@
-// import React from 'react'
-// //import ButtonGroup from 'react-bootstrap/ButtonGroup'
-// export const MoodSelector = () => {
+import React from 'react'
 
-//   let moodValue = []
+export const MoodSelector = () => {
+const emoji = require("emoji-dictionary")
 
+const moodEmojiArray = ['weary', 'cry', 'frowning', 'confused', 'neutral_face', 'relieved', 'slightly_smiling_face', 'blush', 'grinning', 'joy']
+
+const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
+
+//console.log(emojis)
+
+return (
+  emojis
+)
+}
+
+
+
+// if (moodPre === 1) {
+  //   return 'weary'
+  // }
+  
+  
+  
+  
+  
+  
+  // //import ButtonGroup from 'react-bootstrap/ButtonGroup'
+  // export const MoodSelector = () => {
+    
+    //   let moodValue = []
+    
+    // const moods = [
+    //   {value: '1', emoticon: 'weary'}, 
+    //   {value: '2', emoticon: 'cry'},
+    //   {value: '3', emoticon: 'frowning'}, 
+    //   {value: '4', emoticon: 'confused'}, 
+    //   {value: '5', emoticon: 'neutral_face'}, 
+    //   {value: '6', emoticon: 'relieved'}, 
+    //   {value: '7', emoticon: 'slightly_smiling_face'}, 
+    //   {value: '8', emoticon: 'blush'}, 
+    //   {value: '9', emoticon: 'grinning'}, 
+    //   , 
+    //   {value: '10', emoticon: 'joy'}, 
+    // ]
 //   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 //   return (

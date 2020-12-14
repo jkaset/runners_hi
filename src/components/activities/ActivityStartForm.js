@@ -7,7 +7,8 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
 import { Logout } from '../auth/Logout'
 import { Link } from "react-router-dom"
-//import { MoodSelector } from "../moods/MoodSelector"
+
+import { MoodSelector } from "../moods/MoodSelector"
 
 //props: define parameters to capture object
 export const ActivityStartForm = (props) => {
@@ -40,7 +41,6 @@ export const ActivityStartForm = (props) => {
 
         userId: userId,
         date: date,
-        //moodPre: moodPre.current.value,
         moodPre: moodValue.pop(),
         moodPost: "",
         note: "",
@@ -57,11 +57,16 @@ export const ActivityStartForm = (props) => {
   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   //create variable to push to
   let moodValue = []
+  
+  //emoji logic
+  const emoji = require("emoji-dictionary")
+  const moodEmojiArray = ['weary', 'cry', 'frowning', 'confused', 'neutral_face', 'relieved', 'slightly_smiling_face', 'blush', 'grinning', 'joy']
+  
+  const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
 
-  // let lastValue = moodValue.pop()
-  // const moodValueFunction = () => {
-  // return lastValue
-  // }
+  
+
+  
   
   
 
@@ -97,18 +102,15 @@ export const ActivityStartForm = (props) => {
 
         <ButtonGroup ref={moodPre}>
           {moods.map(m => (
-            <button onClick={evt => {
+            <Button onClick={evt => {
               evt.preventDefault()
               console.log("clicked", m)
-              moodValue.push(m)
-              
-              // console.log(arr)
-
-              
-            }} key={m}>{m}</button>
+              moodValue.push(m)     
+            }}className={m} key={m}>{emojis[m-1]}</Button>
           ))}
         </ButtonGroup>
         
+
 
         <button className="btn btn-secondary" type="submit" onClick={evt => {
           evt.preventDefault()

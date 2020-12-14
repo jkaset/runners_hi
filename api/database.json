@@ -256,111 +256,48 @@
     },
     {
       "userId": 1,
-      "date": "12-12-2020 02:21",
-      "moodPre": "6",
-      "moodPost": "5",
+      "date": "12-14-2020 01:40",
+      "moodPre": 7,
+      "moodPost": 10,
       "note": "ss",
-      "activityTypeId": 5,
+      "activityTypeId": 3,
       "id": 31
     },
     {
       "userId": 1,
-      "date": "12-12-2020 02:25",
-      "moodPre": "1",
-      "moodPost": "8",
-      "note": "ss",
-      "activityTypeId": 2,
+      "date": "12-14-2020 01:55",
+      "moodPre": 3,
+      "moodPost": 8,
+      "note": "38",
+      "activityTypeId": 3,
       "id": 32
     },
     {
       "userId": 1,
-      "date": "12-12-2020 02:45",
-      "moodPre": "7",
-      "moodPost": "9",
-      "note": "ss",
-      "activityTypeId": 3,
+      "date": "12-14-2020 02:34",
+      "moodPre": 1,
+      "moodPost": 10,
+      "note": "1 10",
+      "activityTypeId": 8,
       "id": 33
     },
     {
       "userId": 1,
-      "date": "12-12-2020 04:37",
-      "moodPre": "1",
-      "moodPost": "7",
-      "note": "sss",
-      "activityTypeId": 1,
+      "date": "12-14-2020 02:36",
+      "moodPre": 9,
+      "moodPost": 3,
+      "note": "9 3",
+      "activityTypeId": 4,
       "id": 34
     },
     {
       "userId": 1,
-      "date": "12-12-2020 04:38",
-      "moodPre": "3",
-      "moodPost": "9",
-      "note": "sss",
-      "activityTypeId": 1,
-      "id": 35
-    },
-    {
-      "userId": 1,
-      "date": "12-13-2020 07:47",
-      "moodPre": "2",
-      "moodPost": "7",
-      "note": "l",
-      "activityTypeId": 1,
-      "id": 36
-    },
-    {
-      "userId": 1,
-      "date": "12-14-2020 01:11",
-      "moodPre": 5,
-      "moodPost": 8,
-      "note": "kjh",
-      "activityTypeId": 8,
-      "id": 42
-    },
-    {
-      "userId": 1,
-      "date": "12-14-2020 01:12",
-      "moodPre": 3,
-      "moodPost": 8,
-      "note": "",
-      "activityTypeId": 2,
-      "id": 43
-    },
-    {
-      "userId": 1,
-      "date": "12-14-2020 01:12",
-      "moodPre": 1,
-      "moodPost": 9,
-      "note": "",
-      "activityTypeId": 3,
-      "id": 44
-    },
-    {
-      "userId": 1,
-      "date": "12-14-2020 01:12",
-      "moodPre": 1,
-      "moodPost": 10,
-      "note": "",
-      "activityTypeId": 5,
-      "id": 45
-    },
-    {
-      "userId": 1,
-      "date": "12-14-2020 01:20",
+      "date": "12-14-2020 02:37",
       "moodPre": 4,
-      "moodPost": 10,
-      "note": "4 10",
-      "activityTypeId": 1,
-      "id": 46
-    },
-    {
-      "userId": 1,
-      "date": "12-14-2020 01:21",
-      "moodPre": 1,
-      "moodPost": 4,
-      "note": "1 4",
-      "activityTypeId": 6,
-      "id": 47
+      "moodPost": 6,
+      "note": "s",
+      "activityTypeId": 5,
+      "id": 35
     }
   ],
   "activityTypes": [
