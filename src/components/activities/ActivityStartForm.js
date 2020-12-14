@@ -2,11 +2,12 @@ import React, { useContext, useRef, useEffect } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
-import { Form } from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
 import { Logout } from '../auth/Logout'
 import { Link } from "react-router-dom"
-
+//import { MoodSelector } from "../moods/MoodSelector"
 
 //props: define parameters to capture object
 export const ActivityStartForm = (props) => {
@@ -25,12 +26,12 @@ export const ActivityStartForm = (props) => {
     getActivityTypes()
   }, [])
 
-
-
   const logNewActivity = () => {
 
     //in case id is a string
     const activityTypeId = parseInt(activityType.current.value)
+
+
 
     if (activityTypeId === 0) {
       window.alert("Please choose an activity")
@@ -39,7 +40,8 @@ export const ActivityStartForm = (props) => {
 
         userId: userId,
         date: date,
-        moodPre: moodPre.current.value,
+        //moodPre: moodPre.current.value,
+        moodPre: moodValue.pop(),
         moodPost: "",
         note: "",
         activityTypeId
@@ -52,8 +54,16 @@ export const ActivityStartForm = (props) => {
 
     }
   }
-  
   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  //create variable to push to
+  let moodValue = []
+  // let lastValue = moodValue.pop()
+  // const moodValueFunction = () => {
+  // return lastValue
+  // }
+  
+  
+
   //map function to list activity types from api
   //button on bottom logs the data collected from form to database.json and then routes you to Activity End Form where you update that data
   return (
@@ -75,15 +85,27 @@ export const ActivityStartForm = (props) => {
 
           </Form.Control>
         </Form.Group>
-        <Form.Group controlId="form.ControlSelect1">
+        {/* <Form.Group controlId="form.ControlSelect1">
           <Form.Label>On a scale of 1-10, how's your mood?</Form.Label>
           <Form.Control as="select" ref={moodPre}>
             {moods.map(m => (
               <option key={m}>{m}</option>
             ))}
           </Form.Control>
-        </Form.Group>
+        </Form.Group> */}
+
+        <ButtonGroup ref={moodPre}>
+          {moods.map(m => (
+            <button onClick={evt => {
+              evt.preventDefault()
+              console.log("clicked", m)
+              moodValue.push(m)
+              
+            }} key={m}>{m}</button>
+          ))}
+        </ButtonGroup>
         
+
         <button className="btn btn-secondary" type="submit" onClick={evt => {
           evt.preventDefault()
           logNewActivity()
