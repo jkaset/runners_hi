@@ -7,6 +7,7 @@ import {Logout} from "../auth/Logout"
 import "./Activity.css"
 import { Link } from "react-router-dom"
 import { ActivityChart } from "./ActivityChart"
+import {Card, Accordion} from "react-bootstrap" 
 
 
 
