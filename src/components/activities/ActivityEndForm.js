@@ -34,6 +34,13 @@ export const ActivityEndForm = (props) => {
 
   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   let moodValue = []
+
+  //emoji logic
+  const emoji = require("emoji-dictionary")
+  const moodEmojiArray = ['weary', 'cry', 'frowning', 'confused', 'neutral_face', 'relieved', 'slightly_smiling_face', 'blush', 'grinning', 'joy']
+  
+  const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
+
   //react bootstrap form, array method to render moods 1-10
   //button at the bottom runs update function
 
@@ -59,7 +66,7 @@ export const ActivityEndForm = (props) => {
 
         <h4>Time for your post-run check-in</h4>
         <Form.Group controlId="form.ControlSelect1">
-          <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
+          <Form.Label>How's your mood now?</Form.Label>
 
           {/* <Form.Control as="select" ref={moodPost}>
             {moods.map(m => (
@@ -68,11 +75,12 @@ export const ActivityEndForm = (props) => {
           </Form.Control> */}
           <ButtonGroup ref={moodPost}>
           {moods.map(m => (
-            <button onClick={evt => {
+            <Button onClick={evt => {
               evt.preventDefault()
               console.log("clicked", m)
               moodValue.push(m)
-            }} key={m}>{m}</button>
+            
+          }}className={m} key={m}>{emojis[m-1]}</Button>
           ))}
         </ButtonGroup>
         </Form.Group>
