@@ -64,11 +64,6 @@ export const ActivityStartForm = (props) => {
   
   const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
 
-  
-
-  
-  
-  
 
   //map function to list activity types from api
   //button on bottom logs the data collected from form to database.json and then routes you to Activity End Form where you update that data
