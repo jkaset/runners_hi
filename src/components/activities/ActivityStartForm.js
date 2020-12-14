@@ -80,6 +80,19 @@ export const ActivityStartForm = (props) => {
       <Form>
         <h4>Pre-run Stats</h4>
         <Form.Group controlId="form.ControlSelect1">
+          <Form.Label>How's your starting mood?</Form.Label>
+        
+        <ButtonGroup ref={moodPre}>
+          {moods.map(m => (
+            <Button onClick={evt => {
+              evt.preventDefault()
+              console.log("clicked", m)
+              moodValue.push(m)     
+            }}className={m} key={m}>{emojis[m-1]}</Button>
+          ))}
+        </ButtonGroup>
+        </Form.Group>
+        <Form.Group controlId="form.ControlSelect1">
           <Form.Label>Today's activity</Form.Label>
           <Form.Control as="select" ref={activityType}>
             <option value="0">choose your run</option>
@@ -99,16 +112,7 @@ export const ActivityStartForm = (props) => {
             ))}
           </Form.Control>
         </Form.Group> */}
-
-        <ButtonGroup ref={moodPre}>
-          {moods.map(m => (
-            <Button onClick={evt => {
-              evt.preventDefault()
-              console.log("clicked", m)
-              moodValue.push(m)     
-            }}className={m} key={m}>{emojis[m-1]}</Button>
-          ))}
-        </ButtonGroup>
+        
         
 
 

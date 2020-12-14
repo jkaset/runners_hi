@@ -66,7 +66,7 @@ export const ActivityEndForm = (props) => {
 
         <h4>Time for your post-run check-in</h4>
         <Form.Group controlId="form.ControlSelect1">
-          <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
+          <Form.Label>How's your mood now?</Form.Label>
 
           {/* <Form.Control as="select" ref={moodPost}>
             {moods.map(m => (
