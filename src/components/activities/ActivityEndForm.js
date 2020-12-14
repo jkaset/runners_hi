@@ -65,6 +65,13 @@ export const ActivityEndForm = (props) => {
       <Form>
 
         <h4>Time for your post-run check-in</h4>
+        
+
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Run Notes:</Form.Label>
+          <Form.Control className="form_note" maxLength={280} as="textarea" rows={3} ref={note} />
+        </Form.Group>
+
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>How's your mood now?</Form.Label>
 
@@ -75,7 +82,7 @@ export const ActivityEndForm = (props) => {
           </Form.Control> */}
           <ButtonGroup ref={moodPost}>
           {moods.map(m => (
-            <Button onClick={evt => {
+            <Button variant="light" onClick={evt => {
               evt.preventDefault()
               console.log("clicked", m)
               moodValue.push(m)
@@ -83,11 +90,6 @@ export const ActivityEndForm = (props) => {
           }}className={m} key={m}>{emojis[m-1]}</Button>
           ))}
         </ButtonGroup>
-        </Form.Group>
-
-        <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Run Notes:</Form.Label>
-          <Form.Control className="form_note" maxLength={280} as="textarea" rows={3} ref={note} />
         </Form.Group>
 
         <button className="btn btn-secondary" type="submit" onClick={evt => {

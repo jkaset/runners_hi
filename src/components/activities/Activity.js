@@ -1,7 +1,7 @@
-import React, {useContext} from "react"
+import React, { useContext } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
-
+import { Card, Accordion, Button } from "react-bootstrap"
 export const Activity = ({ activity, activityType }) => {
   const { deleteActivity } = useContext(ActivityContext)
 
@@ -14,28 +14,51 @@ export const Activity = ({ activity, activityType }) => {
   }
 
   //all-caps activity type
-let activityHeading = (activityType.name).toUpperCase()
-//{activityType.name}
+  let activityHeading = (activityType.name).toUpperCase()
+  //{activityType.name}
 
 
   return (
-    <section className="activity">
-      <div className="activity__date">{activity.date}</div>
-      <div className="activity__name">{activityHeading}</div>
-      <div className="activity__moodPost">Post-activity Mood: {activity.moodPost} out of 10</div>
-      <div className="activity__moodPre">Pre-activity Mood: {activity.moodPre} out of 10</div>
-      
-      <div className="activity__moodChange">Your mood quotient changed {((activity.moodPost-activity.moodPre)/10)*100}%</div>
-      <div className="activity__note">Notes: "{activity.note}"</div>
+    <>
+      <Accordion>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="0">
+            <ul>
+              <li>{activity.date}</li>
+              <li>{activityHeading}</li>
+              <li>Mental Improvement: {((activity.moodPost - activity.moodPre) / 10) * 100}%</li>
+            </ul>
+            <Button
+              onClick={() => {
+                activityToDelete(activity)
+              }}>Delete</Button>
+            <Button
+            >See Notes</Button>
+          </Accordion.Toggle>
 
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>
+                <div className="activity__note">Notes: "{activity.note}"</div>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+      </Accordion>
+    </>
 
-      <button
-        onClick={() => {
-          activityToDelete(activity)
-        }}
-      >Delete</button>
-
-    </section>
   )
 }
 
+
+{/* <section className="activity">
+                  <div className="activity__date">{activity.date}</div>
+                  <div className="activity__name">{activityHeading}</div>
+                  <div className="activity__moodPost">Post-activity Mood: {activity.moodPost} out of 10</div>
+                  <div className="activity__moodPre">Pre-activity Mood: {activity.moodPre} out of 10</div>
+
+                  <div className="activity__moodChange">Your mood quotient changed {((activity.moodPost - activity.moodPre) / 10) * 100}%</div>
+                  <div className="activity__note">Notes: "{activity.note}"</div>
+
+
+                  
+
+                </section> */}

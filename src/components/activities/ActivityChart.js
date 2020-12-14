@@ -48,7 +48,7 @@ export const ActivityChart = () => {
     //return i
   }
   //}
-  console.log(instancesArray)
+  //console.log(instancesArray)
 
 
 

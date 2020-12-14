@@ -7,8 +7,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
 import { Logout } from '../auth/Logout'
 import { Link } from "react-router-dom"
-
-import { MoodSelector } from "../moods/MoodSelector"
+//import { MoodSelector } from "../moods/MoodSelector"
 
 //props: define parameters to capture object
 export const ActivityStartForm = (props) => {
@@ -64,7 +63,9 @@ export const ActivityStartForm = (props) => {
   
   const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
 
-
+  // const returnEmoji = () => {<div>
+  //   {moods.map(m => (<div>{emojis[m-1]}</div>))}
+  //   </div>}
   //map function to list activity types from api
   //button on bottom logs the data collected from form to database.json and then routes you to Activity End Form where you update that data
   return (
@@ -74,19 +75,7 @@ export const ActivityStartForm = (props) => {
       <Link to="/activities">See stats</Link>
       <Form>
         <h4>Pre-run Stats</h4>
-        <Form.Group controlId="form.ControlSelect1">
-          <Form.Label>How's your starting mood?</Form.Label>
         
-        <ButtonGroup ref={moodPre}>
-          {moods.map(m => (
-            <Button onClick={evt => {
-              evt.preventDefault()
-              console.log("clicked", m)
-              moodValue.push(m)     
-            }}className={m} key={m}>{emojis[m-1]}</Button>
-          ))}
-        </ButtonGroup>
-        </Form.Group>
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>Today's activity</Form.Label>
           <Form.Control as="select" ref={activityType}>
@@ -108,7 +97,21 @@ export const ActivityStartForm = (props) => {
           </Form.Control>
         </Form.Group> */}
         
+        <Form.Group controlId="form.ControlSelect1">
+          <Form.Label>How's your starting mood?</Form.Label>
         
+        <ButtonGroup ref={moodPre}>
+          {moods.map(m => (
+            <Button variant="light"  onClick={evt => {
+              evt.preventDefault()
+              //console.log("clicked", m)
+              moodValue.push(m)     
+            }}className={m} id="emoticon" key={m}>{emojis[m-1]}</Button>
+            
+          ))}
+        </ButtonGroup>
+        
+        </Form.Group>
 
 
         <button className="btn btn-secondary" type="submit" onClick={evt => {
@@ -117,7 +120,6 @@ export const ActivityStartForm = (props) => {
 
         }}>Ready to Run!</button>
       </Form>
-
     </>
   )
 
