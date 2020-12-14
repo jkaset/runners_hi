@@ -2,6 +2,7 @@ import React, { useContext, useRef } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { Form, Button, Card, Accordion } from 'react-bootstrap'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 
 // setState schedules an update to a component’s state object. When state changes, the component responds by re-rendering.
@@ -22,7 +23,7 @@ export const ActivityEndForm = (props) => {
     //pull the id that matches the parameter
     updateActivity({
       id: parseInt(props.match.params.activityId),
-      moodPost: moodPost.current.value,
+      moodPost: moodValue.pop(),
       note: note.current.value
     })
 
@@ -32,7 +33,7 @@ export const ActivityEndForm = (props) => {
   }
 
   const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+  let moodValue = []
   //react bootstrap form, array method to render moods 1-10
   //button at the bottom runs update function
 
@@ -60,11 +61,20 @@ export const ActivityEndForm = (props) => {
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>On a scale of 1-10, how's your mood now?</Form.Label>
 
-          <Form.Control as="select" ref={moodPost}>
+          {/* <Form.Control as="select" ref={moodPost}>
             {moods.map(m => (
               <option key={m}>{m}</option>
             ))}
-          </Form.Control>
+          </Form.Control> */}
+          <ButtonGroup ref={moodPost}>
+          {moods.map(m => (
+            <button onClick={evt => {
+              evt.preventDefault()
+              console.log("clicked", m)
+              moodValue.push(m)
+            }} key={m}>{m}</button>
+          ))}
+        </ButtonGroup>
         </Form.Group>
 
         <Form.Group controlId="exampleForm.ControlTextarea1">

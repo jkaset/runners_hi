@@ -11,6 +11,7 @@
     "bootstrap-maxlength": "^1.10.0",
     "chart.js": "^2.9.4",
     "date-fns": "^2.16.1",
+    "emoji-dictionary": "^1.0.11",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-bootstrap-range-slider": "^2.0.2",
