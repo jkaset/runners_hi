@@ -8,6 +8,8 @@ import "./Activity.css"
 import { Link } from "react-router-dom"
 import { ActivityChart } from "./ActivityChart"
 import {Card, Accordion} from "react-bootstrap" 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -30,7 +32,7 @@ export const ActivityList = () => {
     return (
       <>
         <Logout /> 
-          <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
+          <Link to="/activities/create" className="btn btn-secondary"><FontAwesomeIcon icon={ faPlus }/> Record a New Run</Link>
         
        
         <div>
@@ -60,7 +62,7 @@ export const ActivityList = () => {
       <>
        <Logout />
       <div>
-      <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
+      <Link to="/activities/create" className="btn btn-secondary"><FontAwesomeIcon icon={ faPlus }/> Record a New Run</Link>
       </div>
       </>
     )

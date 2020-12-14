@@ -3,6 +3,8 @@ import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { Form, Button, Card, Accordion } from 'react-bootstrap'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 // setState schedules an update to a component’s state object. When state changes, the component responds by re-rendering.
@@ -97,7 +99,7 @@ export const ActivityEndForm = (props) => {
           //instantGrat()
           editNewActivity()
           
-        }}>Log it</button>
+        }}><FontAwesomeIcon icon={ faPlus }/> Log it</button>
       </Form>
       {/* </Card.Body>
              </Accordion.Collapse>

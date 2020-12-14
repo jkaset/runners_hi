@@ -7,7 +7,8 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
 import { Logout } from '../auth/Logout'
 import { Link } from "react-router-dom"
-//import { MoodSelector } from "../moods/MoodSelector"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChartLine, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 //props: define parameters to capture object
 export const ActivityStartForm = (props) => {
@@ -72,7 +73,8 @@ export const ActivityStartForm = (props) => {
     <>
       <Logout />
 
-      <Link to="/activities">See stats</Link>
+      <Link to="/activities" className="btn btn-secondary">
+          <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
       <Form>
         <h4>Pre-run Stats</h4>
         
@@ -114,11 +116,11 @@ export const ActivityStartForm = (props) => {
         </Form.Group>
 
 
-        <button className="btn btn-secondary" type="submit" onClick={evt => {
+        <Button className="btn btn-secondary" type="submit" onClick={evt => {
           evt.preventDefault()
           logNewActivity()
 
-        }}>Ready to Run!</button>
+        }}><FontAwesomeIcon icon={ faPlayCircle }/> Start Run</Button>
       </Form>
     </>
   )

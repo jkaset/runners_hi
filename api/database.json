@@ -328,12 +328,21 @@
     },
     {
       "userId": 1,
-      "date": "12-14-2020 04:08",
-      "moodPre": 2,
-      "moodPost": 9,
-      "note": "it is so gerey out side",
-      "activityTypeId": 6,
+      "date": "12-14-2020 04:52",
+      "moodPre": 3,
+      "moodPost": 8,
+      "note": "it was great damn",
+      "activityTypeId": 3,
       "id": 42
+    },
+    {
+      "userId": 1,
+      "date": "12-14-2020 04:54",
+      "moodPre": 3,
+      "moodPost": 7,
+      "note": "sdf",
+      "activityTypeId": 4,
+      "id": 43
     }
   ],
   "activityTypes": [

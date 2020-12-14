@@ -2,6 +2,8 @@ import React, { useContext } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { Card, Accordion, Button } from "react-bootstrap"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt, faCaretSquareDown } from '@fortawesome/free-solid-svg-icons'
 export const Activity = ({ activity, activityType }) => {
   const { deleteActivity } = useContext(ActivityContext)
 
@@ -29,11 +31,13 @@ export const Activity = ({ activity, activityType }) => {
               <li>Mental Improvement: {((activity.moodPost - activity.moodPre) / 10) * 100}%</li>
             </ul>
             <Button
+            ><FontAwesomeIcon icon={ faCaretSquareDown }/></Button>
+            
+            <Button
               onClick={() => {
                 activityToDelete(activity)
-              }}>Delete</Button>
-            <Button
-            >See Notes</Button>
+              }}><FontAwesomeIcon icon={ faTrashAlt }/></Button>
+            
           </Accordion.Toggle>
 
           <Accordion.Collapse eventKey="0">
