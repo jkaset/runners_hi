@@ -22,31 +22,34 @@ export const Activity = ({ activity, activityType }) => {
 
   return (
     <>
-      <Accordion>
+      <Accordion className="activity">
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
             <ul>
-              <li><FontAwesomeIcon icon={ faCalendarAlt }/> {activity.date}</li>
-              <li><FontAwesomeIcon icon={ faRunning }/> {activityHeading}</li>
-              <li><FontAwesomeIcon icon={ faChartLine }/> {((activity.moodPost - activity.moodPre) / 10) * 100}%</li>
+              <li><FontAwesomeIcon icon={faCalendarAlt} /> {activity.date}</li>
+              <li><FontAwesomeIcon icon={faRunning} /> {activityHeading}</li>
+              <li><FontAwesomeIcon icon={faChartLine} /> {((activity.moodPost - activity.moodPre) / 10) * 100}%</li>
             </ul>
-            <Button className="btn btn-warning"
-            ><FontAwesomeIcon icon={ faCaretSquareDown }/></Button>
 
-            <Button className="btn btn-dark"
-              onClick={() => {
-                activityToDelete(activity)
-              }}><FontAwesomeIcon icon={ faTrashAlt }/></Button>
-            
+            <div className="float-right activityListButtonGroup">
+              <Button className="btn btn-warning"
+              ><FontAwesomeIcon icon={faCaretSquareDown} /></Button>
+
+              <Button className="btn btn-dark btnDelete"
+                onClick={() => {
+                  activityToDelete(activity)
+                }}><FontAwesomeIcon icon={faTrashAlt} /></Button>
+            </div>
+
           </Accordion.Toggle>
 
           <Accordion.Collapse eventKey="0">
-            <Card.Body>
-            {/* <div className="activity__moodPost">Post-activity Mood: {activity.moodPost} out of 10</div>
+            <Card.Body className="activity__note">
+              {/* <div className="activity__moodPost">Post-activity Mood: {activity.moodPost} out of 10</div>
                   <div className="activity__moodPre">Pre-activity Mood: {activity.moodPre} out of 10</div>               */}
-                <div className="activity__note"><FontAwesomeIcon icon={ faQuoteLeft}/> {activity.note} 
+              <div><FontAwesomeIcon icon={faQuoteLeft} /> {activity.note}
                 {/* <FontAwesomeIcon icon={ faQuoteRight}/>  */}
-                </div>
+              </div>
             </Card.Body>
           </Accordion.Collapse>
         </Card>

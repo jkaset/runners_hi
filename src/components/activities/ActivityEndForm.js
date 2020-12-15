@@ -54,11 +54,11 @@ export const ActivityEndForm = (props) => {
 
   return (
     <>
-      <h4>Finished?</h4>
+      <h2 className="formHeading">Finished?</h2>
       
-      <Form>
+      <Form className="formEnd">
 
-        <h4>Time for your post-run check-in</h4>
+        <h4 className="formHeadline">Time for your post-run check-in</h4>
         
 
         <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -74,7 +74,8 @@ export const ActivityEndForm = (props) => {
               <option key={m}>{m}</option>
             ))}
           </Form.Control> */}
-          <ButtonGroup ref={moodPost}>
+          <div className="text-center">
+          <ButtonGroup size="lg" className="btnGroup" ref={moodPost}>
           {moods.map(m => (
             <Button variant="light" onClick={evt => {
               evt.preventDefault()
@@ -84,14 +85,16 @@ export const ActivityEndForm = (props) => {
           }}className={m} key={m}>{emojis[m-1]}</Button>
           ))}
         </ButtonGroup>
+        </div>
         </Form.Group>
-
-        <button className="btn btn-dark" type="submit" onClick={evt => {
+        <div className="float-right">
+        <button className="btn btn-dark btnLog" type="submit" onClick={evt => {
           evt.preventDefault()
           //instantGrat()
           editNewActivity()
           
         }}><FontAwesomeIcon icon={ faPlus }/> Log it</button>
+        </div>
       </Form>
       {/* </Card.Body>
              </Accordion.Collapse>

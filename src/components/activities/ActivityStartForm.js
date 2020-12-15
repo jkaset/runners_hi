@@ -9,6 +9,9 @@ import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartLine, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
+
+//state that holds selected emojis
+
 //props: define parameters to capture object
 export const ActivityStartForm = (props) => {
   const { addActivity } = useContext(ActivityContext)
@@ -34,7 +37,7 @@ export const ActivityStartForm = (props) => {
 
 
     if (activityTypeId === 0) {
-      window.alert("Please choose an activity")
+      window.alert("Please select activity and mood")
     } else {
       addActivity({
 
@@ -72,11 +75,11 @@ export const ActivityStartForm = (props) => {
     <>
      
       <Form className="form formStart">
-        <h2>Pre-run Stats</h2>
+        <h2 className="formHeading">Pre-run Stats</h2>
         
         <Form.Group controlId="form.ControlSelect1">
-          <Form.Label>Today's activity</Form.Label>
-          <Form.Control as="select" ref={activityType}>
+          <Form.Label className="formLabel">Today's activity</Form.Label>
+          <Form.Control className="dropdown" as="select" ref={activityType}>
             <option value="0">choose your run</option>
             {activityTypes.map(a => (
               <option key={a.id} value={a.id}>
@@ -97,28 +100,30 @@ export const ActivityStartForm = (props) => {
         
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>How's your starting mood?</Form.Label>
-        
-        <ButtonGroup ref={moodPre}>
+        <div className="text-center">
+        <ButtonGroup size="lg" ref={moodPre}>
           {moods.map(m => (
             <Button variant="light"  onClick={evt => {
               evt.preventDefault()
               //console.log("clicked", m)
               moodValue.push(m)     
-            }}className={m} id="emoticon" key={m}>{emojis[m-1]}</Button>
+            }}className={m} id="emoticon" key={m} >{emojis[m-1]}</Button>
             
           ))}
         </ButtonGroup>
+        </div>
         
         </Form.Group>
 
-
-        <Button className="btn btn-warning" type="submit" onClick={evt => {
+        <div className="float-right">
+        <Button className="btn btn-warning startButton" type="submit" onClick={evt => {
           evt.preventDefault()
           logNewActivity()
 
         }}><FontAwesomeIcon icon={ faPlayCircle }/> Start Run</Button>
         <Link to="/activities" className="btn btn-light">
         <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
+        </div>
       </Form>
     </>
   )
