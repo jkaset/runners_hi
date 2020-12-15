@@ -16,7 +16,7 @@ export const ActivityStartForm = (props) => {
 
 
   //references created here to attach to input fields in form
-  const date = format(new Date(), 'MM-dd-yyyy hh:mm:ss')
+  const date = format(new Date(), 'Ppp')
   const activityType = useRef(null)
   const moodPre = useRef(null)
   const userId = parseInt(localStorage.getItem("runnersHi_user"))

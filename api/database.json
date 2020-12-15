@@ -50,7 +50,15 @@
     }
   ],
   "activities": [
-    
+    {
+      "userId": 1,
+      "date": "12/15/2020, 2:33:35 PM",
+      "moodPre": 2,
+      "moodPost": 7,
+      "note": "sss",
+      "activityTypeId": 2,
+      "id": 1
+    }
   ],
   "activityTypes": [
     {
