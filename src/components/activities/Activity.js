@@ -3,7 +3,7 @@ import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { Card, Accordion, Button } from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt, faCaretSquareDown } from '@fortawesome/free-solid-svg-icons'
+import { faTrashAlt, faCaretSquareDown, faChartLine, faCalendarAlt, faRunning, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 export const Activity = ({ activity, activityType }) => {
   const { deleteActivity } = useContext(ActivityContext)
 
@@ -26,13 +26,13 @@ export const Activity = ({ activity, activityType }) => {
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
             <ul>
-              <li>{activity.date}</li>
-              <li>{activityHeading}</li>
-              <li>Mental Improvement: {((activity.moodPost - activity.moodPre) / 10) * 100}%</li>
+              <li><FontAwesomeIcon icon={ faCalendarAlt }/> {activity.date}</li>
+              <li><FontAwesomeIcon icon={ faRunning }/> {activityHeading}</li>
+              <li><FontAwesomeIcon icon={ faChartLine }/> {((activity.moodPost - activity.moodPre) / 10) * 100}%</li>
             </ul>
             <Button
             ><FontAwesomeIcon icon={ faCaretSquareDown }/></Button>
-            
+
             <Button
               onClick={() => {
                 activityToDelete(activity)
@@ -42,7 +42,11 @@ export const Activity = ({ activity, activityType }) => {
 
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-                <div className="activity__note">Notes: "{activity.note}"</div>
+            {/* <div className="activity__moodPost">Post-activity Mood: {activity.moodPost} out of 10</div>
+                  <div className="activity__moodPre">Pre-activity Mood: {activity.moodPre} out of 10</div>               */}
+                <div className="activity__note"><FontAwesomeIcon icon={ faQuoteLeft}/> {activity.note} 
+                {/* <FontAwesomeIcon icon={ faQuoteRight}/>  */}
+                </div>
             </Card.Body>
           </Accordion.Collapse>
         </Card>
