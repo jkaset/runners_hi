@@ -47,11 +47,11 @@ export const ActivityList = () => {
     return (
       <>
 
-        <Link to="/activities/create" className="btn btn-light"><FontAwesomeIcon icon={faPlus} /> Record a New Run</Link>
+        <Link to="/activities/create" className="btn btn-light float-right"><FontAwesomeIcon icon={faPlus} /> Record a New Run</Link>
 
 
-        <div>
-          <h3>Running changes your mood by <ActivityMoodMath />% </h3>
+        <div className="activityListContainer">
+          <h2 className="activityListHeader">Running changes your mood by <ActivityMoodMath />% </h2>
           <div className="chartContainer"><ActivityChart /></div>
           <h4>Your Stats</h4>
           

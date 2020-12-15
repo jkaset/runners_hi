@@ -2,7 +2,7 @@ import React from 'react'
 import './Logo.css'
 import logo from './images/logo.png'
 import { Logout } from './auth/Logout'
-import { Col, Row, Container} from "react-bootstrap"
+
 export const Logo = () => {
   return (
     <>
