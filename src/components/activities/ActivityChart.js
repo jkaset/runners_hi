@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { ActivityContext } from "./ActivityProvider"
 import { Line } from 'react-chartjs-2'
+import "./Activity.css"
 
 
 
@@ -60,7 +61,7 @@ export const ActivityChart = () => {
         label: 'Before',
         fill: false,
         lineTension: 0.5,
-        backgroundColor: 'black',
+        backgroundColor: '#003EF8',
         borderColor: '#292b2c',
         borderWidth: 2,
         data: (moodsPre)
@@ -69,8 +70,8 @@ export const ActivityChart = () => {
         label: 'After',
         fill: false,
         lineTension: 0.5,
-        backgroundColor: '#F7DC5F',
-        borderColor: '#f0ad4e',
+        backgroundColor: '#FFE186',
+        borderColor: '#FFC107',
         borderWidth: 2,
         data: (moodsPost)
       }
@@ -79,9 +80,11 @@ export const ActivityChart = () => {
 
   return (
     <>
-      <div>
+      <div className="chart">
         <Line
           data={state}
+          height={100}
+          options={{ maintainAspectRatio: true }}
           options={{
             // 
             

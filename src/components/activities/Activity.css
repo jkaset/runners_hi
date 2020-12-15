@@ -1,3 +1,30 @@
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+h1, 
+h2,
+h3 { 
+    font-weight: 300;  
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* ACTIVITY LIST STYLING */
 .pre-scrollable {  
   border: solid black 1px;
   height: 100%;
@@ -5,6 +32,29 @@
 
 .activity {
   border: solid black 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* FORM STYLING  */
+/* FORM START STYLING */
+.formStart {
   
 }
 
+
+/* FORM END STYLING */
+
+/* CHART STYLING */
+.chart {
+
+}
+
+.chartContainer {
+
+}
+
+canvas { height: 10 !important }

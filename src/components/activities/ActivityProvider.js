@@ -4,7 +4,7 @@ export const ActivityContext = React.createContext()
 
 export const ActivityProvider = (props) => {
     const [activities, setActivities] = useState([])
-    //const [ searchTerms, setTerms ] = useState("")
+    const [ searchTerms, setTerms ] = useState("")
 
     const getActivities = () => {
         return fetch("http://localhost:8088/activities")
@@ -56,7 +56,7 @@ export const ActivityProvider = (props) => {
 
     return (
         <ActivityContext.Provider value={{
-            activities, addActivity, getActivities, updateActivity, deleteActivity, useActivities
+            activities, addActivity, getActivities, updateActivity, deleteActivity, useActivities, searchTerms, setTerms
         }}>
             {props.children}
         </ActivityContext.Provider>

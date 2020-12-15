@@ -86,7 +86,7 @@ export const ActivityEndForm = (props) => {
         </ButtonGroup>
         </Form.Group>
 
-        <button className="btn btn-secondary" type="submit" onClick={evt => {
+        <button className="btn btn-dark" type="submit" onClick={evt => {
           evt.preventDefault()
           //instantGrat()
           editNewActivity()

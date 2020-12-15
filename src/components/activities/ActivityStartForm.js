@@ -5,7 +5,6 @@ import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form, Button } from 'react-bootstrap'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
-
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartLine, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
@@ -17,7 +16,7 @@ export const ActivityStartForm = (props) => {
 
 
   //references created here to attach to input fields in form
-  const date = format(new Date(), 'MM-dd-yyyy hh:mm')
+  const date = format(new Date(), 'MM-dd-yyyy hh:mm:ss')
   const activityType = useRef(null)
   const moodPre = useRef(null)
   const userId = parseInt(localStorage.getItem("runnersHi_user"))
@@ -72,8 +71,8 @@ export const ActivityStartForm = (props) => {
   return (
     <>
      
-      <Form>
-        <h4>Pre-run Stats</h4>
+      <Form className="form formStart">
+        <h2>Pre-run Stats</h2>
         
         <Form.Group controlId="form.ControlSelect1">
           <Form.Label>Today's activity</Form.Label>
@@ -113,12 +112,12 @@ export const ActivityStartForm = (props) => {
         </Form.Group>
 
 
-        <Button className="btn btn-dark" type="submit" onClick={evt => {
+        <Button className="btn btn-warning" type="submit" onClick={evt => {
           evt.preventDefault()
           logNewActivity()
 
         }}><FontAwesomeIcon icon={ faPlayCircle }/> Start Run</Button>
-        <Link to="/activities" className="btn btn-warning">
+        <Link to="/activities" className="btn btn-light">
         <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
       </Form>
     </>
