@@ -1,7 +1,5 @@
-/* header {
-  
-  background-size: 20%;
-  
-  height: 20vh;
-  
-} */
+header {
+   background-color: #070707;  
+   height: 130px;
+   padding-top: 10px;
+}

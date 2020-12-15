@@ -55,15 +55,7 @@ export const ActivityEndForm = (props) => {
   return (
     <>
       <h4>Finished?</h4>
-      {/* <Accordion>
-        <Card>
-          <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              click here
-      </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body> */}
+      
       <Form>
 
         <h4>Time for your post-run check-in</h4>

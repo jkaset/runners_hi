@@ -5,7 +5,7 @@ import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
 import { Form, Button } from 'react-bootstrap'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
-import { Logout } from '../auth/Logout'
+
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartLine, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
@@ -71,10 +71,7 @@ export const ActivityStartForm = (props) => {
   //button on bottom logs the data collected from form to database.json and then routes you to Activity End Form where you update that data
   return (
     <>
-      <Logout />
-
-      <Link to="/activities" className="btn btn-secondary">
-          <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
+     
       <Form>
         <h4>Pre-run Stats</h4>
         
@@ -116,11 +113,13 @@ export const ActivityStartForm = (props) => {
         </Form.Group>
 
 
-        <Button className="btn btn-secondary" type="submit" onClick={evt => {
+        <Button className="btn btn-dark" type="submit" onClick={evt => {
           evt.preventDefault()
           logNewActivity()
 
         }}><FontAwesomeIcon icon={ faPlayCircle }/> Start Run</Button>
+        <Link to="/activities" className="btn btn-warning">
+        <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
       </Form>
     </>
   )

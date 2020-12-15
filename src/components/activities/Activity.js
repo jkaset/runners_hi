@@ -30,10 +30,10 @@ export const Activity = ({ activity, activityType }) => {
               <li><FontAwesomeIcon icon={ faRunning }/> {activityHeading}</li>
               <li><FontAwesomeIcon icon={ faChartLine }/> {((activity.moodPost - activity.moodPre) / 10) * 100}%</li>
             </ul>
-            <Button
+            <Button className="btn btn-warning"
             ><FontAwesomeIcon icon={ faCaretSquareDown }/></Button>
 
-            <Button
+            <Button className="btn btn-dark"
               onClick={() => {
                 activityToDelete(activity)
               }}><FontAwesomeIcon icon={ faTrashAlt }/></Button>

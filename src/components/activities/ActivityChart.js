@@ -61,7 +61,7 @@ export const ActivityChart = () => {
         fill: false,
         lineTension: 0.5,
         backgroundColor: 'black',
-        borderColor: 'navy',
+        borderColor: '#292b2c',
         borderWidth: 2,
         data: (moodsPre)
       },
@@ -69,8 +69,8 @@ export const ActivityChart = () => {
         label: 'After',
         fill: false,
         lineTension: 0.5,
-        backgroundColor: 'lime',
-        borderColor: 'orange',
+        backgroundColor: '#F7DC5F',
+        borderColor: '#f0ad4e',
         borderWidth: 2,
         data: (moodsPost)
       }

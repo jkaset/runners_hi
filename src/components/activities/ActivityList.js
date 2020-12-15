@@ -31,8 +31,8 @@ export const ActivityList = () => {
   if (userActivities.length > 0) {
     return (
       <>
-        <Logout /> 
-          <Link to="/activities/create" className="btn btn-secondary"><FontAwesomeIcon icon={ faPlus }/> Record a New Run</Link>
+        
+          <Link to="/activities/create" className="btn btn-warning"><FontAwesomeIcon icon={ faPlus }/> Record a New Run</Link>
         
        
         <div>
