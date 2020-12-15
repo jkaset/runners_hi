@@ -3,9 +3,11 @@ import "./Home.css"
 import { Link } from "react-router-dom"
 import { ActivityContext } from "../activities/ActivityProvider"
 import { UserContext } from "../users/UserProvider"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChartLine, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 export const HomeList = () => {
-
+  
   //stuff from Providers I need
   const { activities, getActivities } = useContext(ActivityContext)
   const { users, getUsers } = useContext(UserContext)
@@ -43,8 +45,9 @@ export const HomeList = () => {
         <>
     
       <h3>Welcome back, {userGreeting}!</h3>
-          <Link to="/activities/create" className="btn btn-secondary">Track New Run</Link>
-          <Link to="/activities" className="btn btn-secondary">See Stats</Link>
+          <Link to="/activities/create" className="btn btn-secondary"><FontAwesomeIcon icon={ faPlus }/>  Track New Run</Link>
+          <Link to="/activities" className="btn btn-secondary">
+          <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
         </>
       
           )
@@ -57,8 +60,8 @@ export const HomeList = () => {
             <p>Runner's-Hi helps you track the effects of exercise on your mental well-being.</p>
             <p>Getting started is easy! Before you head out for your run, we'll just ask you a few quick questions.</p>
           </div>
-          <Link to="/activities/create" className="btn btn-primary">
-            Run</Link>
+          <Link to="/activities/create" className="btn btn-secondary">
+            Run  <FontAwesomeIcon icon={ faPlus }/></Link>
 
         </>
       )

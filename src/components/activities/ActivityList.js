@@ -8,6 +8,8 @@ import "./Activity.css"
 import { Link } from "react-router-dom"
 import { ActivityChart } from "./ActivityChart"
 import {Card, Accordion} from "react-bootstrap" 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -29,12 +31,12 @@ export const ActivityList = () => {
   if (userActivities.length > 0) {
     return (
       <>
-        <Logout /> 
-          <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
+        
+          <Link to="/activities/create" className="btn btn-warning"><FontAwesomeIcon icon={ faPlus }/> Record a New Run</Link>
         
        
         <div>
-          <h3>Running changes your mood by <ActivityMoodMath />%</h3>
+          <h3>Running changes your mood by <ActivityMoodMath />% </h3>
           <ActivityChart />
           <h4>Your Stats</h4>
 
@@ -60,7 +62,7 @@ export const ActivityList = () => {
       <>
        <Logout />
       <div>
-      <Link to="/activities/create" className="btn btn-secondary">Record a New Run</Link>
+      <Link to="/activities/create" className="btn btn-secondary"><FontAwesomeIcon icon={ faPlus }/> Record a New Run</Link>
       </div>
       </>
     )
