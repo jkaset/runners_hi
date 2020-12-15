@@ -41,6 +41,12 @@
       "password": "b",
       "name": "Biggie",
       "id": 7
+    },
+    {
+      "email": "joss@joss.com",
+      "password": "joss",
+      "name": "Joss",
+      "id": 8
     }
   ],
   "activities": [
@@ -351,15 +357,6 @@
       "id": 43
     },
     {
-      "userId": 1,
-      "date": "12-14-2020 04:59",
-      "moodPre": 4,
-      "moodPost": 9,
-      "note": "sdhfvlkjahsdflk",
-      "activityTypeId": 5,
-      "id": 44
-    },
-    {
       "userId": 7,
       "date": "12-14-2020 05:32",
       "moodPre": 1,
@@ -394,6 +391,96 @@
       "note": "It was a great run",
       "activityTypeId": 5,
       "id": 48
+    },
+    {
+      "userId": 1,
+      "date": "12-15-2020 05:12",
+      "moodPre": 2,
+      "moodPost": 7,
+      "note": "jhf",
+      "activityTypeId": 5,
+      "id": 49
+    },
+    {
+      "userId": 1,
+      "date": "12-15-2020 05:14",
+      "moodPre": 1,
+      "moodPost": 6,
+      "note": "gggggggg",
+      "activityTypeId": 3,
+      "id": 50
+    },
+    {
+      "userId": 8,
+      "date": "12-15-2020 09:19",
+      "moodPre": 4,
+      "moodPost": 10,
+      "note": "sss",
+      "activityTypeId": 4,
+      "id": 52
+    },
+    {
+      "userId": 8,
+      "date": "12-15-2020 09:19",
+      "moodPre": 6,
+      "moodPost": 4,
+      "note": "sss",
+      "activityTypeId": 4,
+      "id": 53
+    },
+    {
+      "userId": 8,
+      "date": "12-15-2020 09:23",
+      "moodPre": 2,
+      "moodPost": 8,
+      "note": "s",
+      "activityTypeId": 10,
+      "id": 54
+    },
+    {
+      "userId": 8,
+      "date": "12-15-2020 09:23",
+      "moodPre": 5,
+      "moodPost": 9,
+      "note": "ss",
+      "activityTypeId": 6,
+      "id": 55
+    },
+    {
+      "userId": 8,
+      "date": "12-15-2020 09:45",
+      "moodPre": 2,
+      "moodPost": 4,
+      "note": "",
+      "activityTypeId": 2,
+      "id": 56
+    },
+    {
+      "userId": 8,
+      "date": "12-15-2020 09:45",
+      "moodPre": 6,
+      "moodPost": 1,
+      "note": "d",
+      "activityTypeId": 2,
+      "id": 57
+    },
+    {
+      "userId": 8,
+      "date": "12-15-2020 09:48",
+      "moodPre": 9,
+      "moodPost": 10,
+      "note": "",
+      "activityTypeId": 5,
+      "id": 59
+    },
+    {
+      "userId": 8,
+      "date": "12-15-2020 10:15",
+      "moodPre": 1,
+      "moodPost": 3,
+      "note": "ssdfsdf",
+      "activityTypeId": 2,
+      "id": 60
     }
   ],
   "activityTypes": [
