@@ -50,78 +50,7 @@
     }
   ],
   "activities": [
-    {
-      "userId": 1,
-      "date": "12-15-2020 10:35:15",
-      "moodPre": 1,
-      "moodPost": 10,
-      "note": "sdfsdf",
-      "activityTypeId": 1,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "date": "12-15-2020 10:35:27",
-      "moodPre": 4,
-      "moodPost": 9,
-      "note": "",
-      "activityTypeId": 3,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "date": "12-15-2020 10:35:39",
-      "moodPre": 1,
-      "moodPost": 6,
-      "note": "",
-      "activityTypeId": 2,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "date": "12-15-2020 01:28:36",
-      "moodPre": 2,
-      "moodPost": 6,
-      "note": "kgkj",
-      "activityTypeId": 5,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "date": "12-15-2020 01:53:43",
-      "moodPre": 2,
-      "moodPost": 5,
-      "note": "sdfsdf",
-      "activityTypeId": 4,
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "date": "12-15-2020 01:53:52",
-      "moodPre": 3,
-      "moodPost": 1,
-      "note": "",
-      "activityTypeId": 2,
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "date": "12-15-2020 01:54:05",
-      "moodPre": 5,
-      "moodPost": 4,
-      "note": "sdfsdf",
-      "activityTypeId": 3,
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "date": "12-15-2020 01:54:30",
-      "moodPre": 10,
-      "moodPost": 1,
-      "note": "sdfasdf",
-      "activityTypeId": 2,
-      "id": 13
-    }
+    
   ],
   "activityTypes": [
     {
