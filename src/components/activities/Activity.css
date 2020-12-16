@@ -26,15 +26,12 @@ h2 {
 /* ACTIVITY LIST STYLING */
 .pre-scrollable {
   border: solid black 1px;
+  margin-bottom: 40px;
 }
 
 .btnDelete {
   margin: 0 70px 0 20px;
 }
-
-/* .activityListButtonGroup {
-  margin:;
-} */
 
 .activity {
   border: solid black 1px;
@@ -62,6 +59,10 @@ ul {
   text-align: center;
 }
 /* FORM START STYLING */
+.activityFormContainer {
+  margin: 0 30px 0 30px;
+}
+
 .formStart,
 .formEnd {
   margin: 80px 30px 10px 30px;
@@ -123,3 +124,7 @@ ul {
 .btn--9:hover > .emojiContainer {
   color: green;
 }
+
+/* .activityListItem {
+  
+} */

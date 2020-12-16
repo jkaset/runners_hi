@@ -131,7 +131,7 @@ export const ActivityStartForm = (props) => {
   return (
     <>
 
-
+      <div className="activityStartContainer">
       <Form className="form form-start ">
         <h2 className="formHeading">Pre-run Stats</h2>
         <div className="emojiContainer">{ButtonStyler()}</div>
@@ -171,6 +171,7 @@ export const ActivityStartForm = (props) => {
         {/* <div className={ButtonStyler()}>{ButtonStyler()}</div> */}
 
       </Form>
+      </div>
 
     </>
   )

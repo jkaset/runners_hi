@@ -22,6 +22,7 @@ export const Activity = ({ activity, activityType }) => {
 
   return (
     <>
+    <div className="activityListItem">
       <Accordion className="activity">
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
@@ -54,6 +55,7 @@ export const Activity = ({ activity, activityType }) => {
           </Accordion.Collapse>
         </Card>
       </Accordion>
+      </div>
     </>
 
   )
