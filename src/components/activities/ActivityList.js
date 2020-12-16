@@ -51,7 +51,7 @@ export const ActivityList = () => {
 
 
         <div className="activityListContainer">
-          <h2 className="activityListHeader">Running changes your mood by <ActivityMoodMath />% </h2>
+          <h1 className="activityListHeader">Running changes your mood by <ActivityMoodMath />% </h1>
           <div className="chartContainer"><ActivityChart /></div>
           <h4>Your Stats</h4>
           
@@ -80,7 +80,7 @@ export const ActivityList = () => {
 
 
         <div>
-          <h3>Running changes your mood by <ActivityMoodMath />% </h3>
+          <h1>Running changes your mood by <ActivityMoodMath />% </h1>
 
           <h4>Your Stats</h4>
           

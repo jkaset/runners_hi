@@ -131,7 +131,7 @@ export const ActivityStartForm = (props) => {
   return (
     <>
 
-
+      <div className="activityStartContainer">
       <Form className="form form-start ">
         <h2 className="formHeading">Pre-run Stats</h2>
         <div className="emojiContainer">{ButtonStyler()}</div>
@@ -150,7 +150,7 @@ export const ActivityStartForm = (props) => {
 
 
         <Form.Group controlId="form.ControlSelect1">
-          <Form.Label>How's your starting mood?</Form.Label>
+          <Form.Label>On a scale of 1-10, how do you rate your mood?</Form.Label>
           <div className="text-center">
 
             <MoodSelector />
@@ -171,6 +171,7 @@ export const ActivityStartForm = (props) => {
         {/* <div className={ButtonStyler()}>{ButtonStyler()}</div> */}
 
       </Form>
+      </div>
 
     </>
   )
