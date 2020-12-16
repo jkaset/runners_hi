@@ -25,7 +25,7 @@ export const ActivityStartForm = (props) => {
     .then(setMood)
   }, [])
 
-  const [mood, setMood] = useState({})
+  const [mood, setMood] = useState(0)
 
   const MoodSelector = () => {
     
@@ -40,7 +40,7 @@ export const ActivityStartForm = (props) => {
                 evt.preventDefault()
                 setMood(m)
                 console.log("clicked", m)
-                console.log(mood, "2")
+                console.log(mood, "mood")
   
               }} className={m} id="emoticon" key={m} >{m}</Button>
   
@@ -52,12 +52,20 @@ export const ActivityStartForm = (props) => {
     )
   }
 
+  const ButtonStyler = () => {
+    if (mood === 1) {
+      return "bad"
+    //}
+  } else {
+    return "ok"
+  }}
+
   //refactored without refs
   const logNewActivity = () => {
 
     const activityTypeId = parseInt(activityType.current.value)
 
-    if (activityTypeId === 0) {
+    if (activityTypeId === 0 || mood === 0) {
       window.alert("Please select activity and mood")
     } else {
       addActivity({
@@ -78,8 +86,9 @@ export const ActivityStartForm = (props) => {
   
   return (
     <>
-     
-      <Form className="form formStart">
+      
+      
+      <Form className="form form-start ">
         <h2 className="formHeading">Pre-run Stats</h2>
         
         <Form.Group controlId="form.ControlSelect1">
@@ -114,7 +123,10 @@ export const ActivityStartForm = (props) => {
         <Link to="/activities" className="btn btn-light">
           <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
         </div>
+
+        <div className={ButtonStyler()}>{ButtonStyler()}</div>
       </Form>
+      
     </>
   )
 
