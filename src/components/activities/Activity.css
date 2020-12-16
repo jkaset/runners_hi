@@ -1,7 +1,7 @@
 html {
   background-color: #fff;
   color: #555;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
@@ -9,11 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 
-
-h1, 
+h1,
 h2,
-h3 { 
-    font-weight: 300; 
+h3 {
+  font-weight: 300;
 }
 
 h2 {
@@ -24,9 +23,8 @@ h2 {
   letter-spacing: 1px;
 }
 
-
 /* ACTIVITY LIST STYLING */
-.pre-scrollable {  
+.pre-scrollable {
   border: solid black 1px;
 }
 
@@ -55,17 +53,17 @@ ul {
   list-style: none;
 }
 
-.activity__note{
+.activity__note {
   background-color: rgb(230, 230, 230);
 }
-
 
 /* FORM STYLING  */
 .btnGroup {
   text-align: center;
 }
 /* FORM START STYLING */
-.formStart, .formEnd {
+.formStart,
+.formEnd {
   margin: 80px 30px 10px 30px;
 }
 
@@ -108,4 +106,20 @@ ul {
 
 .bad {
   background-color: red;
+}
+
+.emojiContainer {
+  font-size: 110px;
+  text-align: center;
+  color: #000;
+  
+  
+}
+
+.emojiContainer :hover {
+  color: rgb(26, 26, 26);
+}
+
+.btn--9:hover > .emojiContainer {
+  color: green;
 }
