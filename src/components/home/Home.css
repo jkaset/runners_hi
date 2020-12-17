@@ -1,0 +1,28 @@
+.footer {
+  text-align: center;
+  font-size: 50%;
+  display: flex;
+}
+
+.home{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.69)), url("https://images.unsplash.com/photo-1502644838991-d27b9d00dbc8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTEzfHxqdW1wJTIwcnVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
+  background-size: cover;
+  background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+  
+}
+
+.home-heading {
+  color: #fff;
+  
+}
+
+.home-copy {
+  color: #fff;
+  margin: 10% 14% 5% 14%;
+}
+
+.home-btn__new {
+  margin: 3% 5% 0 40%;
+  }

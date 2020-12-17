@@ -19,7 +19,7 @@ export const ActivityEndForm = (props) => {
   useEffect(() => {
     setMood()
   }, [])
-  const [mood, setMood] = useState({})
+  const [mood, setMood] = useState(0)
 
   const MoodSelector = () => {
 
@@ -34,7 +34,7 @@ export const ActivityEndForm = (props) => {
                 evt.preventDefault()
                 setMood(m)
                 console.log("clicked", m)
-                console.log(mood, "2")
+                console.log(mood, "mood")
 
               }} className={m} id="emoticon" key={m} >{m}</Button>
 
@@ -47,7 +47,9 @@ export const ActivityEndForm = (props) => {
   }
   //function to update form: pulls in id of activity just created in form A (the parameter: the URL that will change based on the object we want to display, the id in the browser, the d+ in ApplicationViews?)
   const editNewActivity = () => {
-
+    if (mood === undefined) {
+      window.alert("Select your post run mood")
+    } else {
     //pull the id that matches the parameter
     updateActivity({
       id: parseInt(props.match.params.activityId),
@@ -58,7 +60,7 @@ export const ActivityEndForm = (props) => {
       //need change route when button is clicked
       //this is the push that needs to happen once form has been updated
       .then(() => props.history.push('/activities'))
-  }
+  }}
 
   // const moods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   // let moodValue = []

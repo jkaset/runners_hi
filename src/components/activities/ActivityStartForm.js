@@ -28,6 +28,7 @@ export const ActivityStartForm = (props) => {
 
   const [mood, setMood] = useState(0)
 
+
   const MoodSelector = () => {
 
     const moodsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -103,10 +104,12 @@ export const ActivityStartForm = (props) => {
     
     const handleClose = () => setSmShow(false);
     const handleShow = () => {
-      if (parseInt(activityType.current.value) === 0 || mood === 0) {
-        window.alert("Please select activity and mood")
+      console.log(mood)
+      if (parseInt(activityType.current.value) === 0) {
+        window.alert("Please select activity")
+      } else if (mood === undefined) {
+        window.alert("Don't forget to select mood")
       } else {
-      
       setSmShow(true)}}
   
     return (
@@ -152,7 +155,7 @@ export const ActivityStartForm = (props) => {
     
     const activityTypeId = parseInt(activityType.current.value)
 
-    if (activityTypeId === 0 || mood === 0) {
+    if ((activityTypeId === 0) || (mood === 0 )) {
       window.alert("Please select activity and mood")
     } else {
       addActivity({

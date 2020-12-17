@@ -43,28 +43,30 @@ export const HomeList = () => {
    
     return (
         <>
-    
+      <header className="home">
       <h1 className="home-heading">Welcome back, {userGreeting}!</h1>
-      <div class="home-btn__group">
-          <Link to="/activities/create" className="btn btn-dark btn-home"><FontAwesomeIcon icon={ faPlus }/>  Track New Run</Link>
-          <Link to="/activities" className="btn btn-dark">
+      <div className="home-btn__group">
+          <Link to="/activities/create" className="btn btn-outline-light btn-home"><FontAwesomeIcon icon={ faPlus }/>  Track New Run</Link>
+          <Link to="/activities" className="btn btn-outline-light">
           <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
       </div>
+      </header>
         </>
       
           )
     } else {
       return (
         <>
-          <h1>Hi {userGreeting}! Let's get started</h1>
-          <div>
+          <header className="home">
+          <h1 className="home-heading">Hi {userGreeting}! Let's get started</h1>
+          <div className="home-copy">
             <p>Training doesn't have to be about burning calories or beating your last segment. </p>
             <p>Runner's-Hi helps you track the effects of exercise on your mental well-being.</p>
             <p>Getting started is easy! Before you head out for your run, we'll just ask you a few quick questions.</p>
           </div>
-          <Link to="/activities/create" className="btn btn-dark">
+          <Link to="/activities/create" className="btn btn-outline-light home-btn__new">
             Run  <FontAwesomeIcon icon={ faPlus }/></Link>
-
+            </header>
         </>
       )
     }
