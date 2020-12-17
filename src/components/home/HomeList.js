@@ -44,10 +44,12 @@ export const HomeList = () => {
     return (
         <>
     
-      <h1>Welcome back, {userGreeting}!</h1>
-          <Link to="/activities/create" className="btn btn-dark"><FontAwesomeIcon icon={ faPlus }/>  Track New Run</Link>
+      <h1 className="home-heading">Welcome back, {userGreeting}!</h1>
+      <div class="home-btn__group">
+          <Link to="/activities/create" className="btn btn-dark btn-home"><FontAwesomeIcon icon={ faPlus }/>  Track New Run</Link>
           <Link to="/activities" className="btn btn-dark">
           <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
+      </div>
         </>
       
           )

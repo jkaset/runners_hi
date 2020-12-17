@@ -69,7 +69,7 @@ export const ActivityChart = () => {
       {
         label: 'After',
         fill: false,
-        lineTension: 0.5,
+        lineTension: .5,
         backgroundColor: '#FFE186',
         borderColor: '#FFC107',
         borderWidth: 2,
@@ -87,53 +87,60 @@ export const ActivityChart = () => {
           options={{ maintainAspectRatio: true }}
           options={{
             // 
-            
-              xAxes: [{
-                barPercentage: 0.5,
-                barThickness: 22,
-                maxBarThickness: 38,
-                minBarLength: 18,
 
-                ticks: {
-                  beginAtZero: false
-                }
-              }],
-            
-          yAxes: [
-                {
-                  type: 'linear',
-                  display: true,
-                  position: 'left',
-                  id: 'y-axis-1',
-                  labels: {
-                    show: false
-                  },
-                  ticks: {
-                    beginAtZero: true,
-                  }
+            xAxes: [{
+              barPercentage: .5,
+              barThickness: 22,
+              maxBarThickness: 38,
+              minBarLength: 18,
 
+              ticks: {
+                beginAtZero: false,
+                stepSize: 1,
+                max: 10,
+                min: 1
+              }
+            }],
+
+            yAxes: [
+              {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                id: 'y-axis-1',
+                labels: {
+                  show: false
                 },
-                {
-                  type: 'linear',
-                  display: true,
-                  position: 'right',
-                  gridLines: {
-                    display: false
-                  },
-                  id: 'y-axis-2',
-                  labels: {
-                    show: false
-                  },
-                  ticks: {
-                    beginAtZero: true
-                  }
+                ticks: {
+                  suggestedMin: 1,
+                  suggestedMax: 10
+
                 }
-              ]
-            }
+
+              },
+              {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                gridLines: {
+                  display: false
+                },
+                id: 'y-axis-2',
+                labels: {
+                  show: false
+                },
+                ticks: {
+                  beginAtZero: false,
+                  min: 1
+
+                }
+              }
+            ]
           }
-            />
-    </div>
-</>
+          }
+        />
+      </div>
+    </>
   )
 
-      }
+}
