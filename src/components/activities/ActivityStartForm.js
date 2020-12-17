@@ -97,16 +97,59 @@ export const ActivityStartForm = (props) => {
   
   //when hover over button m, put m-1 icon in empty div
 
+  //modal
+  const ActivityStartModal = () => {
+    const [smShow, setSmShow] = useState(false);
+    
+    const handleClose = () => setSmShow(false);
+    const handleShow = () => {
+      if (parseInt(activityType.current.value) === 0 || mood === 0) {
+        window.alert("Please select activity and mood")
+      } else {
+      
+      setSmShow(true)}}
+  
+    return (
+      <>
+        <Button className="btn btn-warning startButton"  onClick={handleShow}>
+        <FontAwesomeIcon icon={faPlayCircle} /> Start Run
+        </Button>
+  
+        <Modal
+          show={smShow}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Off to a great start!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          Click here when you're done
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={evt => {
+            evt.preventDefault()
+            logNewActivity()
+          }}>
+              Run Completed!
+            </Button>
+            {/* <Button variant="primary">No</Button> */}
+          </Modal.Footer>
+        </Modal>
+      </>
+    );
+  }
+ 
 
 
 
 
 
-
-
+  
   //refactored without refs
   const logNewActivity = () => {
-
+    
     const activityTypeId = parseInt(activityType.current.value)
 
     if (activityTypeId === 0 || mood === 0) {
@@ -159,11 +202,8 @@ export const ActivityStartForm = (props) => {
         </Form.Group>
         
         <div className="float-right">
-          <Button className="btn btn-warning startButton" type="submit" onClick={evt => {
-            evt.preventDefault()
-            logNewActivity()
-
-          }} ><FontAwesomeIcon icon={faPlayCircle} /> Start Run</Button>
+        <ActivityStartModal />
+        
           <Link to="/activities" className="btn btn-light">
             <FontAwesomeIcon icon={faChartLine} />  See Stats</Link>
         </div>
