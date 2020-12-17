@@ -2,7 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Modal } from 'react-bootstrap'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
 import { Link } from "react-router-dom"
@@ -61,10 +61,10 @@ export const ActivityStartForm = (props) => {
 
 
   //emoji logic
-  const emoji = require("emoji-dictionary")
-  const moodEmojiArray = ['weary', 'cry', 'frowning', 'confused', 'neutral_face', 'relieved', 'slightly_smiling_face', 'blush', 'grinning', 'joy']
+  // const emoji = require("emoji-dictionary")
+  // const moodEmojiArray = ['weary', 'cry', 'frowning', 'confused', 'neutral_face', 'relieved', 'slightly_smiling_face', 'blush', 'grinning', 'joy']
 
-  const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
+  // const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
 
   const ButtonStyler = () => {
 
@@ -93,7 +93,7 @@ export const ActivityStartForm = (props) => {
 
   }
 
-  const icons = ['<FontAwesomeIcon icon={faSadCry} />', '<FontAwesomeIcon icon={faSadTear} />', '<FontAwesomeIcon icon={faFrown} />', '<FontAwesomeIcon icon={faFrownOpen} />', '<FontAwesomeIcon icon={faMeh} />', '<FontAwesomeIcon icon={faSmile} />', '<FontAwesomeIcon icon={faGrin} />', '<FontAwesomeIcon icon={faLaugh} />', '<FontAwesomeIcon icon={faLaughSquint} />', '<FontAwesomeIcon icon={faLaughBeam} />']
+  // const icons = ['<FontAwesomeIcon icon={faSadCry} />', '<FontAwesomeIcon icon={faSadTear} />', '<FontAwesomeIcon icon={faFrown} />', '<FontAwesomeIcon icon={faFrownOpen} />', '<FontAwesomeIcon icon={faMeh} />', '<FontAwesomeIcon icon={faSmile} />', '<FontAwesomeIcon icon={faGrin} />', '<FontAwesomeIcon icon={faLaugh} />', '<FontAwesomeIcon icon={faLaughSquint} />', '<FontAwesomeIcon icon={faLaughBeam} />']
   
   //when hover over button m, put m-1 icon in empty div
 
