@@ -2,7 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from "react"
 import "./Activity.css"
 import { ActivityContext } from "./ActivityProvider"
 import { ActivityTypeContext } from "../activityTypes/ActivityTypeProvider"
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Modal } from 'react-bootstrap'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
 import { Link } from "react-router-dom"
@@ -61,10 +61,10 @@ export const ActivityStartForm = (props) => {
 
 
   //emoji logic
-  const emoji = require("emoji-dictionary")
-  const moodEmojiArray = ['weary', 'cry', 'frowning', 'confused', 'neutral_face', 'relieved', 'slightly_smiling_face', 'blush', 'grinning', 'joy']
+  // const emoji = require("emoji-dictionary")
+  // const moodEmojiArray = ['weary', 'cry', 'frowning', 'confused', 'neutral_face', 'relieved', 'slightly_smiling_face', 'blush', 'grinning', 'joy']
 
-  const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
+  // const emojis = moodEmojiArray.map(selector => (emoji.getUnicode(selector)))
 
   const ButtonStyler = () => {
 
@@ -93,20 +93,63 @@ export const ActivityStartForm = (props) => {
 
   }
 
-  const icons = ['<FontAwesomeIcon icon={faSadCry} />', '<FontAwesomeIcon icon={faSadTear} />', '<FontAwesomeIcon icon={faFrown} />', '<FontAwesomeIcon icon={faFrownOpen} />', '<FontAwesomeIcon icon={faMeh} />', '<FontAwesomeIcon icon={faSmile} />', '<FontAwesomeIcon icon={faGrin} />', '<FontAwesomeIcon icon={faLaugh} />', '<FontAwesomeIcon icon={faLaughSquint} />', '<FontAwesomeIcon icon={faLaughBeam} />']
+  // const icons = ['<FontAwesomeIcon icon={faSadCry} />', '<FontAwesomeIcon icon={faSadTear} />', '<FontAwesomeIcon icon={faFrown} />', '<FontAwesomeIcon icon={faFrownOpen} />', '<FontAwesomeIcon icon={faMeh} />', '<FontAwesomeIcon icon={faSmile} />', '<FontAwesomeIcon icon={faGrin} />', '<FontAwesomeIcon icon={faLaugh} />', '<FontAwesomeIcon icon={faLaughSquint} />', '<FontAwesomeIcon icon={faLaughBeam} />']
   
   //when hover over button m, put m-1 icon in empty div
 
+  //modal
+  const ActivityStartModal = () => {
+    const [smShow, setSmShow] = useState(false);
+    
+    const handleClose = () => setSmShow(false);
+    const handleShow = () => {
+      if (parseInt(activityType.current.value) === 0 || mood === 0) {
+        window.alert("Please select activity and mood")
+      } else {
+      
+      setSmShow(true)}}
+  
+    return (
+      <>
+        <Button className="btn btn-warning startButton"  onClick={handleShow}>
+        <FontAwesomeIcon icon={faPlayCircle} /> Start Run
+        </Button>
+  
+        <Modal
+          show={smShow}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Off to a great start!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          Click here when you're done
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={evt => {
+            evt.preventDefault()
+            logNewActivity()
+          }}>
+              Run Completed!
+            </Button>
+            {/* <Button variant="primary">No</Button> */}
+          </Modal.Footer>
+        </Modal>
+      </>
+    );
+  }
+ 
 
 
 
 
 
-
-
+  
   //refactored without refs
   const logNewActivity = () => {
-
+    
     const activityTypeId = parseInt(activityType.current.value)
 
     if (activityTypeId === 0 || mood === 0) {
@@ -159,11 +202,8 @@ export const ActivityStartForm = (props) => {
         </Form.Group>
         
         <div className="float-right">
-          <Button className="btn btn-warning startButton" type="submit" onClick={evt => {
-            evt.preventDefault()
-            logNewActivity()
-
-          }} ><FontAwesomeIcon icon={faPlayCircle} /> Start Run</Button>
+        <ActivityStartModal />
+        
           <Link to="/activities" className="btn btn-light">
             <FontAwesomeIcon icon={faChartLine} />  See Stats</Link>
         </div>
