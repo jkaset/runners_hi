@@ -15,6 +15,10 @@ h3 {
   font-weight: 300;
 }
 
+h1 {
+  text-align: center;
+}
+
 h2 {
   font-size: 180%;
   word-spacing: 2px;
@@ -131,4 +135,18 @@ ul {
 
 .activityStartContainer {
   margin: 0 4% 0 4%;
+}
+
+/* home style */
+.btn-home {
+  margin-right: 5%;
+}
+
+.home-btn__group {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.home-heading {
+  margin-top: 15%;
 }

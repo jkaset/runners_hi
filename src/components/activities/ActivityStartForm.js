@@ -8,7 +8,7 @@ import { format } from 'date-fns'
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartLine, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
-import { faSadCry, faGrin, faSmile, faLaugh, faGrinTongueSquint, faMeh, faFrownOpen, faFrown, faSadTear, faMehBlank, faLaughSquint, faLaughBeam } from '@fortawesome/free-regular-svg-icons';
+import { faSadCry, faGrin, faSmile, faLaugh, faMeh, faFrownOpen, faFrown, faSadTear, faMehBlank, faLaughSquint, faLaughBeam } from '@fortawesome/free-regular-svg-icons';
 
 //state that holds selected emojis
 
@@ -177,17 +177,3 @@ export const ActivityStartForm = (props) => {
   )
 
 }
-
-
-
-{/* <div>
-{
-  moodsArray.map(m=> (
-    <div onMouseOver={
-
-    }>
-        {icons[m - 1]}
-    </div>
-  ))
-}
-</div> */}

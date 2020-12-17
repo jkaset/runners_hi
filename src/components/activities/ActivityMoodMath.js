@@ -17,9 +17,10 @@ export default function ActivityMoodsMath() {
   //an empty array to push to
   let moodsPre = []
 
+  //The reduce() method executes a reducer function (accumulator) on each element of the array, resulting in single output value.
+  const reducer = (accumulator, currentValue) => accumulator + currentValue
+  
   const moodsPreTotal = () => {
-    //The reduce() method executes a reducer function (accumulator) on each element of the array, resulting in single output value.
-    const reducer = (accumulator, currentValue) => accumulator + currentValue
 
     //push all moodPre numbers into empty array
     activities.forEach(activity => {
@@ -36,7 +37,6 @@ export default function ActivityMoodsMath() {
   let moodsPost = []
   
   const moodsPostTotal = () => {
-    const reducer = (accumulator, currentValue) => accumulator + currentValue
 
     activities.forEach(activity => {
       if (activity.userId === user) {    

@@ -205,66 +205,39 @@
     },
     {
       "userId": 1,
-      "date": "12/16/2020, 10:34:13 AM",
-      "moodPre": 9,
-      "moodPost": 2,
-      "note": "d",
-      "activityTypeId": 6,
-      "id": 28
-    },
-    {
-      "userId": 1,
-      "date": "12/16/2020, 10:35:13 AM",
-      "moodPre": 5,
-      "moodPost": 10,
-      "note": "sss",
-      "activityTypeId": 4,
-      "id": 29
-    },
-    {
-      "userId": 1,
-      "date": "12/16/2020, 3:14:04 PM",
-      "moodPre": 1,
-      "moodPost": 3,
-      "note": "ffsfdsf",
-      "activityTypeId": 5,
-      "id": 32
-    },
-    {
-      "userId": 1,
-      "date": "12/16/2020, 3:41:13 PM",
-      "moodPre": 4,
-      "moodPost": 1,
+      "date": "12/17/2020, 7:07:36 AM",
+      "moodPre": 7,
+      "moodPost": 8,
       "note": "",
-      "activityTypeId": 6,
-      "id": 33
-    },
-    {
-      "userId": 1,
-      "date": "12/16/2020, 3:42:07 PM",
-      "moodPre": 4,
-      "moodPost": 9,
-      "note": "hdhd",
-      "activityTypeId": 8,
-      "id": 34
-    },
-    {
-      "userId": 1,
-      "date": "12/16/2020, 4:19:08 PM",
-      "moodPre": 3,
-      "moodPost": 6,
-      "note": "",
-      "activityTypeId": 4,
+      "activityTypeId": 3,
       "id": 35
     },
     {
-      "userId": 1,
-      "date": "12/16/2020, 4:22:16 PM",
-      "moodPre": 5,
-      "moodPost": 8,
-      "note": "adgagddgadg",
-      "activityTypeId": 9,
+      "userId": 2,
+      "date": "12/17/2020, 7:26:43 AM",
+      "moodPre": 1,
+      "moodPost": 5,
+      "note": "dgfsg",
+      "activityTypeId": 2,
       "id": 36
+    },
+    {
+      "userId": 2,
+      "date": "12/17/2020, 7:27:29 AM",
+      "moodPre": 2,
+      "moodPost": 7,
+      "note": "",
+      "activityTypeId": 3,
+      "id": 37
+    },
+    {
+      "userId": 1,
+      "date": "12/17/2020, 11:51:59 AM",
+      "moodPre": 5,
+      "moodPost": "",
+      "note": "",
+      "activityTypeId": 4,
+      "id": 38
     }
   ],
   "activityTypes": [
