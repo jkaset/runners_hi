@@ -4,7 +4,7 @@ import { Login } from './auth/Login'
 import { Register } from './auth/Register'
 import { ApplicationViews } from './ApplicationViews'
 import { Logo } from './Logo';
-
+import { Footer } from './home/Footer'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,6 +23,8 @@ export const App = () => (
                 return <Redirect to="/login" />
             }
         }} />
+
+        <Footer />
 
         <Route path="/login" render={props => <Login {...props} />} />
         <Route path="/register" render={props => <Register {...props} />} />

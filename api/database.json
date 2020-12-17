@@ -47,6 +47,12 @@
       "password": "joss",
       "name": "Joss",
       "id": 8
+    },
+    {
+      "email": "tito@tito.com",
+      "password": "tito",
+      "name": "Tito",
+      "id": 9
     }
   ],
   "activities": [
@@ -177,24 +183,6 @@
       "id": 19
     },
     {
-      "userId": 1,
-      "date": "12/16/2020, 10:18:28 AM",
-      "moodPre": 2,
-      "moodPost": 6,
-      "note": "",
-      "activityTypeId": 7,
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "date": "12/16/2020, 10:19:34 AM",
-      "moodPre": 3,
-      "moodPost": 2,
-      "note": "",
-      "activityTypeId": 1,
-      "id": 22
-    },
-    {
       "userId": 2,
       "date": "12/17/2020, 7:26:43 AM",
       "moodPre": 1,
@@ -214,75 +202,12 @@
     },
     {
       "userId": 1,
-      "date": "12/17/2020, 1:52:08 PM",
+      "date": "12/17/2020, 3:38:34 PM",
       "moodPre": 5,
-      "moodPost": 3,
-      "note": "",
-      "activityTypeId": 6,
+      "moodPost": 4,
+      "note": "zzz",
+      "activityTypeId": 3,
       "id": 38
-    },
-    {
-      "userId": 1,
-      "date": "12/17/2020, 2:00:10 PM",
-      "moodPre": 3,
-      "moodPost": 9,
-      "note": "jfgjf",
-      "activityTypeId": 9,
-      "id": 39
-    },
-    {
-      "userId": 1,
-      "date": "12/17/2020, 2:08:57 PM",
-      "moodPre": 6,
-      "moodPost": 7,
-      "note": "adgasdg",
-      "activityTypeId": 5,
-      "id": 40
-    },
-    {
-      "userId": 1,
-      "date": "12/17/2020, 2:13:35 PM",
-      "moodPre": 5,
-      "moodPost": 8,
-      "note": "asdgfasg",
-      "activityTypeId": 3,
-      "id": 41
-    },
-    {
-      "userId": 1,
-      "date": "12/17/2020, 2:21:33 PM",
-      "moodPre": 6,
-      "moodPost": 8,
-      "note": "klu",
-      "activityTypeId": 8,
-      "id": 42
-    },
-    {
-      "userId": 1,
-      "date": "12/17/2020, 2:24:31 PM",
-      "moodPre": 5,
-      "moodPost": 6,
-      "note": "asdgasdg",
-      "activityTypeId": 2,
-      "id": 43
-    },
-    {
-      "userId": 1,
-      "date": "12/17/2020, 2:25:50 PM",
-      "moodPre": 5,
-      "moodPost": 9,
-      "note": "asdga",
-      "activityTypeId": 5,
-      "id": 44
-    },
-    {
-      "userId": 1,
-      "date": "12/17/2020, 2:26:49 PM",
-      "moodPre": 3,
-      "moodPost": 9,
-      "note": "saghah",
-      "activityTypeId": 3,
-      "id": 45
     }
   ],
   "activityTypes": [

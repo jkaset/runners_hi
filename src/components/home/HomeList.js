@@ -45,7 +45,7 @@ export const HomeList = () => {
         <>
     
       <h1 className="home-heading">Welcome back, {userGreeting}!</h1>
-      <div class="home-btn__group">
+      <div className="home-btn__group">
           <Link to="/activities/create" className="btn btn-dark btn-home"><FontAwesomeIcon icon={ faPlus }/>  Track New Run</Link>
           <Link to="/activities" className="btn btn-dark">
           <FontAwesomeIcon icon={ faChartLine }/>  See Stats</Link>
