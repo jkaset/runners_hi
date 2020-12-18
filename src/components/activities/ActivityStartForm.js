@@ -7,8 +7,9 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { format } from 'date-fns'
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartLine, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine, faPlayCircle, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faSadCry, faGrin, faSmile, faLaugh, faMeh, faFrownOpen, faFrown, faSadTear, faMehBlank, faLaughSquint, faLaughBeam } from '@fortawesome/free-regular-svg-icons';
+import tinyFace from '../images/tinyFace.png'
 
 //state that holds selected emojis
 
@@ -125,17 +126,19 @@ export const ActivityStartForm = (props) => {
           keyboard={false}
         >
           <Modal.Header closeButton>
-            <Modal.Title>Off to a great start!</Modal.Title>
+            <Modal.Title>Run in Progress</Modal.Title>
+            <div className="spinner"></div>
           </Modal.Header>
-          <Modal.Body>
+          {/* <Modal.Body>
           Click here when you're done
-          </Modal.Body>
+          
+          </Modal.Body> */}
           <Modal.Footer>
             <Button variant="secondary" onClick={evt => {
             evt.preventDefault()
             logNewActivity()
           }}>
-              Run Completed!
+              Click when Completed
             </Button>
             {/* <Button variant="primary">No</Button> */}
           </Modal.Footer>
