@@ -22,15 +22,15 @@ Go for it! [It's deployed here!](#)
 
 ## Screenshots
 
-| <img src="./styles/images/resumeImages/readMeResources/home.png"> |
+| <img src="./resources/home.png"> |
 | :---: |
 | Homepage for existing users|
 
-| <img src="./styles/images/resumeImages/readMeResources/chart.png"> |
+| <img src="/resources/chart.png"> |
 | :---: |
 | Runner's Stats|
 
-| <img src="./styles/images/resumeImages/readMeResources/form.png"> |
+| <img src="/resources/form.png"> |
 | :---: |
 | Part 1 of Runner's mood form |
 
