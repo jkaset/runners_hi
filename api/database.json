@@ -27,7 +27,7 @@
     {
       "email": "jes@jes.com",
       "password": "jes",
-      "name": "Jes",
+      "name": "Jess",
       "id": 5
     },
     {
@@ -147,112 +147,31 @@
       "id": 14
     },
     {
-      "userId": 1,
-      "date": "12/15/2020, 4:17:50 PM",
-      "moodPre": 4,
-      "moodPost": 2,
-      "note": "s",
-      "activityTypeId": 4,
-      "id": 15
+      "userId": 5,
+      "date": "12/21/2020, 2:03:31 PM",
+      "moodPre": 5,
+      "moodPost": 10,
+      "note": "Quick run on my lunchbreak. Totally energized to tackle the rest of my day at work",
+      "activityTypeId": 1,
+      "id": 20
     },
     {
-      "userId": 1,
-      "date": "12/16/2020, 6:26:23 AM",
-      "moodPre": 1,
-      "moodPost": 7,
-      "note": "kgh",
-      "activityTypeId": 2,
-      "id": 17
+      "userId": 5,
+      "date": "12/29/2020, 6:06:24 AM",
+      "moodPre": 5,
+      "moodPost": 10,
+      "note": "so fun",
+      "activityTypeId": 3,
+      "id": 21
     },
     {
-      "userId": 1,
-      "date": "12/16/2020, 10:13:36 AM",
-      "moodPre": 6,
-      "moodPost": 6,
-      "note": "",
+      "userId": 5,
+      "date": "12/29/2020, 7:16:50 AM",
+      "moodPre": 7,
+      "moodPost": 10,
+      "note": "sdfghsh",
       "activityTypeId": 7,
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "date": "12/16/2020, 10:13:48 AM",
-      "moodPre": 4,
-      "moodPost": 9,
-      "note": "",
-      "activityTypeId": 6,
-      "id": 19
-    },
-    {
-      "userId": 2,
-      "date": "12/17/2020, 7:26:43 AM",
-      "moodPre": 1,
-      "moodPost": 5,
-      "note": "dgfsg",
-      "activityTypeId": 2,
-      "id": 36
-    },
-    {
-      "userId": 2,
-      "date": "12/17/2020, 7:27:29 AM",
-      "moodPre": 2,
-      "moodPost": 7,
-      "note": "",
-      "activityTypeId": 3,
-      "id": 37
-    },
-    {
-      "userId": 5,
-      "date": "12/17/2020, 5:55:09 PM",
-      "moodPre": 8,
-      "moodPost": 7,
-      "note": "zgdsdgfda",
-      "activityTypeId": 3,
-      "id": 39
-    },
-    {
-      "userId": 5,
-      "date": "12/17/2020, 8:52:56 PM",
-      "moodPre": 9,
-      "moodPost": 10,
-      "note": "pp",
-      "activityTypeId": 5,
-      "id": 40
-    },
-    {
-      "userId": 5,
-      "date": "12/17/2020, 8:53:08 PM",
-      "moodPre": 2,
-      "moodPost": 6,
-      "note": "",
-      "activityTypeId": 5,
-      "id": 41
-    },
-    {
-      "userId": 5,
-      "date": "12/17/2020, 8:53:22 PM",
-      "moodPre": 1,
-      "moodPost": 10,
-      "note": "ohoh",
-      "activityTypeId": 4,
-      "id": 42
-    },
-    {
-      "userId": 1,
-      "date": "12/18/2020, 6:13:02 AM",
-      "moodPre": 3,
-      "moodPost": 3,
-      "note": "",
-      "activityTypeId": 4,
-      "id": 43
-    },
-    {
-      "userId": 1,
-      "date": "12/18/2020, 6:16:40 AM",
-      "moodPre": 3,
-      "moodPost": 7,
-      "note": "ergyhbasdfhsdfghh",
-      "activityTypeId": 4,
-      "id": 44
+      "id": 22
     }
   ],
   "activityTypes": [
