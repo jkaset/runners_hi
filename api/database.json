@@ -172,6 +172,15 @@
       "note": "sdfghsh",
       "activityTypeId": 7,
       "id": 22
+    },
+    {
+      "userId": 1,
+      "date": "01/02/2021, 1:05:07 PM",
+      "moodPre": 8,
+      "moodPost": 9,
+      "note": "Awesome run!",
+      "activityTypeId": 3,
+      "id": 23
     }
   ],
   "activityTypes": [
