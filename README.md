@@ -13,7 +13,7 @@ Runner's-Hi is a single-page web application targeted toward intermediate noncom
 * A two part form, utilizing full-CRUD, that allows user to feed the database with their pre and post-run stats
 * A note form where users can record insights about their run
 * An clean, intuitive interface that makes logging info fun and easy
-* A chart that allows users to SEE relational data about their run
+* A chart that allows users to see relational data about their run
 
 
 ## Run the App
