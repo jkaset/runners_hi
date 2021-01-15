@@ -61,7 +61,7 @@
       "date": "12/15/2020, 2:33:35 PM",
       "moodPre": 2,
       "moodPost": 7,
-      "note": "sss",
+      "note": "Great weather, painless run!",
       "activityTypeId": 2,
       "id": 1
     },
@@ -70,7 +70,7 @@
       "date": "12/15/2020, 2:42:03 PM",
       "moodPre": 3,
       "moodPost": 10,
-      "note": "",
+      "note": "So glad I went",
       "activityTypeId": 2,
       "id": 4
     },
@@ -79,7 +79,7 @@
       "date": "12/15/2020, 3:13:53 PM",
       "moodPre": 5,
       "moodPost": 8,
-      "note": "eagadadas",
+      "note": "Went at an easy pace, took my time",
       "activityTypeId": 6,
       "id": 5
     },
@@ -88,7 +88,7 @@
       "date": "12/15/2020, 3:14:38 PM",
       "moodPre": 1,
       "moodPost": 5,
-      "note": "",
+      "note": "Started raining, my shoes are wet, but I have tons of energy now",
       "activityTypeId": 7,
       "id": 6
     },
@@ -97,7 +97,7 @@
       "date": "12/15/2020, 3:19:30 PM",
       "moodPre": 3,
       "moodPost": 8,
-      "note": "",
+      "note": "Longest run ever. Listened to 3 podcasts.",
       "activityTypeId": 4,
       "id": 8
     },
@@ -106,7 +106,7 @@
       "date": "12/15/2020, 3:19:49 PM",
       "moodPre": 6,
       "moodPost": 10,
-      "note": "asdfasdf",
+      "note": "Killer hills!",
       "activityTypeId": 3,
       "id": 10
     },
@@ -115,7 +115,7 @@
       "date": "12/15/2020, 3:50:10 PM",
       "moodPre": 1,
       "moodPost": 7,
-      "note": "ssss",
+      "note": "Just around the block. Heartrate was looking good.",
       "activityTypeId": 6,
       "id": 11
     },
@@ -124,63 +124,36 @@
       "date": "12/15/2020, 3:57:01 PM",
       "moodPre": 4,
       "moodPost": 8,
-      "note": "kff",
+      "note": "Can't believe that was only 30 minutes! I'm a new man.",
       "activityTypeId": 3,
       "id": 12
     },
     {
       "userId": 1,
-      "date": "12/15/2020, 4:05:55 PM",
-      "moodPre": 3,
-      "moodPost": 7,
-      "note": "sdfsdf",
-      "activityTypeId": 3,
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "date": "12/15/2020, 4:10:31 PM",
-      "moodPre": 4,
-      "moodPost": 4,
-      "note": "sss",
-      "activityTypeId": 4,
+      "date": "01/04/2021, 9:53:52 AM",
+      "moodPre": 1,
+      "moodPost": 8,
+      "note": "Really pushed myself. I'm so glad I went.",
+      "activityTypeId": 11,
       "id": 14
     },
     {
-      "userId": 5,
-      "date": "12/21/2020, 2:03:31 PM",
+      "userId": 1,
+      "date": "01/05/2021, 7:49:54 AM",
       "moodPre": 5,
-      "moodPost": 10,
+      "moodPost": 6,
       "note": "Quick run on my lunchbreak. Totally energized to tackle the rest of my day at work",
       "activityTypeId": 1,
-      "id": 20
-    },
-    {
-      "userId": 5,
-      "date": "12/29/2020, 6:06:24 AM",
-      "moodPre": 5,
-      "moodPost": 10,
-      "note": "so fun",
-      "activityTypeId": 3,
-      "id": 21
-    },
-    {
-      "userId": 5,
-      "date": "12/29/2020, 7:16:50 AM",
-      "moodPre": 7,
-      "moodPost": 10,
-      "note": "sdfghsh",
-      "activityTypeId": 7,
-      "id": 22
+      "id": 15
     },
     {
       "userId": 1,
-      "date": "01/02/2021, 1:05:07 PM",
-      "moodPre": 8,
-      "moodPost": 9,
-      "note": "Awesome run!",
-      "activityTypeId": 3,
-      "id": 23
+      "date": "01/05/2021, 7:50:25 AM",
+      "moodPre": 7,
+      "moodPost": 3,
+      "note": "Had an asthma attack, going to the hospital now",
+      "activityTypeId": 5,
+      "id": 16
     }
   ],
   "activityTypes": [
