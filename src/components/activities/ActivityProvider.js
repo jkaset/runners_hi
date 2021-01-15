@@ -7,13 +7,16 @@ export const ActivityProvider = (props) => {
     const [ searchTerms, setTerms ] = useState("")
 
     const getActivities = () => {
-        return fetch("http://localhost:8088/activities")
+        // return fetch("http://localhost:8088/activities")
+        return fetch("https://runners-hi-db.herokuapp.com/activities")
             .then(res => res.json())
             .then(setActivities)
     }
 
     const addActivity = activity => {
-        return fetch("http://localhost:8088/activities", {
+        // return fetch("http://localhost:8088/activities", 
+        return fetch("https://runners-hi-db.herokuapp.com/activities",
+        {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -37,14 +40,16 @@ export const ActivityProvider = (props) => {
 
 
     const deleteActivity = activityId => {
-        return fetch(`http://localhost:8088/activities/${activityId}`, {
+        return fetch(`https://runners-hi-db.herokuapp.com/activities/${activityId}`, {
+        // return fetch(`http://localhost:8088/activities/${activityId}`, {
             method: "DELETE"
         })
             .then(getActivities)
     }
 
     const updateActivity = activity => {
-        return fetch(`http://localhost:8088/activities/${activity.id}`, {
+        // return fetch(`http://localhost:8088/activities/${activity.id}`, {
+        return fetch(`https://runners-hi-db.herokuapp.com/activities/${activityId}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

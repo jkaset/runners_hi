@@ -9,7 +9,7 @@ export const ActivityTypeProvider = (props) => {
   const [ searchTerms, setTerms ] = useState("")
 
   const getActivityTypes = () => {
-    return fetch("http://localhost:8088/activityTypes")
+    return fetch("https://runners-hi-db.herokuapp.com/activityTypes")
         .then(res => res.json())
         .then(setActivityTypes)
 }
