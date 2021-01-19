@@ -49,7 +49,7 @@ export const ActivityProvider = (props) => {
 
     const updateActivity = activity => {
         // return fetch(`http://localhost:8088/activities/${activity.id}`, {
-        return fetch(`https://runners-hi-db.herokuapp.com/activities/${activityId}`, {
+        return fetch(`https://runners-hi-db.herokuapp.com/activities/${activity.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

@@ -13,7 +13,7 @@ export const Login = props => {
 
     const existingUserCheck = () => {
         // If your json-server URL is different, please change it below!
-        return fetch(`https://runners-hi-db.herokuapp.com/users?email=${email.current.value}`)
+        return fetch(`${deployed}/users?email=${email.current.value}`)
             .then(_ => _.json())
             .then(user => user.length ? user[0] : false)
     }
