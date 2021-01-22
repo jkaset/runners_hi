@@ -47,7 +47,7 @@ export const ActivityList = () => {
     return (
       <>
 
-        <Link to="/activities/create" className="btn btn-light float-right"><FontAwesomeIcon icon={faPlus} /> Record a New Run</Link>
+        <Link to="/activities/create" className="btn btn-light"><FontAwesomeIcon icon={faPlus} /> Record a New Run</Link>
 
 
         <div className="activityListContainer">

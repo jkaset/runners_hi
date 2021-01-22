@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartLine, faPlayCircle, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faSadCry, faGrin, faSmile, faLaugh, faMeh, faFrownOpen, faFrown, faSadTear, faMehBlank, faLaughSquint, faLaughBeam } from '@fortawesome/free-regular-svg-icons';
 import tinyFace from '../images/tinyFace.png'
+import Container from 'react-bootstrap/Container'
 
 //state that holds selected emojis
 
@@ -36,9 +37,8 @@ export const ActivityStartForm = (props) => {
 
     return (
       <>
-      <Row>
-        <Col>
-        < ButtonGroup size="lg" className="d-flex">
+      
+        < div >
           {
             moodsArray.map(m => (
               <Button variant="light" onClick={evt => {
@@ -54,9 +54,8 @@ export const ActivityStartForm = (props) => {
 
             ))
           }
-        </ButtonGroup >
-        </Col>
-        </Row>
+        </div >
+        
         
       </>
     )
@@ -183,7 +182,7 @@ export const ActivityStartForm = (props) => {
 
   return (
     <>
-      <Container fluid>
+     
       <div className="activityStartContainer">
       <Form className="form form-start ">
         <h2 className="formHeading">Pre-run Stats</h2>
@@ -222,7 +221,7 @@ export const ActivityStartForm = (props) => {
 
       </Form>
       </div>
-      </Container>
+      
 
     </>
   )

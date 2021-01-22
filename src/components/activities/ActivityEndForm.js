@@ -27,7 +27,7 @@ export const ActivityEndForm = (props) => {
 
     return (
       <>
-        < ButtonGroup size="lg" >
+        < div >
           {
             moodsArray.map(m => (
               <Button variant="light" onClick={evt => {
@@ -41,7 +41,7 @@ export const ActivityEndForm = (props) => {
 
             ))
           }
-        </ButtonGroup >
+        </div >
       </>
     )
   }
@@ -107,7 +107,7 @@ export const ActivityEndForm = (props) => {
 
   return (
     <>
-      <Container fluid>
+      
       <h2 className="formHeading">Time for your post-run check-in</h2>
       <div className="activityStartContainer">
         <Form className="formEnd">
@@ -157,7 +157,7 @@ export const ActivityEndForm = (props) => {
         </Card>
       </Accordion> */}
       </div>
-      </Container>
+      
     </>
   )
 
