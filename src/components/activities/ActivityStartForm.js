@@ -42,8 +42,8 @@ export const ActivityStartForm = (props) => {
               <Button variant="light" onClick={evt => {
                 evt.preventDefault()
                 setMood(m)
-                console.log("clicked", m)
-                console.log(mood, "mood")
+                // console.log("clicked", m)
+                // console.log(mood, "mood")
 
               }} className={`btn--${m}`} id="emoticon" key={m}> {m}</Button>
               
@@ -179,7 +179,7 @@ export const ActivityStartForm = (props) => {
 
   return (
     <>
-
+      <Container fluid>
       <div className="activityStartContainer">
       <Form className="form form-start ">
         <h2 className="formHeading">Pre-run Stats</h2>
@@ -218,6 +218,7 @@ export const ActivityStartForm = (props) => {
 
       </Form>
       </div>
+      </Container>
 
     </>
   )

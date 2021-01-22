@@ -33,8 +33,8 @@ export const ActivityEndForm = (props) => {
               <Button variant="light" onClick={evt => {
                 evt.preventDefault()
                 setMood(m)
-                console.log("clicked", m)
-                console.log(mood, "mood")
+                // console.log("clicked", m)
+                // console.log(mood, "mood")
 
               }} className={m} id="emoticon" key={m} >{m}</Button>
 
@@ -107,6 +107,7 @@ export const ActivityEndForm = (props) => {
 
   return (
     <>
+      <Container fluid>
       <h2 className="formHeading">Time for your post-run check-in</h2>
       <div className="activityStartContainer">
         <Form className="formEnd">
@@ -156,6 +157,7 @@ export const ActivityEndForm = (props) => {
         </Card>
       </Accordion> */}
       </div>
+      </Container>
     </>
   )
 

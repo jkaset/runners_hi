@@ -39,7 +39,7 @@ export const ActivityList = () => {
 
   const user = parseInt(localStorage.getItem("runnersHi_user"))
   const userActivities = activities.filter(a => a.userId === user)
-  console.log(userActivities)
+  // 
   //sort logic
   //
 
