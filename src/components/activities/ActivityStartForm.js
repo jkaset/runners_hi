@@ -36,6 +36,7 @@ export const ActivityStartForm = (props) => {
 
     return (
       <>
+        <Container fluid>
         < ButtonGroup size="lg" >
           {
             moodsArray.map(m => (
@@ -53,6 +54,7 @@ export const ActivityStartForm = (props) => {
             ))
           }
         </ButtonGroup >
+        </Container>
         
       </>
     )
