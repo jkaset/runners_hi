@@ -36,8 +36,9 @@ export const ActivityStartForm = (props) => {
 
     return (
       <>
-        <Container fluid>
-        < ButtonGroup size="lg" >
+      <Row>
+        <Col>
+        < ButtonGroup size="lg" className="d-flex">
           {
             moodsArray.map(m => (
               <Button variant="light" onClick={evt => {
@@ -54,7 +55,8 @@ export const ActivityStartForm = (props) => {
             ))
           }
         </ButtonGroup >
-        </Container>
+        </Col>
+        </Row>
         
       </>
     )
