@@ -11,8 +11,8 @@ import Container from 'react-bootstrap/Container'
 
 export const App = () => (
     <>
-        <Container fluid> 
         <Logo />
+        <Container fluid> 
 
         <Route render={() => {
             if (localStorage.getItem("runnersHi_user")) {

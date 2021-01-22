@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react"
 
+let deployed = "https://runners-hi-db.herokuapp.com"
+let local = "http://localhost:8088"
+let site = deployed
+
 export const ActivityContext = React.createContext()
 
 export const ActivityProvider = (props) => {
@@ -8,14 +12,14 @@ export const ActivityProvider = (props) => {
 
     const getActivities = () => {
         // return fetch("http://localhost:8088/activities")
-        return fetch("https://runners-hi-db.herokuapp.com/activities")
+        return fetch(`${site}/activities`)
             .then(res => res.json())
             .then(setActivities)
     }
 
     const addActivity = activity => {
         // return fetch("http://localhost:8088/activities", 
-        return fetch("https://runners-hi-db.herokuapp.com/activities",
+        return fetch(`${site}/activities`,
         {
             method: "POST",
             headers: {
@@ -40,7 +44,7 @@ export const ActivityProvider = (props) => {
 
 
     const deleteActivity = activityId => {
-        return fetch(`https://runners-hi-db.herokuapp.com/activities/${activityId}`, {
+        return fetch(`${site}/activities/${activityId}`, {
         // return fetch(`http://localhost:8088/activities/${activityId}`, {
             method: "DELETE"
         })
@@ -49,7 +53,7 @@ export const ActivityProvider = (props) => {
 
     const updateActivity = activity => {
         // return fetch(`http://localhost:8088/activities/${activity.id}`, {
-        return fetch(`https://runners-hi-db.herokuapp.com/activities/${activity.id}`, {
+        return fetch(`${site}/activities/${activity.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

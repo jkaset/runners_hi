@@ -3,6 +3,7 @@ import "./Login.css"
 
 let deployed = "https://runners-hi-db.herokuapp.com"
 let local = "http://localhost:8088"
+let site = deployed
 
 export const Register = (props) => {
     const firstName = useRef()
@@ -15,7 +16,7 @@ export const Register = (props) => {
 
     const existingUserCheck = () => {
         // If your json-server URL is different, please change it below!
-        return fetch(`https://runners-hi-db.herokuapp.com/users?email=${email.current.value}`)
+        return fetch(`${site}/users?email=${email.current.value}`)
             .then(_ => _.json())
             .then(user => !!user.length)
     }
@@ -28,7 +29,7 @@ export const Register = (props) => {
                 .then((userExists) => {
                     if (!userExists) {
                         // If your json-server URL is different, please change it below!
-                        fetch("https://runners-hi-db.herokuapp.com/users", {
+                        fetch(`${site}/users`, {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"

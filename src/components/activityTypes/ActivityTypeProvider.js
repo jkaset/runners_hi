@@ -2,6 +2,10 @@
 
 import React, { useState } from "react"
 
+let deployed = "https://runners-hi-db.herokuapp.com"
+let local = "http://localhost:8088"
+let site = deployed
+
 export const ActivityTypeContext = React.createContext()
 
 export const ActivityTypeProvider = (props) => {
@@ -9,7 +13,7 @@ export const ActivityTypeProvider = (props) => {
   const [ searchTerms, setTerms ] = useState("")
 
   const getActivityTypes = () => {
-    return fetch("https://runners-hi-db.herokuapp.com/activityTypes")
+    return fetch(`${site}/activityTypes`)
         .then(res => res.json())
         .then(setActivityTypes)
 }

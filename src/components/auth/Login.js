@@ -4,6 +4,7 @@ import "./Login.css"
 
 let deployed = "https://runners-hi-db.herokuapp.com"
 let local = "http://localhost:8088"
+let site = deployed
 
 export const Login = props => {
     const email = useRef()
@@ -13,7 +14,7 @@ export const Login = props => {
 
     const existingUserCheck = () => {
         // If your json-server URL is different, please change it below!
-        return fetch(`${deployed}/users?email=${email.current.value}`)
+        return fetch(`${site}/users?email=${email.current.value}`)
             .then(_ => _.json())
             .then(user => user.length ? user[0] : false)
     }
