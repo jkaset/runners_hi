@@ -18,7 +18,11 @@ Runner's-Hi is a single-page web application targeted toward intermediate noncom
 
 ## Run the App
 
-Go for it! [It's deployed here!](#)
+Go for it! [It's deployed here!](https://runners-hi.herokuapp.com/)
+I would recommend logging in as a user with a few runs under her belt to enjoy full-functionality. 
+The graph only appears after you've logged 3 runs because... what's a line-graph with 1 point on it anyway?
+username: jk@jk.com
+password: jk
 
 ## Screenshots
 
