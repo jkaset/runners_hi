@@ -1,6 +1,5 @@
-# [Runner's-Hi](#)
 
-> Runner’s-Hi tracks the one thing your current running app doesn’t: The effect of exercise on your emotional well-being. 
+# Runner’s-Hi tracks the one thing your current running app doesn’t: The effect of exercise on your emotional well-being. 
 
 
 ## The Concept
@@ -24,21 +23,18 @@ The graph only appears after you've logged 3 runs because... what's a line-graph
 username: jk@jk.com
 password: jk
 
-## Screenshots
 
+## Screenshots
+# [Runner's-Hi](#)
 | <img src="./resources/home.png"> |
 | :---: |
 | Homepage for existing users|
 
-| <img src="/resources/chart.png"> |
-| :---: |
-| Runner's Stats|
+![2021-08-12 14 05 12](https://user-images.githubusercontent.com/65924619/129415849-e932f122-3f71-4161-b729-ab16f1558a2f.gif)
+Runner's Stats
 
-| <img src="/resources/form.png"> |
-| :---: |
-| Part 1 of Runner's mood form |
-
-
+![2021-08-12 14 03 51](https://user-images.githubusercontent.com/65924619/129415965-5c86a24c-6b18-4eb1-9941-c11eecab1eee.gif)
+Part 1 of Runner's mood form
 
 ## A guided workflow
 
