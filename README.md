@@ -5,7 +5,7 @@
 
 ## The Concept
 
-Runner's-Hi is a single-page web application targeted toward intermediate noncompetetive runners who may already be using an app like Nike Run Club or Strava, but who are motivated by more than speed, distance, and calories. Runner's-Hi makes the ordinarily prosaic wisdom that "you're always glad you ran" into something truly quantifiable. Users are given averages and graphs to visualize the relational data between their mood before running and their mood after. Pretty cool!
+Runner's-Hi is a single-page web application targeted toward intermediate noncompetetive runners who may already be using an app like Nike Run Club or Strava, but who are motivated by more than speed, distance, and calories. Runner's-Hi makes the ordinarily prosaic wisdom that "you're always glad you ran" into something truly quantifiable. Users are given averages and graphs to visualize the relational data between their mood before running and their mood after. 
 
 
 ## Features
